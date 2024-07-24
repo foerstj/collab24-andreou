@@ -1,0 +1,642 @@
+[mood_setting*]
+{
+  b interior = true;
+	mood_name = clb24a_cave1;
+  f transition_time = 2.000000;
+	[fog]
+	{
+	  x fog_color = 0xFF000000;
+	  f fog_density = 1.000000;
+	  f fog_far_dist = 40.000000;
+	  f fog_lowdetail_far_dist = 35.000000;
+	  f fog_lowdetail_near_dist = 25.000000;
+	  f fog_near_dist = 30.000000;
+	}
+	[music]
+	{
+	  f ambient_intro_delay = 0.000000;
+	  f ambient_repeat_delay = 0.000000;
+		ambient_track = ;
+	  f battle_intro_delay = 0.000000;
+	  f battle_repeat_delay = 0.000000;
+		battle_track = ;
+		room_type = rt_cave;
+	  f standard_intro_delay = 2.000000;
+	  f standard_repeat_delay = 4.000000;
+		standard_track = s_m_goblininventor_01;
+	}
+}
+[mood_setting*]
+{
+  b interior = false;
+	mood_name = clb24a_cliffs-1;
+  f transition_time = 4.000000;
+	[fog]
+	{
+	  x fog_color = 0xFFA8AE93;
+	  f fog_density = 0.500000;
+	  f fog_far_dist = 60.000000;
+	  f fog_lowdetail_far_dist = 45.000000;
+	  f fog_lowdetail_near_dist = 30.000000;
+	  f fog_near_dist = 30.000000;
+	}
+	[frustum]
+	{
+	  f frustum_height = 60.000000;
+	  f frustum_width = 60.000000;
+	}
+	[music]
+	{
+	  f ambient_intro_delay = 0.000000;
+	  f ambient_repeat_delay = 0.000000;
+		ambient_track = s_e_ambient_wind_01b;
+	  f battle_intro_delay = 0.000000;
+	  f battle_repeat_delay = 0.000000;
+		battle_track = ;
+		room_type = rt_mountains;
+	  f standard_intro_delay = 2.000000;
+	  f standard_repeat_delay = 6.000000;
+		standard_track = s_m_the_skull_theme_cicatrix_theme;
+	}
+	[wind]
+	{
+	  f wind_direction = 1.000000;
+	  f wind_velocity = 0.500000;
+	}
+}
+[mood_setting*]
+{
+  b interior = true;
+	mood_name = clb24a_cliffs-cave;
+  f transition_time = 2.000000;
+	[fog]
+	{
+	  x fog_color = 0xFF000000;
+	  f fog_density = 1.000000;
+	  f fog_far_dist = 40.000000;
+	  f fog_lowdetail_far_dist = 35.000000;
+	  f fog_lowdetail_near_dist = 25.000000;
+	  f fog_near_dist = 30.000000;
+	}
+	[music]
+	{
+	  f ambient_intro_delay = 0.000000;
+	  f ambient_repeat_delay = 0.000000;
+		ambient_track = ;
+	  f battle_intro_delay = 0.000000;
+	  f battle_repeat_delay = 0.000000;
+		battle_track = ;
+		room_type = rt_cave;
+	  f standard_intro_delay = 2.000000;
+	  f standard_repeat_delay = 4.000000;
+		standard_track = s_m_castleehb_04;
+	}
+}
+[mood_setting*]
+{
+  b interior = true;
+	mood_name = clb24a_mines-1;
+  f transition_time = 2.000000;
+	[fog]
+	{
+	  x fog_color = 0xFF000000;
+	  f fog_density = 0.000000;
+	  f fog_far_dist = 50.000000;
+	  f fog_lowdetail_far_dist = 40.000000;
+	  f fog_lowdetail_near_dist = 30.000000;
+	  f fog_near_dist = 40.000000;
+	}
+	[frustum]
+	{
+	  f frustum_height = 60.000000;
+	  f frustum_width = 50.000000;
+	}
+	[music]
+	{
+	  f ambient_intro_delay = 0.000000;
+	  f ambient_repeat_delay = 0.000000;
+		ambient_track = s_e_ambient_wind_mines;
+	  f battle_intro_delay = 0.000000;
+	  f battle_repeat_delay = 0.000000;
+		battle_track = ;
+		room_type = rt_cave;
+	  f standard_intro_delay = 2.000000;
+	  f standard_repeat_delay = 6.000000;
+		standard_track = s_m_dwarvenmines_02;
+	}
+}
+[mood_setting*]
+{
+  b interior = true;
+	mood_name = clb24a_mines-1far;
+  f transition_time = 3.000000;
+	[fog]
+	{
+	  x fog_color = 0xFF000000;
+	  f fog_density = 0.000000;
+	  f fog_far_dist = 60.000000;
+	  f fog_lowdetail_far_dist = 50.000000;
+	  f fog_lowdetail_near_dist = 30.000000;
+	  f fog_near_dist = 40.000000;
+	}
+	[frustum]
+	{
+	  f frustum_height = 60.000000;
+	  f frustum_width = 50.000000;
+	}
+	[music]
+	{
+	  f ambient_intro_delay = 0.000000;
+	  f ambient_repeat_delay = 0.000000;
+		ambient_track = s_e_ambient_wind_mines;
+	  f battle_intro_delay = 0.000000;
+	  f battle_repeat_delay = 0.000000;
+		battle_track = ;
+		room_type = rt_cave;
+	  f standard_intro_delay = 2.000000;
+	  f standard_repeat_delay = 6.000000;
+		standard_track = s_m_dwarvenmines_02;
+	}
+}
+[mood_setting*]
+{
+  b interior = true;
+	mood_name = clb24a_mines-2;
+  f transition_time = 3.000000;
+	[fog]
+	{
+	  x fog_color = 0xFF000000;
+	  f fog_density = 0.000000;
+	  f fog_far_dist = 50.000000;
+	  f fog_lowdetail_far_dist = 40.000000;
+	  f fog_lowdetail_near_dist = 30.000000;
+	  f fog_near_dist = 40.000000;
+	}
+	[frustum]
+	{
+	  f frustum_height = 60.000000;
+	  f frustum_width = 50.000000;
+	}
+	[music]
+	{
+	  f ambient_intro_delay = 0.000000;
+	  f ambient_repeat_delay = 0.000000;
+		ambient_track = s_e_ambient_wind_mines;
+	  f battle_intro_delay = 0.000000;
+	  f battle_repeat_delay = 0.000000;
+		battle_track = ;
+		room_type = rt_cave;
+	  f standard_intro_delay = 2.000000;
+	  f standard_repeat_delay = 6.000000;
+		standard_track = s_m_dwarvenmines_04;
+	}
+}
+[mood_setting*]
+{
+  b interior = true;
+	mood_name = clb24a_mines-2far;
+  f transition_time = 3.000000;
+	[fog]
+	{
+	  x fog_color = 0xFF000000;
+	  f fog_density = 0.000000;
+	  f fog_far_dist = 60.000000;
+	  f fog_lowdetail_far_dist = 50.000000;
+	  f fog_lowdetail_near_dist = 30.000000;
+	  f fog_near_dist = 40.000000;
+	}
+	[frustum]
+	{
+	  f frustum_height = 60.000000;
+	  f frustum_width = 50.000000;
+	}
+	[music]
+	{
+	  f ambient_intro_delay = 0.000000;
+	  f ambient_repeat_delay = 0.000000;
+		ambient_track = s_e_ambient_wind_mines;
+	  f battle_intro_delay = 0.000000;
+	  f battle_repeat_delay = 0.000000;
+		battle_track = ;
+		room_type = rt_cave;
+	  f standard_intro_delay = 2.000000;
+	  f standard_repeat_delay = 6.000000;
+		standard_track = s_m_dwarvenmines_04;
+	}
+}
+[mood_setting*]
+{
+  b interior = true;
+	mood_name = clb24a_mines-3;
+  f transition_time = 3.000000;
+	[fog]
+	{
+	  x fog_color = 0xFF000000;
+	  f fog_density = 0.000000;
+	  f fog_far_dist = 50.000000;
+	  f fog_lowdetail_far_dist = 40.000000;
+	  f fog_lowdetail_near_dist = 30.000000;
+	  f fog_near_dist = 40.000000;
+	}
+	[frustum]
+	{
+	  f frustum_height = 60.000000;
+	  f frustum_width = 50.000000;
+	}
+	[music]
+	{
+	  f ambient_intro_delay = 0.000000;
+	  f ambient_repeat_delay = 0.000000;
+		ambient_track = s_e_ambient_wind_mines;
+	  f battle_intro_delay = 0.000000;
+	  f battle_repeat_delay = 0.000000;
+		battle_track = ;
+		room_type = rt_cave;
+	  f standard_intro_delay = 2.000000;
+	  f standard_repeat_delay = 6.000000;
+		standard_track = s_m_dwarvenmines_05;
+	}
+}
+[mood_setting*]
+{
+  b interior = true;
+	mood_name = clb24a_mines-3far;
+  f transition_time = 3.000000;
+	[fog]
+	{
+	  x fog_color = 0xFF000000;
+	  f fog_density = 0.000000;
+	  f fog_far_dist = 60.000000;
+	  f fog_lowdetail_far_dist = 50.000000;
+	  f fog_lowdetail_near_dist = 30.000000;
+	  f fog_near_dist = 40.000000;
+	}
+	[frustum]
+	{
+	  f frustum_height = 60.000000;
+	  f frustum_width = 50.000000;
+	}
+	[music]
+	{
+	  f ambient_intro_delay = 0.000000;
+	  f ambient_repeat_delay = 0.000000;
+		ambient_track = s_e_ambient_wind_mines;
+	  f battle_intro_delay = 0.000000;
+	  f battle_repeat_delay = 0.000000;
+		battle_track = ;
+		room_type = rt_cave;
+	  f standard_intro_delay = 2.000000;
+	  f standard_repeat_delay = 6.000000;
+		standard_track = s_m_dwarvenmines_05;
+	}
+}
+[mood_setting*]
+{
+  b interior = true;
+	mood_name = clb24a_mines-4;
+  f transition_time = 3.000000;
+	[fog]
+	{
+	  x fog_color = 0xFF000000;
+	  f fog_density = 0.000000;
+	  f fog_far_dist = 50.000000;
+	  f fog_lowdetail_far_dist = 40.000000;
+	  f fog_lowdetail_near_dist = 30.000000;
+	  f fog_near_dist = 40.000000;
+	}
+	[frustum]
+	{
+	  f frustum_height = 60.000000;
+	  f frustum_width = 50.000000;
+	}
+	[music]
+	{
+	  f ambient_intro_delay = 0.000000;
+	  f ambient_repeat_delay = 0.000000;
+		ambient_track = s_e_ambient_wind_mines;
+	  f battle_intro_delay = 0.000000;
+	  f battle_repeat_delay = 0.000000;
+		battle_track = ;
+		room_type = rt_cave;
+	  f standard_intro_delay = 2.000000;
+	  f standard_repeat_delay = 6.000000;
+		standard_track = s_m_dwarvenmines_07;
+	}
+}
+[mood_setting*]
+{
+  b interior = true;
+	mood_name = clb24a_mines-4far;
+  f transition_time = 3.000000;
+	[fog]
+	{
+	  x fog_color = 0xFF000000;
+	  f fog_density = 0.000000;
+	  f fog_far_dist = 60.000000;
+	  f fog_lowdetail_far_dist = 50.000000;
+	  f fog_lowdetail_near_dist = 30.000000;
+	  f fog_near_dist = 40.000000;
+	}
+	[frustum]
+	{
+	  f frustum_height = 60.000000;
+	  f frustum_width = 50.000000;
+	}
+	[music]
+	{
+	  f ambient_intro_delay = 0.000000;
+	  f ambient_repeat_delay = 0.000000;
+		ambient_track = s_e_ambient_wind_mines;
+	  f battle_intro_delay = 0.000000;
+	  f battle_repeat_delay = 0.000000;
+		battle_track = ;
+		room_type = rt_cave;
+	  f standard_intro_delay = 2.000000;
+	  f standard_repeat_delay = 6.000000;
+		standard_track = s_m_dwarvenmines_07;
+	}
+}
+[mood_setting*]
+{
+  b interior = true;
+	mood_name = clb24a_mines-5;
+  f transition_time = 3.000000;
+	[fog]
+	{
+	  x fog_color = 0xFF000000;
+	  f fog_density = 0.000000;
+	  f fog_far_dist = 50.000000;
+	  f fog_lowdetail_far_dist = 40.000000;
+	  f fog_lowdetail_near_dist = 30.000000;
+	  f fog_near_dist = 40.000000;
+	}
+	[frustum]
+	{
+	  f frustum_height = 60.000000;
+	  f frustum_width = 50.000000;
+	}
+	[music]
+	{
+	  f ambient_intro_delay = 0.000000;
+	  f ambient_repeat_delay = 0.000000;
+		ambient_track = s_e_ambient_wind_mines;
+	  f battle_intro_delay = 0.000000;
+	  f battle_repeat_delay = 0.000000;
+		battle_track = ;
+		room_type = rt_cave;
+	  f standard_intro_delay = 2.000000;
+	  f standard_repeat_delay = 6.000000;
+		standard_track = s_m_dwarvenmines_03;
+	}
+}
+[mood_setting*]
+{
+  b interior = true;
+	mood_name = clb24a_mines-halls;
+  f transition_time = 3.000000;
+	[fog]
+	{
+	  x fog_color = 0xFF000000;
+	  f fog_density = 0.000000;
+	  f fog_far_dist = 50.000000;
+	  f fog_lowdetail_far_dist = 40.000000;
+	  f fog_lowdetail_near_dist = 30.000000;
+	  f fog_near_dist = 40.000000;
+	}
+	[frustum]
+	{
+	  f frustum_height = 60.000000;
+	  f frustum_width = 50.000000;
+	}
+	[music]
+	{
+		ambient_track = ;
+		room_type = rt_cave;
+	  f standard_intro_delay = 2.000000;
+	  f standard_repeat_delay = 6.000000;
+		standard_track = s_m_fortkroth_02;
+	}
+}
+[mood_setting*]
+{
+  b interior = true;
+	mood_name = clb24a_lava_1;
+  f transition_time = 5.000000;
+	[fog]
+	{
+	  x fog_color = 0xFF4E2307;
+	  f fog_density = 1.000000;
+	  f fog_far_dist = 50.000000;
+	  f fog_lowdetail_far_dist = 40.000000;
+	  f fog_lowdetail_near_dist = 20.000000;
+	  f fog_near_dist = 20.000000;
+	}
+	[frustum]
+	{
+	  f frustum_height = 60.000000;
+	  f frustum_width = 50.000000;
+	}
+	[music]
+	{
+		ambient_track = ;
+		room_type = rt_concerthall;
+	  f standard_intro_delay = 4.000000;
+	  f standard_repeat_delay = 6.000000;
+		standard_track = s_m_lavacaverns_03;
+	}
+}
+[mood_setting*]
+{
+  b interior = true;
+	mood_name = clb24a_lava_2;
+  f transition_time = 3.000000;
+	[fog]
+	{
+	  x fog_color = 0xFF4E2307;
+	  f fog_density = 1.000000;
+	  f fog_far_dist = 50.000000;
+	  f fog_lowdetail_far_dist = 40.000000;
+	  f fog_lowdetail_near_dist = 20.000000;
+	  f fog_near_dist = 20.000000;
+	}
+	[frustum]
+	{
+	  f frustum_height = 60.000000;
+	  f frustum_width = 50.000000;
+	}
+	[music]
+	{
+		ambient_track = ;
+		room_type = rt_concerthall;
+	  f standard_intro_delay = 2.000000;
+	  f standard_repeat_delay = 6.000000;
+		standard_track = s_m_goblininventor_05;
+	}
+}
+[mood_setting*]
+{
+  b interior = true;
+	mood_name = clb24a_lava_3;
+  f transition_time = 3.000000;
+	[fog]
+	{
+	  x fog_color = 0xFF4E2307;
+	  f fog_density = 1.000000;
+	  f fog_far_dist = 55.000000;
+	  f fog_lowdetail_far_dist = 40.000000;
+	  f fog_lowdetail_near_dist = 20.000000;
+	  f fog_near_dist = 20.000000;
+	}
+	[frustum]
+	{
+	  f frustum_height = 60.000000;
+	  f frustum_width = 50.000000;
+	}
+	[music]
+	{
+		ambient_track = ;
+		room_type = rt_concerthall;
+	  f standard_intro_delay = 2.000000;
+	  f standard_repeat_delay = 6.000000;
+		standard_track = s_m_lavacaverns_02;
+	}
+}
+[mood_setting*]
+{
+  b interior = true;
+	mood_name = clb24a_lava_3dark;
+  f transition_time = 1.000000;
+	[fog]
+	{
+	  x fog_color = 0xFF000000;
+	  f fog_density = 1.000000;
+	  f fog_far_dist = 45.000000;
+	  f fog_lowdetail_far_dist = 35.000000;
+	  f fog_lowdetail_near_dist = 20.000000;
+	  f fog_near_dist = 20.000000;
+	}
+	[frustum]
+	{
+	  f frustum_height = 60.000000;
+	  f frustum_width = 50.000000;
+	}
+	[music]
+	{
+		ambient_track = ;
+		room_type = rt_concerthall;
+	  f standard_intro_delay = 2.000000;
+	  f standard_repeat_delay = 6.000000;
+		standard_track = s_m_lavacaverns_02;
+	}
+}
+[mood_setting*]
+{
+  b interior = true;
+	mood_name = clb24a_lava_4dark;
+  f transition_time = 2.000000;
+	[fog]
+	{
+	  x fog_color = 0xFF000000;
+	  f fog_density = 1.000000;
+	  f fog_far_dist = 45.000000;
+	  f fog_lowdetail_far_dist = 35.000000;
+	  f fog_lowdetail_near_dist = 20.000000;
+	  f fog_near_dist = 20.000000;
+	}
+	[frustum]
+	{
+	  f frustum_height = 60.000000;
+	  f frustum_width = 50.000000;
+	}
+	[music]
+	{
+		ambient_track = ;
+		room_type = rt_concerthall;
+	  f standard_intro_delay = 2.000000;
+	  f standard_repeat_delay = 6.000000;
+		standard_track = s_m_dragonlair_01;
+	}
+}
+[mood_setting*]
+{
+  b interior = true;
+	mood_name = clb24a_lava_4;
+  f transition_time = 3.000000;
+	[fog]
+	{
+	  x fog_color = 0xFF4E2307;
+	  f fog_density = 1.000000;
+	  f fog_far_dist = 55.000000;
+	  f fog_lowdetail_far_dist = 40.000000;
+	  f fog_lowdetail_near_dist = 20.000000;
+	  f fog_near_dist = 20.000000;
+	}
+	[frustum]
+	{
+	  f frustum_height = 60.000000;
+	  f frustum_width = 50.000000;
+	}
+	[music]
+	{
+		ambient_track = ;
+		room_type = rt_concerthall;
+	  f standard_intro_delay = 2.000000;
+	  f standard_repeat_delay = 6.000000;
+		standard_track = s_m_dragonlair_01;
+	}
+}
+[mood_setting*]
+{
+  b interior = true;
+	mood_name = clb24a_lava_5;
+  f transition_time = 3.000000;
+	[fog]
+	{
+	  x fog_color = 0xFF4E2307;
+	  f fog_density = 1.000000;
+	  f fog_far_dist = 55.000000;
+	  f fog_lowdetail_far_dist = 40.000000;
+	  f fog_lowdetail_near_dist = 20.000000;
+	  f fog_near_dist = 20.000000;
+	}
+	[frustum]
+	{
+	  f frustum_height = 60.000000;
+	  f frustum_width = 50.000000;
+	}
+	[music]
+	{
+		room_type = rt_concerthall;
+	  f standard_intro_delay = 0.000000;
+	  f standard_repeat_delay = 0.000000;
+		standard_track = s_m_gom_battle;
+	}
+}
+[mood_setting*]
+{
+  b interior = true;
+	mood_name = clb24a_lava_6;
+  f transition_time = 3.000000;
+	[fog]
+	{
+	  x fog_color = 0xFF4E2307;
+	  f fog_density = 1.000000;
+	  f fog_far_dist = 55.000000;
+	  f fog_lowdetail_far_dist = 40.000000;
+	  f fog_lowdetail_near_dist = 20.000000;
+	  f fog_near_dist = 20.000000;
+	}
+	[frustum]
+	{
+	  f frustum_height = 60.000000;
+	  f frustum_width = 50.000000;
+	}
+	[music]
+	{
+		ambient_track = ;
+		room_type = rt_concerthall;
+	  f standard_intro_delay = 1.000000;
+	  f standard_repeat_delay = 6.000000;
+		standard_track = s_m_chamber_02;
+	}
+}

@@ -1,0 +1,84 @@
+
+[t:template,n:clb24_door_gob_metal_02_left_toggle]
+{
+	specializes		= base_door;
+	doc				= "clb24a_gi_metal_reinforced_sm_left_toggle";
+    category_name   = "use_toggle";
+
+    aspect:model	= m_i_gob_door-02;
+    aspect:material = wood_small;
+	[body]
+	{
+		[chore_dictionary]
+		{
+        	chore_prefix = a_i_gob;
+
+			[chore_open]
+			{
+				skrit			= transition;
+				anim_files: 00	= door-02-open;
+			}
+			[chore_close]
+			{
+				skrit			= transition;
+				anim_files: 00	= door-02-close;
+			}
+		}
+	}
+	[messages]
+	{
+		[locked]
+		{
+			screen_text = "";
+		}
+	}
+	[door_basic]
+	{
+		use_toggle		= true;
+		oneshot 		= true;
+	}
+	[clb24a_door_pipe_quest]
+	{
+	}
+}
+[t:template,n:clb24_door_gob_metal_02_right_toggle]
+{
+	specializes		= base_door;
+	doc				= "clb24a_gi_metal_reinforced_sm_right_toggle";
+    category_name   = "use_toggle";
+
+    aspect:model	= m_i_gob_door-02-R;
+	[body]
+	{
+		[chore_dictionary]
+		{
+        	chore_prefix = a_i_gob;
+
+			[chore_open]
+			{
+				skrit			= transition;
+				anim_files: 00	= door-02-R-open;
+			}
+			[chore_close]
+			{
+				skrit			= transition;
+				anim_files: 00	= door-02-R-close;
+			}
+		}
+	}
+	[messages]
+	{
+		[locked]
+		{
+			screen_text = "";
+		}
+	}
+	[door_basic]
+	{
+		use_toggle		= true;
+		oneshot 		= true;
+	}
+	[clb24a_door_pipe_quest]
+	{
+	}
+}

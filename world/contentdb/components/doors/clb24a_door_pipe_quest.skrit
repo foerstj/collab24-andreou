@@ -1,0 +1,114 @@
+//////////////////////////////////////////////////////////////////////////////
+//
+// File     :  clb24a_door_pipe_quest.skrit
+// Author(s):  Andreou_NG
+//
+//	
+//----------------------------------------------------------------------------
+//  $Revision:: $              $Date:$
+//----------------------------------------------------------------------------
+//////////////////////////////////////////////////////////////////////////////
+
+
+//////////////////////////////////////////////////////////////////////////////
+// public definitions
+
+// reserved tags
+property bool   _server_only$        	= true;
+
+property scid   		second_door$            					doc = "Scid of Second Door.";
+
+owner                                = GoSkritComponent;
+
+//////////////////////////////////////////////////////////////////////////////
+
+Startup State Startup$
+{
+	event OnGoHandleMessage$( eWorldEvent e$, WorldMessage msg$ )
+	{	
+		
+		if( e$ == we_req_activate ) 
+		{
+			SetState Exit$;
+		}
+		if( e$ == WE_REQ_USE ) 
+		{
+			Goid user$ = msg$.GetSendFrom();
+		
+			if( user$.IsValid)
+			{
+				string message$;
+				int pipes_left$ = 4;
+			
+				if ( GameAuditor.GetDb.GetBool( "clb24a_blue_pipe_open" ) )
+				{
+					pipes_left$ -= 1;
+				}
+				if ( GameAuditor.GetDb.GetBool( "clb24a_green_pipe_open" ) )
+				{
+					pipes_left$ -= 1;
+				}
+				if ( GameAuditor.GetDb.GetBool( "clb24a_yellow_pipe_open" ) )
+				{
+					pipes_left$ -= 1;
+				}
+				if ( GameAuditor.GetDb.GetBool( "clb24a_red_pipe_open" ) )
+				{
+					pipes_left$ -= 1;
+				}
+				
+				if (pipes_left$ > 1)
+				{
+					StringTool.AssignF( message$ , "Door is locked. There are still %i pipes left to open", pipes_left$);
+				}
+				else if (pipes_left$ > 0)
+				{
+					StringTool.Assign( message$ , "Door is locked. There is just one pipe left to open");
+				}
+				else
+				{
+					//Door can be opened now
+					SetState Opening$;
+				}
+				
+				if ( !GameAuditor.GetDb.GetBool( "clb24a_blue_pipe_open" ) )
+				{
+					StringTool.Append( message$ , " (Blue)");
+				}
+				if ( !GameAuditor.GetDb.GetBool( "clb24a_green_pipe_open" ) )
+				{
+					StringTool.Append( message$ , " (Green)");
+				}
+				if ( !GameAuditor.GetDb.GetBool( "clb24a_yellow_pipe_open" ) )
+				{
+					StringTool.Append( message$ , " (Yellow)");
+				}
+				if ( !GameAuditor.GetDb.GetBool( "clb24a_red_pipe_open" ) )
+				{
+					StringTool.Append( message$ , " (Red)");
+				}
+				
+				Report.SScreen( user$.Go.Player.MachineId, message$ );
+			}
+		}
+	}
+}
+
+State Opening$
+{
+	event OnEnterState$
+	{
+		SSendWorldMessage( we_req_activate, owner.Goid, owner.Goid ); //Unlock
+		SSendWorldMessage( we_req_use, owner.Goid, owner.Goid ); //Open
+		if ( second_door$.isvalid() )
+	    {
+			SSendWorldMessage( we_req_activate, owner.Goid, second_door$ );
+			SSendWorldMessage( we_req_use, owner.Goid, second_door$ );
+	    }
+		SetState Exit$;
+	}
+}
+
+State Exit$
+{
+}

@@ -1,0 +1,9 @@
+[t:template,n:elevator_2s_2c_12n]
+{
+	specializes = elevator;
+	doc = [elevator_2s_2c_12n];
+	extra_doc = "Activate to move, Deactivate disables forever";
+    category_name       = "elevator";
+
+	[elevator_2s_2c_12n]  {  }
+}

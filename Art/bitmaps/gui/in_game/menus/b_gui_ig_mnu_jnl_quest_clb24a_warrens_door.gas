@@ -1,0 +1,5 @@
+[t:tsd,n:b_gui_ig_mnu_jnl_quest_clb24a_warrens_door]
+{
+    layer1texture1 = b_gui_ig_mnu_jnl_quest_clb24a_warrens_door;
+  i texturedetail = 0;
+}

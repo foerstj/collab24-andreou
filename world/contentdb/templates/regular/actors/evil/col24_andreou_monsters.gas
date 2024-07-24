@@ -1,0 +1,2997 @@
+[t:template,n:c24_5_bandit]
+{
+	doc = "c24_bandit_melee";
+	specializes = base_bandit;
+	[actor]
+	{
+		[skills]
+		{
+			strength =   13, 0;
+			intelligence =  10, 0;
+			dexterity =   11, 0;
+			melee =  13,  0;
+		}
+	}
+	[aspect]
+	{
+		life = 312;
+		max_life = 312;
+		mana = 20;
+		max_mana = 20;
+   		experience_value = 244;
+
+		[textures]
+		{
+			0 = b_c_gah_fb_skin_34;
+			1 = b_c_pos_a3_032;
+		}
+	}
+	[common]
+	{
+		membership = monster, party_bandit_ranged, bandit;
+	}
+	[attack]
+	{
+		attack_range = 0.5;
+		damage_max = 21;
+		damage_min = 18;
+	}
+   	[defend] { defense=79; }
+	[inventory]
+	{
+		[pcontent]
+		{
+			[all*]
+			{
+				es_feet = bo_bo_le_light;
+                es_weapon_hand = sd_g_c_gl_1h_avg;
+			}
+			[oneof*]
+			{
+				[oneof*]
+				{
+				   chance = 0.1;
+				   il_main = potion_health_small;
+				   il_main = potion_mana_small;
+				}
+				[all*]
+				{
+       				chance = 0.02;
+	                il_main = #spell/6-10;
+				}
+				[oneof*]
+				{
+					chance = 0.2;
+					il_main = #*/25-37;
+					il_main = #armor/30-76;
+				}
+                [oneof*]
+				{
+	            	chance = 0.004;
+	                il_main = #weapon/-rare(1)/31-41;
+	                il_main = #armor/-rare(1)/69-93;
+                    il_main = #*/-rare(1)/31-41;
+                }
+				[oneof*]
+				{
+                	chance = 0.002;
+	                il_main = #weapon/-unique(2)/31-41;
+	                il_main = #armor/-unique(2)/69-93;
+                    il_main = #*/-unique(2)/31-41;
+	            }
+				[gold*]
+				{
+					chance = 0.15;
+					max = 457;
+					min = 291;
+				}
+			}
+		}
+	}
+   	[mind]
+   	{
+		jat_brain						= world\ai\jobs\common\brain_hero.skrit
+			?actor_joins_existing_party	= true;
+		jat_fidget		= world\ai\jobs\common\job_fidget.skrit
+			?curious		= 0.75
+			&interest		= interest
+			&meander		= true
+			&still			= false;
+	}
+}
+
+[t:template,n:c24_5_bandit_ranged]
+{
+	doc = "c24_bandit_ranged";
+	specializes = base_bandit;
+	[actor]
+	{
+		[skills]
+		{
+			strength =   13, 0;
+			intelligence = 10, 0;
+			dexterity =   12, 0;
+			ranged =  13,  0;
+		}
+	}
+	[aspect]
+	{
+		life = 282;
+		max_life = 282;
+		mana = 20;
+		max_mana = 20;
+   		experience_value = 244;
+
+		[textures]
+		{
+			0 = b_c_gah_fb_skin_34;
+			1 = b_c_pos_a3_033;
+		}
+	}
+	[common]
+	{
+		screen_name="Bandit Archer";
+		membership = monster, party_bandit_ranged, bandit;
+	}
+	[inventory]
+	{
+        custom_head = m_c_gah_fb_hlmt_head-05;
+    	selected_active_location = IL_ACTIVE_RANGED_WEAPON;
+		[pcontent]
+		{
+			[all*]
+			{
+				es_feet = bo_bo_le_light;
+                es_shield_hand = bw_g_c_c_m_r_low;
+			}
+			[oneof*]
+			{
+				[oneof*]
+				{
+				   chance = 0.1;
+				   il_main = potion_health_small;
+				   il_main = potion_mana_small;
+				}
+				[all*]
+				{
+       				chance = 0.02;
+	                il_main = #spell/6-10;
+				}
+				[oneof*]
+				{
+					chance = 0.2;
+					il_main = #*/25-37;
+					il_main = #armor/30-76;
+				}
+                [oneof*]
+				{
+	            	chance = 0.004;
+	                il_main = #weapon/-rare(1)/31-41;
+	                il_main = #armor/-rare(1)/69-93;
+                    il_main = #*/-rare(1)/31-41;
+                }
+				[oneof*]
+				{
+                	chance = 0.002;
+	                il_main = #weapon/-unique(2)/31-41;
+	                il_main = #armor/-unique(2)/69-93;
+                    il_main = #*/-unique(2)/31-41;
+	            }
+				[gold*]
+				{
+					chance = 0.15;
+					max = 457;
+					min = 291;
+				}
+			}
+		}
+	}
+	[defend] { defense=60; }
+	[mind]
+    {
+  		jat_brain						= world\ai\jobs\common\brain_hero.skrit
+			?actor_creates_own_party		= true
+			&actor_joins_existing_party		= true
+			&party_template					= "party_bandit_ranged";
+
+    	jat_fidget						= world\ai\jobs\common\job_fidget.skrit
+    		?social							= 0.35
+    		&still							= false;
+    }
+}
+
+[t:template,n:c24_5_bandit_mage]
+{
+	doc = "c24_bandit_mage";
+	specializes = base_bandit;
+	[actor]
+	{
+		[skills]
+		{
+			strength =   9, 0;
+			intelligence = 14, 0;
+			dexterity =   10, 0;
+			combat_magic =  13,  0;
+		}
+	}
+	[aspect]
+	{
+		life = 233;
+		max_life = 233;
+		mana = 40;
+		max_mana = 40;
+   		experience_value = 244;
+
+		[textures]
+		{
+			0 = b_c_gah_fb_skin_34;
+			1 = b_c_pos_a3_032;
+		}
+	}
+	[common]
+	{
+		screen_name="Bandit Tamer";
+		membership = monster, party_bandit_ranged, bandit;
+	}
+	[inventory]
+	{
+    	selected_active_location = il_active_primary_spell;
+		[pcontent]
+		{
+			[all*]
+			{
+				es_feet = bo_bo_le_light;
+				es_spellbook = book_glb_magic_01;
+			}
+			[oneof*]
+			{
+				[oneof*]
+				{
+				   chance = 0.1;
+				   il_main = potion_health_small;
+				   il_main = potion_mana_small;
+				}
+				[all*]
+				{
+       				chance = 0.05;
+	                il_main = #spell/7-12;
+				}
+				[oneof*]
+				{
+					chance = 0.2;
+					il_main = #*/25-37;
+					il_main = #armor/30-76;
+				}
+                [oneof*]
+				{
+	            	chance = 0.004;
+	                il_main = #weapon/-rare(1)/31-41;
+	                il_main = #armor/-rare(1)/69-93;
+                    il_main = #*/-rare(1)/31-41;
+                }
+				[oneof*]
+				{
+                	chance = 0.002;
+	                il_main = #weapon/-unique(2)/31-41;
+	                il_main = #armor/-unique(2)/69-93;
+                    il_main = #*/-unique(2)/31-41;
+	            }
+				[gold*]
+				{
+					chance = 0.15;
+					max = 457;
+					min = 291;
+				}
+			}
+		}
+		[other]
+		{
+			  il_active_primary_spell   = c24_spell_explosive_powder_bandit;
+			  il_active_secondary_spell = c24_spell_battle_healing_bandit;
+		}
+	}
+	[defend] { defense=86; }
+	[mind]
+    {
+		actor_weapon_preference              = WP_MAGIC;
+
+		actor_auto_switches_to_magic         = true;
+		actor_auto_heals_others_life         = true;
+  		jat_brain						= world\ai\jobs\common\brain_hero.skrit
+			?actor_creates_own_party		= true
+			&actor_joins_existing_party		= true
+			&party_template					= "party_bandit_ranged";
+
+    	jat_fidget						= world\ai\jobs\common\job_fidget.skrit
+    		?social							= 0.35
+    		&still							= false;
+    }
+}
+
+[t:template,n:c24_5_bandit_boss]
+{
+	doc = "c24_bandit_boss";
+	specializes = base_bandit;
+	[actor]
+	{
+		[skills]
+		{
+			strength =   19, 0;
+			intelligence = 15, 0;
+			dexterity =   14, 0;
+			melee =  20,  0;
+		}
+	}
+
+	[common]
+	{
+		screen_name = "Bandit Leader";
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				single_shot = true;
+				no_trig_bits = true;
+				action* = call_sfx_script("unique_ray_red(sgx)");
+			}
+		}
+	}
+	[aspect]
+	{
+		life = 614;
+		max_life = 614;
+		mana = 600;
+		max_mana = 600;
+		experience_value = 537;
+		[textures]
+		{
+			0 = b_c_gah_fb_skin_35;
+			1 = b_c_pos_a3_034;
+		}
+	}
+	[inventory]
+	{
+        custom_head = m_c_gah_fb_hlmt_head-04;
+		[pcontent]
+		{
+			[all*]
+			{
+				es_feet = bo_bo_le_light;
+                es_weapon_hand = ax_g_c_1h2b_avg;
+			}
+			[all*]
+			{
+				[oneof*]
+				{
+					il_main = #*/39-53;
+					il_main = #armor/91-109;
+				}
+                [oneof*]
+				{
+	                il_main = #weapon/-rare(1)/44-59;
+	                il_main = #armor/-rare(1)/98-133;
+                    il_main = #*/-rare(1)/44-59;
+                }
+				[oneof*]
+				{
+	                il_main = #weapon/-unique(2)/44-59;
+	                il_main = #armor/-unique(2)/98-133;
+                    il_main = #*/-unique(2)/44-59;
+	            }
+				[gold*]
+				{
+					max = 1314;
+					min = 836;
+					piles = 2 - 3;
+				}
+			}
+		}
+	}
+	[attack]
+	{
+		attack_range = 0.5;
+		damage_max = 45;
+		damage_min = 41;
+	}
+	[defend] { defense=171; }
+}
+
+[t:template,n:c24_5_troll]
+{
+	category_name = "1W_evil_d";
+	doc = "c24_troll_bandit_pet";
+	specializes = troll_base;
+	[actor]
+	{
+		[skills]
+		{
+			strength =  13, 0;
+			intelligence =  4, 0;
+			dexterity =  11, 0;
+			melee =  12,  0;
+		}
+	}
+	[aspect]
+	{
+		experience_value = 166;
+		life = 188;
+		life_recovery_period = 4;
+		life_recovery_unit  = 1;
+		max_life = 188;
+		mana = 10;
+		max_mana = 10;
+		textures:0 = b_c_edm_tl-03;
+	}
+	[attack]
+	{
+		attack_range = 0.5;
+		damage_max = 13;
+		damage_min = 8;
+	}
+	[common] 
+	{ 
+		screen_name="Bandit Pet Troll";
+		membership = monster, party_bandit_ranged, bandit;
+	}
+	[defend] { defense=58; }
+   	[inventory]
+	{
+    	[pcontent]
+		{
+			[oneof*]
+			{
+            	es_weapon_hand = cb_un_2h_troll;
+			}
+			[oneof*]
+			{
+				[oneof*]
+				{
+				   chance = 0.1;
+				   il_main = potion_health_small;
+				   il_main = potion_mana_small;
+				}
+				[oneof*]
+				{
+					chance = 0.1;
+					il_main = #*/18-30;
+					il_main = #armor/18-60;
+				}
+                [oneof*]
+				{
+	            	chance = 0.004;
+	                il_main = #weapon/-rare(1)/24-33;
+	                il_main = #armor/-rare(1)/54-74;
+                    il_main = #*/-rare(1)/24-33;
+                }
+				[oneof*]
+				{
+                	chance = 0.002;
+	                il_main = #weapon/-unique(2)/24-33;
+	                il_main = #armor/-unique(2)/54-74;
+                    il_main = #*/-unique(2)/24-33;
+	            }
+            }
+		}
+	}
+	[mind]
+	{
+		jat_fidget							= world\ai\jobs\common\job_fidget.skrit
+			?curious							= 0.75
+			&interest							= interest
+			&meander							= false
+			&still								= false;
+		
+		jat_brain						= world\ai\jobs\common\brain_hero.skrit
+			?actor_joins_existing_party	= true;
+			
+		actor_life_ratio_low_threshold = .33;
+		on_life_ratio_low_flee = true;
+		flee_count = 1;
+		flee_distance = 20;
+		melee_engage_range = 14.0;
+		personal_space_range = 0.7;
+		ranged_engage_range = 14.0;
+		sight_range = 14.0;
+	}
+}
+
+
+[t:template,n:c24_5_darkling_base]
+{
+	category_name = "1W_evil_d";
+	doc = "c24_5_darkling_base";
+	specializes = base_darkling;
+	[actor]
+	{
+		[skills]
+		{
+			strength =  15, 0;
+			intelligence =  13, 0;
+			dexterity =  13, 0;
+			combat_magic =  14,  0;
+		}
+	}
+	[aspect]
+	{
+		experience_value = 262;
+		life = 287;
+		max_life = 287;
+		mana = 16;
+		max_mana = 16;
+	}
+	[attack]
+	{
+		damage_bonus_min_cmagic = 31;
+		damage_bonus_max_cmagic = 27;
+	}
+	[common] { screen_name="Darkling"; }
+	[defend] { defense=46; }
+	[inventory]
+	{
+    	selected_active_location = il_active_primary_spell;
+		[other] { il_active_primary_spell=spell_darkling_spark; }
+    	[pcontent]
+		{
+			[all*]
+			{
+   				chance = 0.05;
+                il_main = #nmagic/8-15;
+                il_main = #cmagic/8-15;
+			}
+			[oneof*]
+			{
+				chance = 0.15;
+				il_main = #*/26-39;
+				il_main = #armor/32-79;
+			}
+			[oneof*]
+			{
+				chance = 0.004;
+				il_main = #weapon/-rare(1)/32-43;
+				il_main = #armor/-rare(1)/72-97;
+				il_main = #*/-rare(1)/32-43;
+			}
+			[oneof*]
+			{
+				chance = 0.002;
+				il_main = #weapon/-unique(2)/32-43;
+				il_main = #armor/-unique(2)/72-97;
+				il_main = #*/-unique(2)/32-43;
+			}
+			[gold*]
+			{
+				chance = 0.15;
+				max = 384;
+				min = 245;
+			}
+		}
+	}
+	[mind]
+	{
+		jat_fidget = world\ai\jobs\common\job_fidget.skrit;
+	}
+}
+[t:template,n:c24_5_darkling]
+{
+	category_name = "1W_evil_d";
+	doc = "c24_5_darkling";
+	specializes = c24_5_darkling_base;
+}
+[t:template,n:c24_5_darkling_reveal]
+{
+	category_name = "1W_evil_d";
+	doc = "c24_5_darkling_reveal";
+	specializes = c24_5_darkling_base;
+	[mind]
+	{
+		jat_startup = world\ai\jobs\common\job_startup_reveal.skrit
+			?invisible = true;
+		sight_origin_height = 1;
+		actor_auto_fidgets = false;
+	}
+	[common]
+	{
+		[template_triggers]
+		{
+			[*]
+			{
+				single_shot = true;
+				action* = call_sfx_script("darkling_eye_glow");
+				action* = call_sfx_script("darkling_reveal");
+				condition* = receive_world_message("we_enemy_spotted");
+			}
+		}
+	}
+}
+
+[t:template,n:c24_5_scorpion]
+{
+	category_name = "1W_evil_d";
+	doc = "c24_5_scorpion";
+	specializes = scorpion_base;
+	[actor]
+	{
+		[skills]
+		{
+			strength =  17, 0;
+			intelligence =  8, 0;
+			dexterity =  11, 0;
+			melee =  14,  0;
+
+		}
+	}
+	[aspect]
+	{
+		experience_value = 197;
+		life = 221;
+		max_life = 221;
+		mana = 6;
+		max_mana = 6;
+	}
+	[attack]
+	{
+		attack_range = 0.5;
+		damage_max = 51;
+		damage_min = 42;
+	}
+	[common]
+	{
+		screen_name="Scorpion";
+		membership = party_scorpion_boss, monster;
+	}
+	[defend] { defense=46; }
+	[inventory]
+	{
+	}
+}
+
+[t:template,n:c24_5_scorpion_boss]
+{
+	category_name = "1W_evil_d";
+	doc = "c24_5_scorpion_boss";
+	specializes = scorpion_base;
+	[actor]
+	{
+		[skills]
+		{
+			strength 		=  20, 0;
+			intelligence	=  6, 0;
+			dexterity 		=  17, 0;
+			melee 			=  14,  0;
+
+		}
+	}
+	[aspect]
+	{
+		experience_value = 410;
+		life = 525;
+		max_life = 525;
+		mana = 6;
+		max_mana = 6;
+		textures:0 = b_c_edm_sc-02;
+	}
+	[attack]
+	{
+		attack_range = 0.5;
+		damage_max = 75;
+		damage_min = 65;
+	}
+	[common]
+	{
+		screen_name="Albino Scorpion";
+		membership=monster,immune_charm,immune_control,immune_freeze,immune_polymorph,immune_align_change,immune_explode;
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				single_shot = true;
+				no_trig_bits = true;
+				action* = call_sfx_script("unique_ray_red(sgx)");
+			}
+		}
+	}
+	[defend] { defense=107; }
+   	[inventory]
+	{
+    	[pcontent]
+		{
+			[all*]
+			{
+				[oneof*]
+				{
+					il_main = #weapon/33-47;
+                    il_main = #armor,f/52-96;
+				}
+                [oneof*]
+				{
+	                   chance = 0.5;
+	                   il_main = #weapon/-rare(1)/38-52;
+	                   il_main = #armor/-rare(1)/86-117;
+                       il_main = #*/-rare(1)/38-52;
+                }
+			}
+		}
+	}
+
+	[mind]
+	{
+		jat_attack_object_melee 			= world\ai\jobs\common\job_attack_object_melee.skrit
+			?run_chance 					= 1.0;
+
+		jat_brain							= world\ai\jobs\common\brain_hero.skrit
+			?actor_creates_own_party			= true
+			&party_template						= "party_scorpion_boss";
+
+		jat_fidget = world\ai\jobs\common\job_fidget.skrit
+			?social				= 0.8
+			&social_limit		= 2
+			&social_limit_dist	= 2.5
+			&approach_dist		= 2.5
+			&friend_template	= false
+			&friends			= "party_scorpion_boss"
+			&still				= false;
+
+		melee_engage_range = 14.0;
+		personal_space_range = 0.7;
+		ranged_engage_range = 14.0;
+		sight_range = 14.0;
+	}
+	[physics]
+	{
+		explode_when_killed = true;
+		break_effect = blood_mist;
+		break_sound = s_e_meat_explosion;
+		[break_particulate]
+		{
+			frag_glb_scorpion_01 = 1;
+			frag_glb_scorpion_02 = 2;
+			frag_glb_scorpion_03 = 1;
+			frag_glb_scorpion_04 = 4;
+			frag_glb_scorpion_05 = 4;
+		}
+	}
+}
+[t:template,n:c24_5_mine_worm]
+{
+	category_name = "1W_evil_d";
+	doc = "c24_5_mine_worm";
+	specializes = actor_evil;
+	[actor]
+	{
+		[skills]
+		{
+			strength =  17, 0;
+			intelligence =  7, 0;
+			dexterity =  10, 0;
+			combat_magic =  16,  0;
+		}
+	}
+	[aspect]
+	{
+		draw_shadow = false;
+		experience_value = 264;
+		life = 480;
+		max_life = 480;
+		max_mana = 10;
+		mana = 10;
+		model = m_c_edm_mw_pos_1;
+		[voice]
+		{
+			[cast]			{ * = s_e_attack_mine_worm;		}
+			[die]			{ priority = high; * = s_e_die_worm;				}
+			[enemy_spotted]	{ priority = high; * = s_e_call_worm_SED;		}
+			[hit_glance]	{ priority = low; * = s_e_hit_worm_SED;			}
+		}
+	}
+	[attack]
+	{
+		attack_range = 4;
+		damage_max = 59;
+		damage_min = 46;
+		damage_bonus_min_cmagic = 21;
+		damage_bonus_max_cmagic = 25;
+	}
+	[body]
+	{
+		avg_move_velocity = 0;
+		[bone_translator]
+		{
+			body_anterior = bone04;
+			body_mid = bone03;
+			body_posterior = bone02;
+			kill_bone = bone03;
+			shield_bone = bone03;
+			weapon_bone = AP_flame;
+		}
+		[chore_dictionary]
+		{
+			initial_chore = chore_none;
+			chore_prefix = a_c_edm_mw_fs;
+			[chore_attack]
+			{
+				chore_stances = 0;
+				skrit = select_attack;
+				[anim_files]
+				{
+					00=at;
+					01=at-02;
+				}
+			}
+			[chore_default]
+			{
+				chore_stances = 0;
+				skrit = infinite_loop;
+				[anim_files] { 00=ds; }
+			}
+			[chore_misc]
+			{
+				chore_stances = 0;
+				skrit = select_transition;
+				[anim_files]
+				{
+					slep = ds;
+					wake = rv;
+				}
+			}
+			[chore_die]
+			{
+				chore_stances = 0;
+				skrit = select_transition;
+				[anim_files] { 00=di; }
+			}
+			[chore_fidget]
+			{
+				chore_stances = 0;
+				skrit = select_fidget;
+				[anim_files] { 00=dff; }
+			}
+			[chore_magic]
+			{
+				chore_stances = 0;
+				skrit = select_attack;
+				[anim_files] { 00=mg; }
+			}
+			[chore_walk]
+			{
+				chore_stances = 0;
+				skrit = select_walk;
+				[anim_files] { 00=dsf; }
+			}
+		}
+	}
+	[inventory]
+	{
+		selected_active_location = il_active_primary_spell;
+		[other] { il_active_primary_spell=spell_mine_worm_spikes; }
+	}
+	[common]
+	{
+		screen_name="Mine Worm";
+		membership=monster,immune_freeze;
+		[template_triggers]
+		{
+			[*]
+			{
+				action* = call_sfx_script("mine_worm_dust");
+				condition* = receive_world_message("we_anim_sfx",1);
+			}
+
+			[*]
+			{
+				action* = call_sfx_script("mine_worm_die_dust");
+				condition* = receive_world_message("we_anim_die");
+			}
+		}
+
+	}
+	[generator_in_object]
+	{
+		child_template_name = hole_cav_01;
+		spawn_event = WE_ENEMY_SPOTTED;
+		spawn_chance = 1.0;
+		spawn_delay = 0.5;
+		fade_kid = true;
+	}
+    [defend] { defense=96; }
+	[mind]
+	{
+		jat_die 								= world\ai\jobs\actors\evil\job_die_delete.skrit;
+		jat_startup 							= world\ai\jobs\common\job_startup_reveal.skrit
+			?invisible 							= true;
+
+		jat_flee_from_object					= jat_none;
+		jat_guard         						= jat_none;
+		jat_move          						= jat_none;
+		jat_patrol         						= jat_none;
+
+		on_enemy_entered_icz_switch_to_melee	= true;
+
+		actor_weapon_preference					= WP_MAGIC;
+		actor_auto_switches_to_magic			= true;
+		actor_auto_switches_to_karate			= true;
+		actor_auto_switches_to_melee			= true;
+
+		actor_auto_fidgets 						= false;
+		movement_orders 						= mo_hold;
+		inner_comfort_zone_range 				= 4.4;
+		melee_engage_range 						= 4.5;
+		personal_space_range 					= 2.0;
+		on_enemy_entered_ocz_attack 			= true;
+		ranged_engage_range 					= 10.0;
+		sight_range 							= 14.0;
+		sight_origin_height						= 2;
+	}
+}
+
+[t:template,n:c24_5_rock_beast]
+{
+	category_name = "1W_evil_d";
+	doc = "c24_5_rock_beast";
+	specializes = base_rock_beast;
+	[actor]
+	{
+		[skills]
+		{
+			strength =  22, 0;
+			intelligence =  8, 0;
+			dexterity =  17, 0;
+            melee =  	14,  0;
+			combat_magic = 14, 0;
+		}
+	}
+	[aspect]
+	{
+		experience_value = 473;
+		life = 660;
+		material = stone;
+		max_life = 660;
+		mana = 10;
+		max_mana = 10;
+	}
+	[attack]
+	{
+		attack_range = 0.5;
+		damage_max = 92;
+		damage_min = 82;
+		damage_bonus_min_cmagic = 9;
+		damage_bonus_max_cmagic = 18;
+	}
+	[common] { screen_name="Rock Beast"; }
+	[defend] { defense=130; }
+	[inventory]
+	{
+		selected_active_location = il_active_primary_spell;
+		[other] { il_active_primary_spell=spell_rock_beast_blast; }
+
+    	[pcontent]
+		{
+			[oneof*]
+			{
+				il_main = #*/41-55;
+				il_main = #armor/65-114;
+			}
+			[oneof*]
+			{
+				chance = 0.004;
+				il_main = #weapon/-rare(1)/46-62;
+				il_main = #armor/-rare(1)/102-138;
+				il_main = #*/-rare(1)/46-62;
+			}
+			[oneof*]
+			{
+				chance = 0.002;
+				il_main = #weapon/-unique(2)/46-62;
+				il_main = #armor/-unique(2)/102-138;
+				il_main = #*/-unique(2)/46-62;
+			}
+		}
+	}
+}
+
+
+[t:template,n:c24_5_automaton_melee_1_base]
+{
+	category_name = "1W_evil_d";
+	doc = "c24_5_automaton_melee_1_base";
+	specializes = dsx_automaton_base;
+	[actor]
+	{
+		[skills]
+		{
+			strength 		= 15, 0;
+			intelligence 	= 9, 0;
+			dexterity 		= 10, 0;
+			melee 			= 14, 0;
+		}
+	}
+	[aspect]
+	{
+		experience_value = 364;
+		life		 	= 467;
+		max_life	 	= 467;
+		mana		 	= 22;
+		max_mana	 	= 22;
+		model = m_c_edm_au;
+		[textures]	{ 0 = b_c_edm_au-01; }
+		[voice]
+		{
+			[attack]	{ priority = high; * = s_e_attack_automaton_SED;	 }
+			[die]	{ priority = high; * = s_e_die_automaton_SED;	 }
+			[enemy_spotted]	{ priority = high; * = s_e_call_automaton_old_SED; }
+		}
+	}
+	[attack]
+	{
+			attack_range = 0.5;
+			damage_max = 62;
+			damage_min = 55; 
+	}
+	[common]
+	{
+		screen_name = "Weathered Automaton";
+	}
+	[defend] { defense = 96; }
+	[inventory]
+	{
+    	[pcontent]
+		{
+			[oneof*]
+			{
+				chance = 0.2;
+				il_main = #*/35-49;
+				il_main = #armor/48-101;
+			}
+			[oneof*]
+			{
+				chance = 0.004;
+				il_main = #weapon/-rare(1)/40-55;
+				il_main = #armor/-rare(1)/90-122;
+				il_main = #*/-rare(1)/40-55;
+			}
+			[oneof*]
+			{
+				chance = 0.002;
+				il_main = #weapon/-unique(2)/40-55;
+				il_main = #armor/-unique(2)/90-122;
+				il_main = #*/-unique(2)/40-55;
+			}
+			[gold*]
+			{
+				chance = 0.15;
+				max = 779;
+				min = 497;
+			}
+		}
+	}
+
+}
+[t:template,n:c24_5_automaton_melee_1_reveal]
+{
+  doc = "c24_5_automaton_melee_1_reveal";
+  specializes = c24_5_automaton_melee_1_base;
+  
+  	[mind]
+	{
+		jat_fidget				= world\ai\jobs\common\job_fidget.skrit
+		?still					= true;
+	}
+}
+[t:template,n:c24_5_automaton_melee_1_active]
+{
+  doc = "c24_5_automaton_melee_1_active";
+  specializes = c24_5_automaton_melee_1_base;
+	[mind]
+	{
+		jat_startup				= jat_none;
+	}
+}
+
+
+[t:template,n:c24_5_automaton_ranged_1_base]
+{
+	category_name = "1W_evil_d";
+	doc = "c24_5_automaton_ranged_1_base";
+	specializes = dsx_automaton_base;
+	[actor]
+	{
+		[skills]
+		{
+			strength 	 = 16, 0;
+			intelligence = 10, 0;
+			dexterity 	 = 12, 0;
+			ranged 		 = 16, 0;
+			nature_magic = 16,0;
+			combat_magic = 16,0;
+		}
+	}
+	[aspect]
+	{
+		model = m_c_edm_au2;
+		[textures]	{ 0 = b_c_edm_au-02; }
+		experience_value = 351;
+		life			 = 386;
+		max_life		 = 386;
+		mana			 = 98;
+		max_mana		 = 98;
+		material = steel;
+		[voice]
+		{
+			[die]			{ priority = high; * = s_e_die_automaton_SED;	 }
+			[enemy_spotted]	{ priority = high; * = s_e_call_automaton_old_SED; }
+		}
+	}
+	[attack]
+	{
+		attack_range = 0.5;
+		damage_max = 35; 
+		damage_min = 28; 
+		damage_bonus_min_cmagic = 20;
+		damage_bonus_max_cmagic = 21;
+	}
+	[body]
+	{
+		[chore_dictionary]
+		{
+			chore_prefix = a_c_edm_au2_fs;
+			[chore_magic]
+			{
+				chore_stances = 0;
+				skrit = select_attack;
+				[anim_files]
+				{
+					00 = mg;
+					01 = mg-01;
+				}
+			}
+			[chore_default]
+			{
+				chore_stances = 0;
+				skrit = infinite_loop;
+				[anim_files] { 00=ds; }
+			}
+			[chore_die]
+			{
+				chore_stances = 0;
+				skrit = select_transition;
+				[anim_files] { 00=di; }
+			}
+			[chore_fidget]
+			{
+				chore_stances = 0;
+				skrit = select_fidget;
+				[anim_files]
+					{ 
+						00=dsf;
+						01=dsf-01;
+					}
+			}
+			[chore_walk]
+			{
+				chore_stances = 0;
+				skrit = select_walk;
+				[anim_files] { 00=wl; }
+			}
+			[chore_misc]
+			{
+				chore_stances = 0;
+				skrit = select_transition;
+				[anim_files] 
+				{
+					slep=ds-01;
+					wake=rv;
+				}
+			}
+		}
+	}
+	
+	[common]
+	{
+		screen_name = "Rusted Automaton";
+	}
+	[generator_in_object]
+	{
+		child_template_name = dsx_automaton_skeleton2;
+		spawn_event = WE_EXPLODED;
+		spawn_chance = 1.0;
+	}
+	[defend] { defense = 96; }
+	[inventory]
+	{
+		selected_active_location = il_active_primary_spell;
+		[other] 
+		{ 
+			il_active_primary_spell   = dsx_spell_rusted_automoton_minigun; 
+		}
+    	[pcontent]
+		{
+			[oneof*]
+			{
+				chance = 0.2;
+				il_main = #*/35-49;
+				il_main = #armor/48-101;
+			}
+			[oneof*]
+			{
+				chance = 0.004;
+				il_main = #weapon/-rare(1)/40-55;
+				il_main = #armor/-rare(1)/90-122;
+				il_main = #*/-rare(1)/40-55;
+			}
+			[oneof*]
+			{
+				chance = 0.002;
+				il_main = #weapon/-unique(2)/40-55;
+				il_main = #armor/-unique(2)/90-122;
+				il_main = #*/-unique(2)/40-55;
+			}
+			[gold*]
+			{
+				chance = 0.15;
+				max = 779;
+				min = 497;
+			}
+		}
+	}
+	[mind]
+	{
+		actor_weapon_preference			= WP_MAGIC;
+		actor_auto_switches_to_magic	= true;
+		actor_auto_switches_to_karate	= false;
+		actor_auto_switches_to_melee	= false;
+	
+		on_enemy_entered_ocz_flee 		= true;
+		on_enemy_entered_ocz_attack 	= false;
+		on_enemy_entered_icz_flee 		= true;
+		on_enemy_entered_icz_attack 	= false;
+		flee_count 						= 1;
+	}
+	[physics]
+	{
+		explode_when_killed = true;
+		explosion_magnitude = 4.25;
+		gib_gore_good = true;
+		break_effect=generic_explosion;
+
+		[break_particulate]
+		{
+			frag_glb_Rautomaton_r-01 = 2;
+			frag_glb_Rautomaton_r-02 = 2;
+			frag_glb_Rautomaton_r-03 = 2;
+			frag_glb_Rautomaton_r-04 = 1;
+			frag_glb_Rautomaton_r-05 = 1;
+		}
+	}
+ 
+}
+
+[t:template,n:c24_5_automaton_ranged_1_reveal]
+{
+  doc = "c24_5_automaton_ranged_1_reveal";
+  specializes = c24_5_automaton_ranged_1_base;
+  
+  	[mind]
+	{
+		jat_fidget				= world\ai\jobs\common\job_fidget.skrit
+		?still					= true;
+	}
+}
+[t:template,n:c24_5_automaton_ranged_1_active]
+{
+  doc = "c24_5_automaton_ranged_1_active";
+  specializes = c24_5_automaton_ranged_1_base;
+	[mind]
+	{
+		jat_startup				= jat_none;
+	}
+}
+
+
+[t:template,n:c24_5_scorpiot_melee_1_base]
+{
+  doc = "c24_5_scorpiot_melee_1_base";
+  specializes = dsx_scorpiot_base;
+  [actor]
+    {
+      [skills]
+		{
+		  strength =     16, 0;
+		  intelligence = 5, 0;
+		  dexterity =    7, 0;
+		  melee =        14, 0;
+		}
+    }
+  [aspect]
+    {
+      experience_value = 279;
+      life             = 341;
+      max_life         = 341;
+      mana             = 33;
+      max_mana         = 33;
+
+      model = m_c_edm_scorpiot;
+    textures:0 = b_c_edm_scorpiot-02;
+
+    }
+  [attack]
+    {
+      attack_range = 0.5;
+      damage_max = 59; 
+      damage_min = 50; 
+    }
+  [common]
+    {
+      screen_name = "Weathered Scorpiot"; //--
+    }
+  [defend] { defense = 104; }
+	[inventory]
+	{
+    	[pcontent]
+		{
+			[oneof*]
+			{
+				chance = 0.2;
+				il_main = #*/30-43;
+				il_main = #armor/36-88;
+			}
+			[oneof*]
+			{
+				chance = 0.004;
+				il_main = #weapon/-rare(1)/35-48;
+				il_main = #armor/-rare(1)/79-107;
+				il_main = #*/-rare(1)/35-48;
+			}
+			[oneof*]
+			{
+				chance = 0.002;
+				il_main = #weapon/-unique(2)/35-48;
+				il_main = #armor/-unique(2)/79-107;
+				il_main = #*/-unique(2)/35-48;
+			}
+			[gold*]
+			{
+				chance = 0.15;
+				max = 467;
+				min = 298;
+			}
+		}
+	}
+
+  [generator_in_object]
+  {
+		child_template_name = dsx_scorpiot_skeleton_rusted;
+		spawn_event = WE_EXPLODED;
+		spawn_chance = 1.0;
+  }
+  [physics]
+    {
+		explode_when_killed = true;
+		explosion_magnitude = 4.25;
+		gib_gore_good = true;
+		break_effect=generic_explosion;
+
+		[break_particulate]
+		{
+			frag_glb_rusted_scorpiot_head = 1;
+			frag_glb_rusted_scorpiot_back = 1;
+			frag_glb_rusted_scorpiot_shoulder = 2;
+			frag_glb_rusted_scorpiot_leg = 4;
+			frag_glb_rusted_scorpiot_rarm = 1;
+			frag_glb_rusted_scorpiot_larm = 1;
+			frag_glb_rusted_scorpiot_piston = 2;
+			frag_glb_rusted_scorpiot_blade = 1;
+		}
+    }
+
+}
+[t:template,n:c24_5_scorpiot_melee_1_reveal]
+{
+  doc = "c24_5_scorpiot_melee_1_reveal";
+  specializes = c24_5_scorpiot_melee_1_base;
+  
+  	[mind]
+	{
+		jat_fidget				= world\ai\jobs\common\job_fidget.skrit
+		?still					= true;
+	}
+}
+[t:template,n:c24_5_scorpiot_melee_1_active]
+{
+  doc = "c24_5_scorpiot_melee_1_active";
+  specializes = c24_5_scorpiot_melee_1_base;
+	[mind]
+	{
+		jat_startup				= jat_none;
+	}
+}
+
+[t:template,n:c24_5_scorpiot_ranged_1_base]
+{
+	category_name = "1W_evil_d";
+	doc = "c24_5_scorpiot_ranged_1_base";
+	specializes = dsx_scorpiot_base;
+	[actor]
+	{
+		[skills]
+		{
+		  strength 		= 15, 0; 
+		  intelligence  =  8, 0;
+		  dexterity 	=  11, 0;
+		  ranged 		=  16, 0;
+		  combat_magic	=  16, 0;
+		  nature_magic	=  16, 0;
+		}
+	}
+	[aspect]
+	{
+		experience_value = 267;
+		life             = 287;
+		max_life         = 287;
+		mana             = 33;
+		max_mana         = 33;
+
+		model = m_c_edm_scorpigun;
+		textures:0 = b_c_edm_scorpiot-02;
+		scale_base = 0.8;
+	}
+	[attack]
+	{
+		attack_range = 0.5;
+		damage_max = 45;
+		damage_min = 30;
+		damage_bonus_min_cmagic = 13;
+		damage_bonus_max_cmagic = 18;
+	}
+	[body]
+	{
+		avg_move_velocity = 1.5;
+      [bone_translator]
+	{
+	  body_anterior = BoneHead;
+	  body_mid = BoneBody;
+	  body_posterior = BoneBody;
+	  kill_bone = BoneBody;
+	}
+		[chore_dictionary]
+		{
+			chore_prefix = a_c_edm_scorpigun_fs;
+			[chore_attack]
+			{
+				chore_stances = 0;
+				skrit = select_attack;
+				[anim_files] { 00=mg-01; }
+			}
+			[chore_magic]
+			{
+				chore_stances = 0;
+				skrit = select_attack;
+				[anim_files] {
+
+//					These Guys aren't going to have a laser
+//					01 = mg-01; // tail beam
+					00 = mg-02; // left cannon
+					01 = mg-03; // right cannon
+				}
+			}
+			[chore_default]
+			{
+				chore_stances = 0;
+				skrit = infinite_loop;
+				[anim_files] { 00=ds; }
+			}
+			[chore_die]
+			{
+				chore_stances = 0;
+				skrit = select_transition;
+				[anim_files] { 00=di-01; }
+			}
+			[chore_fidget]
+			{
+				chore_stances = 0;
+				skrit = select_fidget;
+				[anim_files] { 00=dff; }
+			}
+			[chore_walk]
+			{
+				chore_stances = 0;
+				skrit = select_walk;
+				[anim_files] { 00=wl; }
+			}
+		}
+	}
+
+	[inventory]
+	{
+		selected_active_location = il_active_primary_spell;
+		[other]
+		{
+			il_active_primary_spell=dsx_spell_rusted_scorpigun_lcannon;
+			il_spell_2 = dsx_spell_rusted_scorpigun_rcannon;
+		}
+    	[pcontent]
+		{
+			[oneof*]
+			{
+				chance = 0.2;
+				il_main = #*/35-49;
+				il_main = #armor/48-101;
+			}
+			[oneof*]
+			{
+				chance = 0.004;
+				il_main = #weapon/-rare(1)/40-55;
+				il_main = #armor/-rare(1)/90-122;
+				il_main = #*/-rare(1)/40-55;
+			}
+			[oneof*]
+			{
+				chance = 0.002;
+				il_main = #weapon/-unique(2)/40-55;
+				il_main = #armor/-unique(2)/90-122;
+				il_main = #*/-unique(2)/40-55;
+			}
+			[gold*]
+			{
+				chance = 0.15;
+				max = 779;
+				min = 497;
+			}
+		}
+	}
+
+	[common]
+	{
+	  screen_name = "Rusted Scorpiot"; //--
+	}
+
+	[generator_in_object]
+    	{
+		child_template_name = dsx_scorpiot_skeleton_rusted;
+		spawn_event = WE_EXPLODED;
+		spawn_chance = 1.0;
+	}
+
+	[physics]
+    	{
+		explode_when_killed = true;
+		explosion_magnitude = 4.25;
+		gib_gore_good = true;
+		break_effect=generic_explosion;
+
+		[break_particulate]
+		{
+			frag_glb_rusted_scorpiot_head = 1;
+			frag_glb_rusted_scorpiot_back = 1;
+			frag_glb_rusted_scorpiot_shoulder = 2;
+			frag_glb_rusted_scorpiot_leg = 4;
+			frag_glb_rusted_scorpiot_piston = 2;
+		}
+	}
+
+ 
+	[defend] { defense = 104; }
+
+
+	[mind]
+	{
+		jat_fidget				= world\ai\jobs\common\job_fidget.skrit
+		?curious				= 0.75
+		&wander					= 0.8
+		&social					= 0.2
+		&interest				= interest
+		&delay_min				= 1
+		&delay_max				= 6
+		&still					= false;
+		on_enemy_spotted_alert_friends 		= true;
+		jat_brain				= world\ai\jobs\common\brain_hero.skrit
+		?actor_joins_existing_party		= true
+		&actor_creates_own_party		= true
+		&party_template				= "party_dsx_automaton";
+		com_channels				= dyn_party, automaton;
+		com_range				= 14.0;
+		melee_engage_range			= 14.0;
+		ranged_engage_range	 		= 14.0;
+		personal_space_range 			= 1.0;
+		sight_range				= 14.0;
+		actor_life_ratio_low_threshold 		= 0.5;
+		jat_die					= world\ai\jobs\actors\evil\job_die_explode.skrit;
+		jat_startup				= world\ai\jobs\common\job_startup_reveal.skrit
+		?try_face				= false;
+		jat_cast 				= world\ai\jobs\common\job_cast.skrit
+		?rand_spell 				= true;
+		actor_weapon_preference			= WP_MAGIC;
+		actor_auto_switches_to_magic	= true;
+		actor_auto_switches_to_karate	= false;
+		actor_auto_switches_to_melee	= false;
+		on_enemy_entered_ocz_flee 	= true;
+		on_enemy_entered_ocz_attack = false;
+		on_enemy_entered_icz_flee 	= true;
+		on_enemy_entered_icz_attack = false;
+		flee_count 					= 1;
+	}
+}
+
+[t:template,n:c24_5_scorpiot_ranged_1_reveal]
+{
+  doc = "c24_5_scorpiot_ranged_1_reveal";
+  specializes = c24_5_scorpiot_ranged_1_base;
+  
+  	[mind]
+	{
+		jat_fidget				= world\ai\jobs\common\job_fidget.skrit
+		?still					= true;
+	}
+}
+[t:template,n:c24_5_scorpiot_ranged_1_active]
+{
+  doc = "c24_5_scorpiot_ranged_1_active";
+  specializes = c24_5_scorpiot_ranged_1_base;
+	[mind]
+	{
+		jat_startup				= jat_none;
+	}
+}
+
+/////////////////////////////////////////////////////
+////////////////	5_4 Warrerns Mobs  ////////////////
+/////////////////////////////////////////////////////
+
+[t:template,n:c24_5_gobbot_base]
+{
+	category_name = "1W_evil_d";
+	doc = "c24_5_gobbot_base";
+	specializes = base_gobbot;
+	[actor]
+	{
+		[skills]
+		{
+			strength 		=  10,0;
+			intelligence 	=  7, 0;
+			dexterity 		=  9, 0;
+            ranged			=  15,0;
+		}
+	}
+	[aspect]
+	{
+		experience_value = 326;
+		life = 370;
+        max_life = 370;
+        mana = 14;
+        max_mana = 14;
+	}
+	[defend] { defense=90; }
+}
+
+[t:template,n:c24_5_gobbot_flame]
+{
+	category_name = "1W_evil_d";
+	doc = "c24_5_gobbot_flame";
+	specializes = c24_5_gobbot_base;
+	[common]
+	{
+		screen_name="Gobbot Igniter";
+	}
+	[inventory]
+	{
+		selected_active_location = IL_ACTIVE_RANGED_WEAPON;
+
+		[pcontent]
+		{
+			[oneof*]
+			{
+				ES_WEAPON_HAND = clb24_lesser_flamethrower;
+			}
+			[oneof*]
+			{
+				[oneof*]
+				{
+				   chance = 0.05;
+				   il_main = potion_health_medium;
+				   il_main = potion_mana_medium;
+				   il_main = potion_health_small;
+				   il_main = potion_mana_small;
+				}
+				[oneof*]
+				{
+       				chance = 0.02;
+               		il_main = #nmagic/5-13;
+               		il_main = #cmagic/5-13;
+				}
+				[oneof*]
+				{
+					chance = 0.2;
+					il_main = #*/31-45;
+					il_main = #armor/38-92;
+				}
+				[oneof*]
+				{
+	            	chance = 0.004;
+	                il_main = #weapon/-rare(1)/37-50;
+	                il_main = #armor/-rare(1)/83-112;
+                    il_main = #*/-rare(1)/37-50;
+                }
+				[oneof*]
+				{
+                	chance = 0.002;
+	                il_main = #weapon/-unique(2)/37-50;
+	                il_main = #armor/-unique(2)/83-112;
+                    il_main = #*/-unique(2)/37-50;
+	            }
+				[gold*]
+				{
+					chance = 0.15;
+					max = 556;
+					min = 356;
+				}
+			}
+		}
+	}
+}
+
+[t:template,n:c24_5_gobbot_granade]
+{
+	category_name = "1W_evil_d";
+	doc = "c24_5_gobbot_granade";
+	specializes = c24_5_gobbot_base;
+	[common]
+	{
+		screen_name="Gobbot Granadier";
+	}
+	[inventory]
+	{
+		selected_active_location = IL_ACTIVE_RANGED_WEAPON;
+
+		[pcontent]
+		{
+			[oneof*]
+			{
+				ES_WEAPON_HAND = clb24_lesser_grenade_launcher;
+			}
+			[oneof*]
+			{
+				[oneof*]
+				{
+				   chance = 0.05;
+				   il_main = potion_health_medium;
+				   il_main = potion_mana_medium;
+				   il_main = potion_health_small;
+				   il_main = potion_mana_small;
+				}
+				[oneof*]
+				{
+       				chance = 0.02;
+               		il_main = #nmagic/5-13;
+               		il_main = #cmagic/5-13;
+				}
+				[oneof*]
+				{
+					chance = 0.2;
+					il_main = #*/31-45;
+					il_main = #armor/38-92;
+				}
+				[oneof*]
+				{
+	            	chance = 0.004;
+	                il_main = #weapon/-rare(1)/37-50;
+	                il_main = #armor/-rare(1)/83-112;
+                    il_main = #*/-rare(1)/37-50;
+                }
+				[oneof*]
+				{
+                	chance = 0.002;
+	                il_main = #weapon/-unique(2)/37-50;
+	                il_main = #armor/-unique(2)/83-112;
+                    il_main = #*/-unique(2)/37-50;
+	            }
+				[gold*]
+				{
+					chance = 0.15;
+					max = 556;
+					min = 356;
+				}
+			}
+		}
+	}
+}
+
+[t:template,n:c24_5_gobbot_electric]
+{
+	category_name = "1W_evil_d";
+	doc = "c24_5_gobbot_electric";
+	specializes = c24_5_gobbot_base;
+	[common]
+	{
+		screen_name="Gobbot Shocker";
+	}
+	[inventory]
+	{
+		selected_active_location = IL_ACTIVE_RANGED_WEAPON;
+
+		[pcontent]
+		{
+			[oneof*]
+			{
+				ES_WEAPON_HAND = clb24_lesser_lightning;
+			}
+			[oneof*]
+			{
+				[oneof*]
+				{
+				   chance = 0.05;
+				   il_main = potion_health_medium;
+				   il_main = potion_mana_medium;
+				   il_main = potion_health_small;
+				   il_main = potion_mana_small;
+				}
+				[oneof*]
+				{
+       				chance = 0.02;
+               		il_main = #nmagic/5-13;
+               		il_main = #cmagic/5-13;
+				}
+				[oneof*]
+				{
+					chance = 0.2;
+					il_main = #*/31-45;
+					il_main = #armor/38-92;
+				}
+				[oneof*]
+				{
+	            	chance = 0.004;
+	                il_main = #weapon/-rare(1)/37-50;
+	                il_main = #armor/-rare(1)/83-112;
+                    il_main = #*/-rare(1)/37-50;
+                }
+				[oneof*]
+				{
+                	chance = 0.002;
+	                il_main = #weapon/-unique(2)/37-50;
+	                il_main = #armor/-unique(2)/83-112;
+                    il_main = #*/-unique(2)/37-50;
+	            }
+				[gold*]
+				{
+					chance = 0.15;
+					max = 556;
+					min = 356;
+				}
+			}
+		}
+	}
+}
+
+[t:template,n:c24_5_gobbot_minigun]
+{
+	category_name = "1W_evil_d";
+	doc = "c24_5_gobbot_minigun";
+	specializes = c24_5_gobbot_base;
+	[common]
+	{
+		screen_name="Gobbot Shredder";
+	}
+	[inventory]
+	{
+		selected_active_location = IL_ACTIVE_RANGED_WEAPON;
+
+		[pcontent]
+		{
+			[oneof*]
+			{
+				ES_WEAPON_HAND = clb24_lesser_dragon;
+			}
+			[oneof*]
+			{
+				[oneof*]
+				{
+				   chance = 0.05;
+				   il_main = potion_health_medium;
+				   il_main = potion_mana_medium;
+				   il_main = potion_health_small;
+				   il_main = potion_mana_small;
+				}
+				[oneof*]
+				{
+       				chance = 0.02;
+               		il_main = #nmagic/5-13;
+               		il_main = #cmagic/5-13;
+				}
+				[oneof*]
+				{
+					chance = 0.2;
+					il_main = #*/31-45;
+					il_main = #armor/38-92;
+				}
+				[oneof*]
+				{
+	            	chance = 0.004;
+	                il_main = #weapon/-rare(1)/37-50;
+	                il_main = #armor/-rare(1)/83-112;
+                    il_main = #*/-rare(1)/37-50;
+                }
+				[oneof*]
+				{
+                	chance = 0.002;
+	                il_main = #weapon/-unique(2)/37-50;
+	                il_main = #armor/-unique(2)/83-112;
+                    il_main = #*/-unique(2)/37-50;
+	            }
+				[gold*]
+				{
+					chance = 0.15;
+					max = 556;
+					min = 356;
+				}
+			}
+		}
+	}
+}
+
+
+[t:template,n:c24_5_hunter]
+{
+	category_name = "1W_evil_d";
+	doc = "c24_5_hunter";
+	specializes = base_picker;
+	[actor]
+	{
+		[skills]
+		{
+			strength =  10, 0;
+			intelligence =  9, 0;
+			dexterity =  11, 0;
+            melee       = 15, 0;
+		}
+	}
+	[aspect]
+	{
+		experience_value = 221;
+		life = 223;
+		max_life = 223;
+		mana = 10;
+		max_mana = 10;
+		textures:0 = b_c_edm_pr-03;
+		material = steel;
+		[voice]
+		{
+			[die]			{ priority = high; * = s_e_die_copter; }
+			[enemy_spotted]	{ priority = high; * = s_e_call_mechanoid_small_SED;	}
+		}
+	}
+	[attack]
+	{
+		attack_range = 0.5;
+		damage_max = 49;
+		damage_min = 40;
+		reload_delay = 0;
+	}
+	[common] { screen_name="Hunter"; }
+	[defend] { defense=53; }
+	[mind]
+	{
+		jat_fidget	= world\ai\jobs\common\job_fidget.skrit
+			?curious	= 0.65
+			&interest	= interest
+			&meander	= false
+			&still		= false;
+	}
+	[physics]
+	{
+		explode_when_killed = true;
+		gib_gore_good = true;
+		[break_particulate]
+		{
+			frag_glb_hunter_01 = 1;
+			frag_glb_hunter_02 = 1;
+			frag_glb_hunter_03 = 3;
+			frag_glb_hunter_04 = 2;
+			frag_glb_hunter_05 = 3;
+			frag_glb_metal_01 = 3;
+			frag_glb_metal_03 = 1;
+			frag_glb_metal_05 = 3;
+			frag_glb_metal_06 = 4;
+		}
+	}
+}
+
+[t:template,n:c24_5_robot_heater]
+{
+	category_name = "1W_evil_d";
+	doc = "c24_5_robot_heater";
+	specializes = actor_evil;
+	[actor]
+	{
+		[skills]
+		{
+			strength =  		10, 0;
+			intelligence =  	7, 0;
+			dexterity =  		8, 0;
+			combat_magic =  	15,  0;
+		}
+	}
+	[aspect]
+	{
+		experience_value = 480;
+		life = 459;
+		max_life = 459;
+		mana = 10;
+		max_mana = 10;
+		model = m_c_edm_ht_pos_1;
+		material = steel;
+		[voice]
+		{
+			[die]			{ priority = high; * = s_e_die_proxo; }
+			[enemy_spotted]	{ priority = high; * = s_e_call_mechanoid_big_SED; }
+		}
+	}
+	[attack]
+	{
+		area_damage_radius = 1.5;
+		damage_max = 144;
+		damage_min = 140;
+	}
+	[tsd_manager] {}
+	[body]
+	{
+		avg_move_velocity = 2.000000;
+		[bone_translator]
+		{
+			body_anterior = bone01;
+			body_mid = bone01;
+			body_posterior = bone01;
+			kill_bone = bone01;
+			shield_bone = bone01;
+			weapon_bone = bone01;
+		}
+		[chore_dictionary]
+		{
+			chore_prefix = a_c_edm_ht_fs;
+			[chore_attack]
+			{
+				chore_stances = 0;
+				skrit = select_attack;
+				[anim_files] { 00=at; }
+			}
+			[chore_default]
+			{
+				chore_stances = 0;
+				skrit = infinite_loop;
+				[anim_files] { 00=ds; }
+			}
+			[chore_die]
+			{
+				chore_stances = 0;
+				skrit = select_transition;
+				[anim_files] { 00=ds; }
+			}
+			[chore_fidget]
+			{
+				chore_stances = 0;
+				skrit = select_fidget;
+				[anim_files] { 00=dsf; }
+			}
+			[chore_magic]
+			{
+				chore_stances = 0;
+				skrit = select_attack;
+				[anim_files] { 00=at; }
+			}
+			[chore_walk]
+			{
+				chore_stances = 0;
+				skrit = select_walk;
+				[anim_files] { 00=wl; }
+			}
+		}
+	}
+	[inventory]
+	{
+		selected_active_location = il_active_primary_spell;
+		[other] { il_active_primary_spell=c24_spell_heater_fire_lesser; }
+		[pcontent]
+		{
+			[oneof*]
+			{
+				[oneof*]
+				{
+					chance = 0.2;
+					il_main = #*/39-54;
+					il_main = #armor/62-112;
+                }
+                [oneof*]
+				{
+	            	chance = 0.004;
+	                il_main = #weapon/-rare(1)/45-60;
+	                il_main = #armor/-rare(1)/100-135;
+                    il_main = #*/-rare(1)/45-60;
+                }
+				[oneof*]
+				{
+                	chance = 0.002;
+	                il_main = #weapon/-unique(2)/45-60;
+	                il_main = #armor/-unique(2)/100-135;
+                    il_main = #*/-unique(2)/45-60;
+	            }
+				[gold*]
+				{
+					chance = 0.15;
+					max = 1014;
+					min = 649;
+				}
+			}
+		}
+	}
+	[common]
+	{
+		screen_name="Heater";
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				single_shot = true;
+				action* = call_sfx_script("tailpipe_steam_heater");
+			}
+		}
+	}
+	[defend] { defense=139; }
+	[mind]
+	{
+		jat_fidget	= world\ai\jobs\common\job_fidget.skrit
+			?meander	= false
+			&still		= false;
+
+		melee_engage_range = 3;
+		personal_space_range = 0.7;
+		ranged_engage_range = 10.0;
+		sight_range = 12.0;
+
+		actor_weapon_preference			= WP_MAGIC;
+		actor_auto_switches_to_magic	= true;
+		actor_auto_switches_to_karate	= false;
+		actor_auto_switches_to_melee	= false;
+	}
+	[physics]
+	{
+		break_effect = heater_explosion;
+		explode_when_killed = true;
+		explosion_magnitude = 3.0;
+		gib_gore_good = true;
+		[break_particulate]
+		{
+			frag_glb_heater_01 = 3;
+			frag_glb_heater_02 = 2;
+			frag_glb_heater_03 = 1;
+			frag_glb_heater_04 = 1;
+			frag_glb_heater_05 = 2;
+			frag_glb_metal_01 = 1;
+			frag_glb_metal_02 = 2;
+			frag_glb_metal_03 = 3;
+			frag_glb_metal_04 = 1;
+			frag_glb_metal_05 = 3;
+			frag_glb_metal_06 = 3;
+			frag_glb_wood_01 = 1;
+			frag_glb_wood_02 = 1;
+			frag_glb_wood_03 = 2;
+			frag_glb_wood_04 = 2;
+			frag_glb_wood_05 = 4;
+			frag_glb_wood_06 = 3;
+		}
+	}
+}
+[t:template,n:c24_5_robot_blaster]
+{
+	category_name = "1W_evil_d";
+	doc = "c24_5_robot_blaster";
+	specializes = actor_evil;
+	[actor]
+	{
+		[skills]
+		{
+			strength =  20, 0;
+			intelligence =  9, 0;
+			dexterity =  11, 0;
+			combat_magic =  15, 0;
+		}
+	}
+	[aspect]
+	{
+		experience_value = 498;
+		life = 532;
+		max_life = 532;
+		mana = 10;
+		max_mana = 10;
+		model = m_c_edm_bl_pos_1;
+		material = wood;
+		[voice]
+		{
+			[die]			{ priority = high; * = s_e_die_proxo; }
+			[enemy_spotted]	{ priority = high; * = s_e_call_mechanoid_big_SED; }
+		}
+	}
+	[tsd_manager]
+	{
+		check_freq_min	= .1;
+		check_freq_max	= .1;
+		use_velocity_for_speed = true;
+	}
+	[body]
+	{
+		avg_move_velocity = 1.960000;
+		[bone_translator]
+		{
+			body_anterior = bone01;
+			body_mid = bone01;
+			body_posterior = bone01;
+			kill_bone = bone01;
+			shield_bone = bone01;
+			weapon_bone = bone01;
+		}
+		[chore_dictionary]
+		{
+			chore_prefix = a_c_edm_bl_fs;
+			[chore_attack]
+			{
+				chore_stances = 0;
+				skrit = select_attack;
+				[anim_files] { 00=at; }
+			}
+			[chore_magic]
+			{
+				chore_stances = 0;
+				skrit = select_attack;
+				[anim_files] { 00=at; }
+			}
+			[chore_default]
+			{
+				chore_stances = 0;
+				skrit = infinite_loop;
+				[anim_files] { 00=ds; }
+			}
+			[chore_die]
+			{
+				chore_stances = 0;
+				skrit = select_transition;
+				[anim_files] { 00=ds; }
+			}
+			[chore_fidget]
+			{
+				chore_stances = 0;
+				skrit = select_fidget;
+				[anim_files] { 00=dsf; }
+			}
+			[chore_walk]
+			{
+				chore_stances = 0;
+				skrit = select_walk;
+				[anim_files] { 00=wl; }
+			}
+		}
+	}
+
+	[common]
+	{
+		screen_name="Blaster";
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				single_shot = true;
+				action* = call_sfx_script("tailpipe_steam_blaster");
+			}
+		}
+	}
+	[defend] { defense=139; }
+	[inventory]
+	{
+    	selected_active_location = il_active_primary_spell;
+		[other] { il_active_primary_spell=c24_spell_blaster_bomb_lesser; }
+		[pcontent]
+		{
+			[oneof*]
+			{
+				[oneof*]
+				{
+					chance = 0.2;
+					il_main = #*/39-54;
+					il_main = #armor/62-112;
+                }
+                [oneof*]
+				{
+	            	chance = 0.004;
+	                il_main = #weapon/-rare(1)/45-60;
+	                il_main = #armor/-rare(1)/100-135;
+                    il_main = #*/-rare(1)/45-60;
+                }
+				[oneof*]
+				{
+                	chance = 0.002;
+	                il_main = #weapon/-unique(2)/45-60;
+	                il_main = #armor/-unique(2)/100-135;
+                    il_main = #*/-unique(2)/45-60;
+	            }
+				[gold*]
+				{
+					chance = 0.15;
+					max = 1014;
+					min = 649;
+				}
+			}
+		}
+	}
+	[mind]
+	{
+		jat_fidget						= world\ai\jobs\common\job_fidget.skrit
+			?meander						= false
+			&still							= false;
+
+		actor_weapon_preference			= WP_MAGIC;
+		actor_auto_switches_to_magic	= true;
+		actor_auto_switches_to_karate	= false;
+		actor_auto_switches_to_melee	= false;
+
+		melee_engage_range = 9;
+		personal_space_range = 0.7;
+		ranged_engage_range = 12.0;
+		sight_range = 13.0;
+	}
+	[physics]
+	{
+		velocity=14.0;
+		break_effect = generic_explosion;
+		explode_when_killed = true;
+		explosion_magnitude = 3.0;
+		gib_gore_good = true;
+		[break_particulate]
+		{
+			frag_glb_blaster_01 = 3;
+			frag_glb_blaster_02 = 1;
+			frag_glb_blaster_03 = 1;
+			frag_glb_blaster_04 = 1;
+			frag_glb_blaster_05 = 1;
+			frag_glb_metal_01 = 1;
+			frag_glb_metal_02 = 2;
+			frag_glb_metal_03 = 3;
+			frag_glb_metal_04 = 1;
+			frag_glb_metal_05 = 3;
+			frag_glb_metal_06 = 3;
+			frag_glb_wood_01 = 1;
+			frag_glb_wood_02 = 1;
+			frag_glb_wood_03 = 2;
+			frag_glb_wood_04 = 2;
+			frag_glb_wood_05 = 4;
+			frag_glb_wood_06 = 3;
+		}
+	}
+}
+
+[t:template,n:c24_5_robot_copter]
+{
+	category_name = "1W_evil_d";
+	doc = "c24_5_robot_copter";
+	specializes = actor_evil;
+	[actor]
+	{
+		[skills]
+		{
+			strength =  	4, 0;
+			intelligence =  	6, 0;
+			dexterity =  	12, 0;
+			combat_magic =  	15,  0;
+		}
+	}
+	[aspect]
+	{
+		experience_value = 263;
+		life = 252;
+		max_life = 252;
+		mana = 100;
+		max_mana = 100;
+		model = m_c_edm_cp_pos_1;
+		material = wood;
+		[voice]
+		{
+			[die]			{ priority = high; * = s_e_die_copter; }
+			[enemy_spotted]	{ priority = high; * = s_e_call_mechanoid_small_SED;	}
+		}
+	}
+	[attack]
+	{
+		attack_range = 	0.5;
+		damage_max = 	97;
+		damage_min = 	93;
+	}
+	[body]
+	{
+		min_move_velocity = 3.75;
+		avg_move_velocity = 5.990000;
+		[bone_translator]
+		{
+			body_anterior = bone01;
+			body_mid = bone01;
+			body_posterior = bone01;
+			kill_bone = bone01;
+			shield_bone = bone01;
+			weapon_bone = bone01;
+		}
+		[chore_dictionary]
+		{
+			chore_prefix = a_c_edm_cp_fs;
+			[chore_attack]
+			{
+				chore_stances = 0;
+				skrit = select_attack;
+				[anim_files] { 00=at; }
+			}
+			[chore_default]
+			{
+				chore_stances = 0;
+				skrit = infinite_loop;
+				[anim_files] { 00=ds; }
+			}
+			[chore_die]
+			{
+				chore_stances = 0;
+				skrit = select_transition;
+				[anim_files] { 00=dsf; }
+			}
+			[chore_fidget]
+			{
+				chore_stances = 0;
+				skrit = select_fidget;
+				[anim_files] { 00=fl; }
+			}
+			[chore_magic]
+			{
+				chore_stances = 0;
+				skrit = select_transition;
+				[anim_files] { 00=at; }
+			}
+			[chore_walk]
+			{
+				chore_stances = 0;
+				skrit = select_walk;
+				[anim_files] { 00=fl; }
+			}
+		}
+	}
+
+	[inventory]
+	{
+		selected_active_location = il_active_primary_spell;
+		[other] { il_active_primary_spell=c24_spell_copter_lightning_lesser; }
+	}
+
+	[common]
+	{
+		screen_name="Copter";
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				single_shot = true;
+				action* = call_sfx_script("tailpipe_steam_copter");
+
+			}
+		}
+	}
+	[defend] { defense=78; }
+	[mind]
+	{
+		actor_weapon_preference			= WP_MAGIC;
+		actor_auto_switches_to_magic	= true;
+		actor_auto_switches_to_karate	= false;
+		actor_auto_switches_to_melee	= false;
+
+		melee_engage_range = 12;
+		personal_space_range = 0.7;
+		ranged_engage_range = 13.0;
+		sight_range = 14.0;
+	}
+	[physics]
+	{
+		break_effect = generic_explosion;
+		explode_when_killed = true;
+		explosion_magnitude = 3.0;
+		gib_gore_good = true;
+		[break_particulate]
+		{
+			frag_glb_copter_01 = 1;
+			frag_glb_copter_02 = 1;
+			frag_glb_copter_03 = 1;
+			frag_glb_copter_04 = 1;
+			frag_glb_copter_05 = 1;
+			frag_glb_metal_01 = 1;
+			frag_glb_metal_03 = 1;
+			frag_glb_metal_04 = 1;
+			frag_glb_metal_05 = 2;
+			frag_glb_metal_06 = 2;
+			frag_glb_wood_01 = 1;
+			frag_glb_wood_02 = 1;
+			frag_glb_wood_03 = 1;
+			frag_glb_wood_04 = 2;
+			frag_glb_wood_05 = 2;
+			frag_glb_wood_06 = 3;
+		}
+	}
+}
+
+[t:template,n:c24_5_robot_proxo]
+{
+	category_name = "1W_evil_d";
+	doc = "c24_5_robot_proxo";
+	specializes = actor_evil;
+	[actor]
+	{
+		[skills]
+		{
+			strength =  	7, 0;
+			intelligence =  	2, 0;
+			dexterity =  	3, 0;
+			combat_magic =  		15,  0;
+		}
+	}
+	[aspect]
+	{
+		experience_value = 131;
+		life = 24;
+		max_life = 24;
+		mana = 4;
+		max_mana = 4;
+		model = m_c_edm_px_pos_1;
+		material = steel;
+		[voice]
+		{
+			[die]			{ priority = high; * = s_e_die_proxo;				}
+			[enemy_spotted]	{ priority = high; * = s_e_call_mechanoid_small_SED;	}
+		}
+	}
+	[attack]
+	{
+		area_damage_radius = 4.25;
+		attack_range = 0.5;
+		damage_max = 120;
+		damage_min = 95;
+	}
+	[body]
+	{
+		avg_move_velocity = 1.970000;
+		[bone_translator]
+		{
+			body_anterior = bip01_head;
+			body_mid = bip01_spine1;
+			body_posterior = bip01_pelvis;
+			kill_bone = bip01_spine1;
+			shield_bone = bip01_l_hand;
+			weapon_bone = bip01_r_hand;
+		}
+		[chore_dictionary]
+		{
+			chore_prefix = a_c_edm_px_fs;
+			[chore_attack]
+			{
+				chore_stances = 0;
+				skrit = select_transition;
+				[anim_files] { 00=at; }
+			}
+			[chore_default]
+			{
+				chore_stances = 0;
+				skrit = infinite_loop;
+				[anim_files] { 00=ds; }
+			}
+			[chore_die]
+			{
+				chore_stances = 0;
+				skrit = select_transition;
+				[anim_files] { 00=ds; }
+			}
+			[chore_fidget]
+			{
+				chore_stances = 0;
+				skrit = select_fidget;
+				[anim_files] { 00=dsf; }
+			}
+			[chore_walk]
+			{
+				chore_stances = 0;
+				skrit = select_walk;
+				[anim_files] { 00=wl; }
+			}
+		}
+	}
+	[effect_manager]
+	{
+		start_msg = WE_ENTERED_WORLD;
+		stop_msg = WE_LEFT_WORLD;
+		stop_msg2 = WE_KILLED;
+
+		effect_name = "";
+		rep_effect_name = "proxo_blink";
+
+		repeat_rate = .3;
+		repeat_rate_max = .3;
+
+		run_once = true;
+	}
+	[common]
+	{
+		screen_name="Proxo";
+	}
+	[defend] { defense=16; }
+	[mind]
+	{
+		jat_fidget				= world\ai\jobs\common\job_fidget.skrit
+			?meander				= false
+			&still					= false;
+		jat_attack_object_melee = world\ai\jobs\common\job_attack_object_suicide_bomb.skrit;
+		melee_engage_range = 9;
+		personal_space_range = 0.7;
+		ranged_engage_range = 10.0;
+		sight_range = 11.0;
+	}
+	[physics]
+	{
+		break_effect = proxo_explosion;
+		damage_all = true;
+		explode_when_killed = true;
+		explosion_magnitude = 4.25;
+		gib_gore_good = true;
+		[break_particulate]
+		{
+			frag_glb_metal_01 = 1;
+			frag_glb_metal_02 = 2;
+			frag_glb_metal_03 = 3;
+			frag_glb_metal_04 = 1;
+			frag_glb_metal_05 = 3;
+			frag_glb_metal_06 = 3;
+			frag_glb_proxo_01 = 3;
+			frag_glb_proxo_02 = 2;
+			frag_glb_proxo_03 = 3;
+			frag_glb_proxo_04 = 2;
+			frag_glb_proxo_05 = 1;
+			frag_glb_proxo_06 = 2;
+			frag_glb_wood_01 = 1;
+			frag_glb_wood_02 = 1;
+			frag_glb_wood_03 = 2;
+			frag_glb_wood_04 = 2;
+			frag_glb_wood_05 = 4;
+			frag_glb_wood_06 = 3;
+		}
+	}
+}
+
+
+[t:template,n:c24_5_goblin]
+{
+	category_name = "1W_evil_a";
+	doc = "c24_5_goblin";
+	specializes = base_goblin;
+	[actor]
+	{
+		[skills]
+		{
+			strength =  	7, 0;
+			intelligence =  	12, 0;
+			dexterity =  	11, 0;
+			melee =  		15,  0;
+		}
+	}
+	[aspect]
+	{
+		experience_value = 208;
+		life = 197;
+		max_life = 197;
+		mana = 24;
+		max_mana = 24;
+		model = m_c_eam_ggt_pos_1;
+		scale_base = 1;
+	}
+	[attack]
+	{
+		attack_range = 0.5;
+		damage_max = 32;
+		damage_min = 28;
+	}
+	[common] { screen_name="Goblin Grunt"; }
+	[defend] { defense=32; }
+	[inventory]
+	{
+    	[pcontent]
+		{
+            [oneof*] { es_weapon_hand = hm_g_c_1h1m_low; }
+
+			[oneof*]
+			{
+				[oneof*]
+				{
+				   chance = 0.05;
+				   il_main = potion_health_medium;
+				   il_main = potion_mana_medium;
+				   il_main = potion_health_small;
+				   il_main = potion_mana_small;
+				}
+				[oneof*]
+				{
+					chance = 0.2;
+					il_main = #*/21-34;
+					il_main = #armor/21-68;
+                }
+                [oneof*]
+				{
+	            	chance = 0.004;
+	                il_main = #weapon/-rare(1)/27-37;
+	                il_main = #armor/-rare(1)/62-84;
+                    il_main = #*/-rare(1)/27-37;
+                }
+				[oneof*]
+				{
+                	chance = 0.002;
+	                il_main = #weapon/-unique(2)/27-37;
+	                il_main = #armor/-unique(2)/62-84;
+                    il_main = #*/-unique(2)/27-37;
+	            }
+				[gold*]
+				{
+					chance = 0.15;
+					max = 320;
+					min = 205;
+				}
+			}
+		}
+    }
+	[mind]
+	{
+		on_life_ratio_low_flee = true;
+		flee_count = 1;
+		flee_distance = 20;
+		melee_engage_range = 10;
+		personal_space_range = 0.7;
+		ranged_engage_range = 10.0;
+		sight_range = 10.0;
+	}
+}
+[t:template,n:c24_5_goblin_guard]
+{
+	category_name = "1W_evil_a";
+	doc = "c24_5_goblin_guard";
+	specializes = base_goblin;
+	[body]
+	{
+		max_move_velocity = 4.3;
+	}
+	[actor]
+	{
+		[skills]
+		{
+			strength =  	9, 0;
+			intelligence =  	11, 0;
+			dexterity =  	11, 0;
+			melee =  		15,  0;
+		}
+	}
+	[aspect]
+	{
+		experience_value = 313;
+		life = 346;
+		max_life = 346;
+		mana = 22;
+		max_mana = 22;
+		model = m_c_eam_ggt_pos_1;
+		textures:0 = b_c_eam_ggd;
+	}
+	[attack]
+	{
+		attack_range = 0.5;
+		damage_max = 32;
+		damage_min = 24;
+	}
+	[common] { screen_name="Goblin Guard"; }
+	[defend] { defense=90; }
+	[inventory]
+	{
+    	[pcontent]
+		{
+			[oneof*]
+			{
+				es_weapon_hand = ss_g_c_bl_1h_avg;
+               	es_weapon_hand = mc_g_c_s_1h_avg;
+               	es_weapon_hand = sd_g_c_gl_1h_avg;
+               	es_weapon_hand = ax_g_c_1h2b_avg;
+			}
+
+			[oneof*]
+			{
+				[oneof*]
+				{
+				   chance = 0.05;
+				   il_main = potion_health_medium;
+				   il_main = potion_mana_medium;
+				}
+				[oneof*]
+				{
+					chance = 0.2;
+					il_main = #*/27-41;
+					il_main = #armor/33-83;
+                }
+                [oneof*]
+				{
+	            	chance = 0.004;
+	                il_main = #weapon/-rare(1)/33-45;
+	                il_main = #armor/-rare(1)/75-102;
+                    il_main = #*/-rare(1)/33-45;
+                }
+				[oneof*]
+				{
+                	chance = 0.002;
+	                il_main = #weapon/-unique(2)/33-45;
+	                il_main = #armor/-unique(2)/75-102;
+                    il_main = #*/-unique(2)/33-45;
+	            }
+				[gold*]
+				{
+					chance = 0.15;
+					max = 556;
+					min = 356;
+				}
+			}
+		}
+    }
+	[mind]
+	{
+		jat_fidget		= world\ai\jobs\common\job_fidget.skrit
+			?curious	= 0.4
+			&social		= 0.35
+			&meander	= true
+			&interest	= interest
+			&still		= false;
+
+		jat_attack_object_melee 			= world\ai\jobs\common\job_attack_object_melee.skrit
+			?run_chance 					= 1.0;
+		melee_engage_range = 14;
+		personal_space_range = 0.7;
+		ranged_engage_range = 14.0;
+		sight_range = 14.0;
+	}
+}
+
+
+
+
+
+
+
+[t:template,n:c24_5_lava_beast_boss]
+{
+	category_name = "1W_evil_d";
+	doc = "c24_5_lava_beast_boss";
+	specializes = base_rock_beast;
+	[actor]
+	{
+		[skills]
+		{
+			strength =  	30, 0;
+			intelligence =  13, 0;
+			dexterity =  	23, 0;
+            melee =  		17,  0;
+			combat_magic = 17, 0;
+		}
+	}
+	[aspect]
+	{
+		experience_value = 1244;
+		life = 2800;
+		material = stone;
+		max_life = 2800;
+		mana = 10;
+		max_mana = 10;
+		textures:0 = b_c_edm_rb-03;
+	}
+	[attack]
+	{
+		attack_range = 0.5;
+		damage_max = 109;
+		damage_min = 96;
+	}
+	[common]
+	{
+		screen_name="Magma Beast";
+		membership=monster,immune_charm,immune_control,immune_freeze,immune_polymorph,immune_align_change,immune_explode;
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				single_shot = true;
+				no_trig_bits = true;
+				action* = call_sfx_script("rock_beast_eye_glow");
+				action* = call_sfx_script("unique_ray_yellow(sgx)");
+				action* = call_sfx_script("unique_light_yellow(sgx)");
+			}
+			[*]
+			{
+				action* = call_sfx_script("rock_beast_dust","bip01_r_foot");
+				condition* = receive_world_message("we_anim_other",'rfdn');
+			}
+			[*]
+			{
+				action* = call_sfx_script("rock_beast_dust","bip01_l_foot");
+				condition* = receive_world_message("we_anim_other",'lfdn');
+			}
+			[*]
+			{
+				action* = call_sfx_script("rock_beast_smash");
+				condition* = receive_world_message("we_anim_sfx",1);
+			}
+			[*]
+			{
+				action* = call_sfx_script("rock_beast_yell");
+				condition* = receive_world_message("we_anim_sfx",2);
+			}
+			[*]
+			{
+				action* = call_sfx_script("rock_beast_dust_hands");
+				condition* = receive_world_message("we_anim_sfx",3);
+			}
+		}
+	}
+	[defend] { defense=222; }
+
+	[physics]
+	{
+		gib_gore_good = true;
+		[break_particulate]
+		{
+			frag_glb_lava_beast_01 = 1;
+			frag_glb_lava_beast_02 = 1;
+			frag_glb_lava_beast_03 = 1;
+			frag_glb_lava_beast_04 = 1;
+			frag_glb_lava_beast_05 = 1;
+			frag_glb_lava_beast_06 = 2;
+			frag_glb_lava_beast_07 = 3;
+			frag_glb_lava_beast_08 = 4;
+		}
+	}
+	[inventory]
+	{
+		selected_active_location = il_active_primary_spell;
+		[other] { il_active_primary_spell=c24_spell_lava_beast_blast; }
+
+   		[pcontent]
+		{
+			[all*]
+			{
+				[oneof*]
+				{
+					il_main = #*/64-90;
+					il_main = #armor/147-192;
+					max = 2;
+					min = 2;
+				}
+				[oneof*]
+				{
+	                il_main = #weapon/-rare(1)/78-105;
+	                il_main = #armor/-rare(1)/175-237;
+					max = 2;
+					min = 2;
+                }
+				[oneof*]
+				{
+	                il_main = #weapon/-unique(2)/78-105;
+	                il_main = #armor/-unique(2)/175-237;
+					max = 2;
+					min = 2;
+	            }
+				[gold*]
+				{
+					max = 4303;
+					min = 2766;
+					min_pile = 200;
+					piles = 6 - 8;
+				}
+			}
+		}
+	}
+}

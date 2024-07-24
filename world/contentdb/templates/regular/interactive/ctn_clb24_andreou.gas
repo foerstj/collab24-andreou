@@ -1,0 +1,1073 @@
+/////////////////////////////////////////////////////////////
+//////////////////////// 5_1_cliffs /////////////////////////
+/////////////////////////////////////////////////////////////
+
+
+[t:template,n:clb24_5_1_barrel]
+{
+	category_name = "clb24_andreou";
+	doc = "clb24_5_1_barrel";
+	specializes = base_container_barrel;
+	[aspect]
+	{
+		model = m_i_glb_barrel;
+	}
+	[attack]
+	{
+		damage_max = 42;
+		damage_min = 22;
+	}
+	[inventory]
+	{
+		[pcontent]
+		{
+			[oneof*]
+			{
+				[gold*]
+				{
+					chance = 0.2;
+					max = 142;
+					min = 90;
+				}
+				[oneof*]
+				{
+					chance = 0.2;
+					il_main = potion_mana_small;
+					il_main = potion_health_small;
+				}
+				[oneof*]
+				{
+					chance = 0.25;
+					il_main = potion_mana_small;
+					il_main = potion_health_small;
+				}
+			}
+		}
+	}
+	[trapped]
+	{
+		trap = trp_generator_explosion_barrel;
+	}
+}
+[t:template,n:clb24_5_1_crate]
+{
+	category_name = "clb24_andreou";
+	doc = "clb24_5_1_crate";
+	specializes = base_container_wood;
+	[aspect]
+	{
+		model = m_i_glb_crate;
+	}
+	[attack]
+	{
+		damage_max = 45;
+		damage_min = 27;
+	}
+	[common]
+	{
+		screen_name = "Crate";
+	}
+	[inventory]
+	{
+		[pcontent]
+		{
+			[oneof*]
+			{
+				[gold*]
+				{
+					chance = 0.2;
+					max = 350;
+					min = 300;
+				}
+				[oneof*]
+				{
+					chance = 0.3;
+					il_main = #weapon/12-32;
+					il_main = #armor/19-60;
+					il_main = #*/12-32;
+					il_main = potion_mana_small;
+					il_main = potion_health_small;
+				}
+			}
+		}
+	}
+	[trapped]
+	{
+		trap = trp_generator_explosion_crate;
+	}
+}
+
+[t:template,n:clb24_5_1_chest_low]
+{
+	category_name = "clb24_andreou";
+	doc = "clb24_5_1_chest_low";
+	specializes = base_chest;
+	[aspect]
+	{
+		model = m_i_glb_chest-03;
+		[textures]		{ 0 = b_i_glb_chest-01; }
+	}
+	[attack]
+	{
+		damage_max = 48;
+		damage_min = 32;
+	}
+	[body]
+	{
+		[chore_dictionary]
+		{
+			chore_prefix = a_i_ice;
+			[chore_open]
+			{
+				skrit = transition;
+				[anim_files] { 00=chest-open; }
+			}
+		}
+	}
+	[inventory]
+	{
+		[pcontent]
+		{
+			[oneof*]
+			{
+				[gold*]
+				{
+					chance = 0.2;
+					max = 285;
+					min = 217;
+				}
+				[oneof*]
+				{
+					chance = 0.5;
+					il_main = #weapon/12-32;
+					il_main = #armor/19-95;
+					il_main = #*/12-32;
+					max = 2;
+					min = 1;
+				}
+				[oneof*]
+				{
+					chance = 0.004;
+					il_main = #weapon/-rare(1)/33-41;
+					il_main = #armor/-rare(1)/97-115;
+					il_main = #*/-rare(1)/33-41;
+				}
+				[oneof*]
+				{
+					chance = 0.002;
+					il_main = #weapon/-unique(2)/33-41;
+					il_main = #armor/-unique(2)/97-115;
+					il_main = #*/-unique(2)/33-41;
+				}
+			}
+		}
+	}
+	[trapped]
+	{
+		trap = trp_generator_frost_chest;
+		fire_event = WE_REQ_USE;
+	}
+}
+[t:template,n:clb24_5_1_chest_low-green]
+{
+	category_name = "clb24_andreou";
+	doc = "clb24_5_1_chest_low-green";
+	specializes = base_chest;
+	[aspect]
+	{
+		model = m_i_glb_chest-04;
+		[textures]		{ 0 = b_i_glb_chest-open-02; }
+	}
+	[attack]
+	{
+		damage_max = 48;
+		damage_min = 32;
+	}
+	[body]
+	{
+		[chore_dictionary]
+		{
+			chore_prefix = a_i_ice;
+			[chore_open]
+			{
+				skrit = transition;
+				[anim_files] { 00=chest-open; }
+			}
+		}
+	}
+	[inventory]
+	{
+		[pcontent]
+		{
+			[oneof*]
+			{
+				[gold*]
+				{
+					chance = 0.2;
+					max = 285;
+					min = 217;
+				}
+				[oneof*]
+				{
+					chance = 0.5;
+					il_main = #weapon/12-32;
+					il_main = #armor/19-95;
+					il_main = #*/12-32;
+					max = 2;
+					min = 1;
+				}
+				[oneof*]
+				{
+					chance = 0.004;
+					il_main = #weapon/-rare(1)/33-41;
+					il_main = #armor/-rare(1)/97-115;
+					il_main = #*/-rare(1)/33-41;
+				}
+				[oneof*]
+				{
+					chance = 0.002;
+					il_main = #weapon/-unique(2)/33-41;
+					il_main = #armor/-unique(2)/97-115;
+					il_main = #*/-unique(2)/33-41;
+				}
+			}
+		}
+	}
+	[trapped]
+	{
+		trap = trp_generator_arrow_chest;
+		fire_event = WE_REQ_USE;
+	}
+}
+
+[t:template,n:clb24_5_1_chest_med]
+{
+	category_name = "clb24_andreou";
+	doc = "clb24_5_1_chest_med";
+	specializes = base_chest;
+	[aspect]
+	{
+		model = m_i_glb_chest-07;
+	}
+	[attack]
+	{
+		damage_max = 55;
+		damage_min = 40;
+	}
+	[body]
+	{
+		[chore_dictionary]
+		{
+			chore_prefix = a_i_glb;
+			[chore_open]
+			{
+				skrit = transition;
+				[anim_files] { 00=chest-07-open; }
+			}
+		}
+	}
+	[inventory]
+	{
+		[pcontent]
+		{
+			[all*]
+			{
+				[gold*]
+				{
+					chance = 0.5;
+					max = 285;
+					min = 217;
+				}
+				[oneof*]
+				{
+					il_main = #weapon/25-36;
+					il_main = #armor/50-95;
+					il_main = #*/25-36;
+					max = 2;
+					min = 1;
+				}
+				[oneof*]
+				{
+					chance = 0.1;
+					il_main = #weapon/-rare(1)/33-41;
+					il_main = #armor/-rare(1)/97-115;
+					il_main = #*/-rare(1)/33-41;
+				}
+				[oneof*]
+				{
+					chance = 0.05;
+					il_main = #weapon/-unique(2)/33-41;
+					il_main = #armor/-unique(2)/97-115;
+					il_main = #*/-unique(2)/33-41;
+				}
+			}
+		}
+	}
+	[trapped]
+	{
+		trap = trp_generator_frost_chest;
+		fire_event = WE_REQ_USE;
+	}
+}
+
+[t:template,n:clb24_5_1_chest_high]
+{
+	category_name = "clb24_andreou";
+	doc = "clb24_5_1_chest_high";
+	specializes = base_chest;
+	[aspect]
+	{
+		model = m_i_csl_chest-04;
+	}
+	[attack]
+	{
+		damage_max = 110;
+		damage_min = 80;
+	}
+	[body]
+	{
+		[chore_dictionary]
+		{
+			chore_prefix = a_i_csl;
+			[chore_open]
+			{
+				skrit = transition;
+				[anim_files] { 00=chest-04-open; }
+			}
+		}
+	}
+	[inventory]
+	{
+		[pcontent]
+		{
+			[all*]
+			{
+				[gold*]
+				{
+					max = 435;
+					min = 317;
+					min_pile = 63;
+					piles = 3 - 4;
+				}
+				[oneof*]
+				{
+					il_main = #weapon/30-40;
+					il_main = #armor/70-95;
+					il_main = #*/30-40;
+					max = 2;
+					min = 1;
+				}
+				[oneof*]
+				{
+					il_main = #weapon/-rare(1)/36-46;
+					il_main = #armor/-rare(1)/90-120;
+					il_main = #weapon/-unique(2)/36-46;
+					il_main = #armor/-unique(2)/90-120;
+					max = 2;
+					min = 1;
+				}
+			}
+		}
+	}
+	[trapped]
+	{
+		trap = trp_generator_fireball_chest;
+		fire_event = WE_REQ_USE;
+	}
+}
+[t:template,n:clb24_5_1_chest_high_safe]
+{
+	category_name = "clb24_andreou";
+	doc = "clb24_5_1_chest_high_safe";
+	specializes = base_chest;
+	[aspect]
+	{
+		model = m_i_csl_chest-04;
+	}
+	[body]
+	{
+		[chore_dictionary]
+		{
+			chore_prefix = a_i_csl;
+			[chore_open]
+			{
+				skrit = transition;
+				[anim_files] { 00=chest-04-open; }
+			}
+		}
+	}
+	[inventory]
+	{
+		[pcontent]
+		{
+			[all*]
+			{
+				[gold*]
+				{
+					max = 435;
+					min = 317;
+					min_pile = 63;
+					piles = 3 - 4;
+				}
+				[oneof*]
+				{
+					il_main = #weapon/30-40;
+					il_main = #armor/70-95;
+					il_main = #*/30-40;
+					max = 2;
+					min = 1;
+				}
+				[oneof*]
+				{
+					il_main = #weapon/-rare(1)/36-46;
+					il_main = #armor/-rare(1)/90-120;
+					il_main = #weapon/-unique(2)/36-46;
+					il_main = #armor/-unique(2)/90-120;
+					max = 2;
+					min = 1;
+				}
+			}
+		}
+	}
+}
+
+////////////////////////////////////////////////////////////
+//////////////////////// 5_3_mines /////////////////////////
+////////////////////////////////////////////////////////////
+
+
+[t:template,n:clb24_5_3_barrel_low]
+{
+	category_name = "clb24_andreou";
+	doc = "clb24_5_3_barrel_low";
+	specializes = base_container_barrel;
+	[aspect]
+	{
+		model = m_i_glb_barrel;
+	}
+	[attack]
+	{
+		damage_max = 50;
+		damage_min = 30;
+	}
+	[inventory]
+	{
+		[pcontent]
+		{
+			[oneof*]
+			{
+				[gold*]
+				{
+					chance = 0.2;
+					max = 177;
+					min = 102;
+				}
+				[oneof*]
+				{
+					chance = 0.1;
+					il_main = potion_mana_small;
+					il_main = potion_health_small;
+				}
+				[oneof*]
+				{
+					chance = 0.25;
+					il_main = potion_mana_small;
+					il_main = potion_health_small;
+				}
+			}
+		}
+	}
+	[trapped]
+	{
+		trap = trp_generator_explosion_barrel;
+	}
+}
+[t:template,n:clb24_5_3_crate_low]
+{
+	category_name = "clb24_andreou";
+	doc = "clb24_5_3_crate_low";
+	specializes = base_container_wood;
+	[aspect]
+	{
+		model = m_i_glb_crate;
+	}
+	[attack]
+	{
+		damage_max = 50;
+		damage_min = 33;
+	}
+	[common]
+	{
+		screen_name = "Crate";
+	}
+	[inventory]
+	{
+		[pcontent]
+		{
+			[oneof*]
+			{
+				[gold*]
+				{
+					chance = 0.2;
+					max = 411;
+					min = 258;
+				}
+				[oneof*]
+				{
+					chance = 0.3;
+					il_main = #weapon/15-35;
+					il_main = #armor/22-68;
+					il_main = #*/15-35;
+					il_main = potion_mana_small;
+					il_main = potion_health_small;
+				}
+			}
+		}
+	}
+	[trapped]
+	{
+		trap = trp_generator_explosion_crate;
+	}
+}
+[t:template,n:clb24_5_3_crate_low_long]
+{
+	category_name = "clb24_andreou";
+	doc = "clb24_5_3_crate_low_long";
+	specializes = base_container_wood;
+	[aspect]
+	{
+		model = m_i_glb_footlocker-01;
+	}
+	[attack]
+	{
+		damage_max = 50;
+		damage_min = 33;
+	}
+	[common]
+	{
+		screen_name = "Crate";
+	}
+	[inventory]
+	{
+		[pcontent]
+		{
+			[oneof*]
+			{
+				[oneof*]
+				{
+					chance = 0.5;
+					il_main = #weapon/15-35;
+					il_main = #armor/22-68;
+					il_main = #*/15-35;
+					il_main = potion_mana_small;
+					il_main = potion_health_small;
+				}
+			}
+		}
+	}
+	[trapped]
+	{
+		trap = trp_generator_explosion_crate;
+	}
+}
+[t:template,n:clb24_5_3_barrel_med_light]
+{
+	category_name = "clb24_andreou";
+	doc = "clb24_5_3_barrel_med_light";
+	specializes = base_container_barrel;
+	[aspect]
+	{
+		model = m_i_cav_barrel-01;
+	}
+	[attack]
+	{
+		damage_max = 55;
+		damage_min = 35;
+	}
+	[inventory]
+	{
+		[pcontent]
+		{
+			[oneof*]
+			{
+				[gold*]
+				{
+					chance = 0.2;
+					max = 277;
+					min = 170;
+				}
+				[oneof*]
+				{
+					chance = 0.15;
+					il_main = potion_mana_medium;
+					il_main = potion_health_medium;
+				}
+				[oneof*]
+				{
+					chance = 0.2;
+					il_main = potion_mana_small;
+					il_main = potion_health_small;
+				}
+			}
+		}
+	}
+	[trapped]
+	{
+		trap = trp_generator_explosion_barrel;
+	}
+}
+[t:template,n:clb24_5_3_barrel_med_dark]
+{
+	category_name = "clb24_andreou";
+	doc = "clb24_5_3_barrel_med_dark";
+	specializes = base_container_barrel;
+	[aspect]
+	{
+		model = m_i_cav_barrel-02;
+	}
+	[attack]
+	{
+		damage_max = 55;
+		damage_min = 35;
+	}
+	[inventory]
+	{
+		[pcontent]
+		{
+			[oneof*]
+			{
+				[gold*]
+				{
+					chance = 0.2;
+					max = 277;
+					min = 170;
+				}
+				[oneof*]
+				{
+					chance = 0.15;
+					il_main = potion_mana_medium;
+					il_main = potion_health_medium;
+				}
+				[oneof*]
+				{
+					chance = 0.2;
+					il_main = potion_mana_small;
+					il_main = potion_health_small;
+				}
+			}
+		}
+	}
+	[trapped]
+	{
+		trap = trp_generator_explosion_barrel;
+	}
+}
+[t:template,n:clb24_5_3_crate_med_dark]
+{
+	category_name = "clb24_andreou";
+	doc = "clb24_5_3_crate_med_dark";
+	specializes = base_container_wood;
+	[aspect]
+	{
+		model	= m_i_glb_crate-krug;
+		[textures]	{0=b_i_glb_crate-02;}
+	}
+	[attack]
+	{
+		damage_max = 60;
+		damage_min = 40;
+	}
+	[common]
+	{
+		screen_name = "Crate";
+	}
+	[inventory]
+	{
+		[pcontent]
+		{
+			[oneof*]
+			{
+				[gold*]
+				{
+					chance = 0.2;
+					max = 411;
+					min = 300;
+				}
+				[oneof*]
+				{
+					chance = 0.5;
+					il_main = #weapon/20-37;
+					il_main = #armor/30-80;
+					il_main = #*/20-37;
+				}
+			}
+		}
+	}
+	[trapped]
+	{
+		trap = trp_generator_explosion_crate;
+	}
+}
+[t:template,n:clb24_5_3_crate_high_small]
+{
+	category_name = "clb24_andreou";
+	doc = "clb24_5_3_crate_high_small";
+	specializes = base_container_wood;
+	[aspect]
+	{
+		model	= m_i_cav_crate-02;
+	}
+	[attack]
+	{
+		damage_max = 90;
+		damage_min = 50;
+	}
+	[common]
+	{
+		screen_name = "Crate";
+	}
+	[inventory]
+	{
+		[pcontent]
+		{
+			[oneof*]
+			{
+				[gold*]
+				{
+					chance = 0.2;
+					max = 500;
+					min = 300;
+				}
+				[oneof*]
+				{
+					chance = 0.5;
+					il_main = #weapon/25-40;
+					il_main = #armor/50-95;
+					il_main = #*/25-40;
+				}
+			}
+		}
+	}
+	[trapped]
+	{
+		trap = trp_generator_explosion_crate;
+	}
+}
+[t:template,n:clb24_5_3_crate_high_big]
+{
+	category_name = "clb24_andreou";
+	doc = "clb24_5_3_crate_high_big";
+	specializes = base_container_wood;
+	[aspect]
+	{
+		model	= m_i_glb_crate-03;
+		[textures]	{0=b_i_glb_crate-03;}
+	}
+	[attack]
+	{
+		damage_max = 100;
+		damage_min = 70;
+	}
+	[common]
+	{
+		screen_name = "Crate";
+	}
+	[inventory]
+	{
+		[pcontent]
+		{
+			[oneof*]
+			{
+				[oneof*]
+				{
+					chance = 0.75;
+					il_main = #weapon/25-40;
+					il_main = #armor/50-105;
+					il_main = #*/25-40;
+				}
+			}
+		}
+	}
+	[trapped]
+	{
+		trap = trp_generator_explosion_crate;
+	}
+}
+
+[t:template,n:clb24_5_3_chest_low_wood]
+{
+	category_name = "clb24_andreou";
+	doc = "clb24_5_3_chest_low_wood";
+	specializes = base_chest;
+	[aspect]
+	{
+		material = steel;
+		model = m_i_glb_chest-07;
+		[textures]		{ 0 = b_i_csl_chest-06; }
+	}
+	[attack]
+	{
+		damage_max = 60;
+		damage_min = 50;
+	}
+	[body]
+	{
+		[chore_dictionary]
+		{
+			chore_prefix = a_i_glb;
+			[chore_open]
+			{
+				skrit = transition;
+				[anim_files] { 00=chest-07-open; }
+			}
+		}
+	}
+	[inventory]
+	{
+		[pcontent]
+		{
+			[oneof*]
+			{
+				[gold*]
+				{
+					chance = 0.5;
+					max = 314;
+					min = 237;
+				}
+				[oneof*]
+				{
+					chance = 0.4;
+					il_main = #weapon/14-35;
+					il_main = #armor/24-100;
+					il_main = #*/14-35;
+				}
+				[oneof*]
+				{
+					chance = 0.05;
+					il_main = #weapon/-rare(1)/33-41;
+					il_main = #armor/-rare(1)/97-115;
+					il_main = #*/-rare(1)/33-41;
+				}
+				[oneof*]
+				{
+					chance = 0.05;
+					il_main = #weapon/-unique(2)/33-41;
+					il_main = #armor/-unique(2)/97-115;
+					il_main = #*/-unique(2)/33-41;
+				}
+			}
+		}
+	}
+	[trapped]
+	{
+		trap = trp_generator_frost_chest;
+		fire_event = WE_REQ_USE;
+	}
+}
+[t:template,n:clb24_5_3_chest_low_small]
+{
+	category_name = "clb24_andreou";
+	doc = "clb24_5_3_chest_low_small";
+	specializes = base_chest;
+	[aspect]
+	{
+		material = steel;
+		model = m_i_glb_chest-02;
+	}
+	[attack]
+	{
+		damage_max = 60;
+		damage_min = 50;
+	}
+	[body]
+	{
+		[chore_dictionary]
+		{
+			chore_prefix = a_i_glb;
+			[chore_open]
+			{
+				skrit = transition;
+				[anim_files] { 00=chest-02-open; }
+			}
+		}
+	}
+	[inventory]
+	{
+		[pcontent]
+		{
+			[oneof*]
+			{
+				[gold*]
+				{
+					chance = 0.8;
+					max = 314;
+					min = 237;
+				}
+				[oneof*]
+				{
+					chance = 0.1;
+					il_main = #weapon/20-30;
+					il_main = #armor/44-100;
+					il_main = #*/20-30;
+				}
+				[oneof*]
+				{
+					chance = 0.05;
+					il_main = #weapon/-rare(1)/33-41;
+					il_main = #armor/-rare(1)/97-115;
+					il_main = #*/-rare(1)/33-41;
+				}
+				[oneof*]
+				{
+					chance = 0.05;
+					il_main = #weapon/-unique(2)/33-41;
+					il_main = #armor/-unique(2)/97-115;
+					il_main = #*/-unique(2)/33-41;
+				}
+			}
+		}
+	}
+	[trapped]
+	{
+		trap = trp_generator_frost_chest;
+		fire_event = WE_REQ_USE;
+	}
+}
+
+[t:template,n:clb24_5_3_chest_med]
+{
+	category_name = "clb24_andreou";
+	doc = "clb24_5_3_chest_med";
+	specializes = base_chest;
+	[aspect]
+	{
+		material = steel;
+		model = m_i_glb_chest-05;
+		[textures]		{ 0 = b_i_gob_chest-01; }
+	}
+	[attack]
+	{
+		damage_max = 95;
+		damage_min = 66;
+	}
+	[body]
+	{
+		[chore_dictionary]
+		{
+			chore_prefix = a_i_ice;
+			[chore_open]
+			{
+				skrit = transition;
+				[anim_files] { 00=chest-open; }
+			}
+		}
+	}
+	[inventory]
+	{
+		[pcontent]
+		{
+			[all*]
+			{
+				[gold*]
+				{
+					chance = 0.5;
+					max = 450;
+					min = 288;
+				}
+				[oneof*]
+				{
+					il_main = #weapon/28-39;
+					il_main = #armor/57-110;
+					il_main = #*/28-39;
+					max = 2;
+					min = 1;
+				}
+				[oneof*]
+				{
+					chance = 0.1;
+					il_main = #weapon/-rare(1)/35-44;
+					il_main = #armor/-rare(1)/97-122;
+					il_main = #*/-rare(1)/35-44;
+				}
+				[oneof*]
+				{
+					chance = 0.05;
+					il_main = #weapon/-unique(2)/35-44;
+					il_main = #armor/-unique(2)/97-122;
+					il_main = #*/-unique(2)/35-44;
+				}
+			}
+		}
+	}
+	[trapped]
+	{
+		trap = trp_generator_frost_chest;
+		fire_event = WE_REQ_USE;
+	}
+}
+[t:template,n:clb24_5_3_chest_high]
+{
+	category_name = "clb24_andreou";
+	doc = "clb24_5_3_chest_high";
+	specializes = base_chest;
+	[aspect]
+	{
+		material = steel;
+		model = m_i_gob_crate-02;
+	}
+	[attack]
+	{
+		damage_max = 121;
+		damage_min = 88;
+	}
+	[body]
+	{
+		[chore_dictionary]
+		{
+			chore_prefix = a_i_gob;
+			[chore_open]
+			{
+				skrit = transition;
+				[anim_files] { 00=crate-02-open; }
+			}
+		}
+	}
+	[inventory]
+	{
+		[pcontent]
+		{
+			[all*]
+			{
+				[gold*]
+				{
+					max = 500;
+					min = 399;
+					min_pile = 63;
+					piles = 3 - 4;
+				}
+				[oneof*]
+				{
+					il_main = #weapon/33-43;
+					il_main = #armor/75-110;
+					il_main = #*/33-43;
+					max = 2;
+					min = 1;
+				}
+				[oneof*]
+				{
+					il_main = #weapon/-rare(1)/38-49;
+					il_main = #armor/-rare(1)/99-130;
+					il_main = #weapon/-unique(2)/38-49;
+					il_main = #armor/-unique(2)/99-130;
+					max = 2;
+					min = 1;
+				}
+			}
+		}
+	}
+	[trapped]
+	{
+		trap = trp_generator_fireball_chest;
+		fire_event = WE_REQ_USE;
+	}
+}

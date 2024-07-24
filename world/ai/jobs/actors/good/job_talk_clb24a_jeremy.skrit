@@ -1,0 +1,100 @@
+/*
+  ============================================================================
+  ----------------------------------------------------------------------------
+
+	File		: 	job_talk_clb24a_jeremy.skrit
+
+	Author(s)	: 	Andreou-NG
+
+	Purpose		: 	The cranky shop oiwner Jeriah- I mean, Jeremy
+
+  ----------------------------------------------------------------------------
+  ============================================================================
+*/
+
+Go		m_Go$;
+GoMind	m_Mind$;
+GoBody  m_Body$;
+Job		m_Job$;
+Goid	m_Target$;
+
+#include "k_job_c_mcp_fidget_utils"
+#include "k_job_c_talk_utils"
+
+startup state STARTUP$
+{
+}
+
+////////////////////////////////////////////////////////////////////////////////
+//	init
+event OnJobInitPointers$( Job job$ )
+{
+	m_Job$		= job$;
+	m_Go$		= job$.Go;
+	m_Mind$		= job$.Go.Mind;
+	m_Body$		= job$.Go.Body;
+}
+
+
+event OnJobInit$( Job job$ )
+{
+	OnJobInitPointers$( job$ );
+
+	m_Target$	= job$.GoalObject;
+
+	SetState Talk$;
+}
+
+////////////////////////////////////////////////////////////////////////////////
+//	blab blab away... pretend you're Lee on coffee
+state Talk$
+{
+	transition
+	{
+		-> Exiting$:	OnWorldMessage( WE_REQ_TALK_END ) =
+		{
+			if( m_Go$.Mind.ActorAutoFidgets )
+			{
+				StartFidgetIfRequired$();
+			}
+		}
+	}
+	
+	trigger OnWorldMessage$( WE_ANIM_DONE )
+	{
+		TryAnim$('talk');
+	}
+
+	event OnEnterState$
+	{
+		if ( GameAuditor.GetDb.GetBool( "clb24a_bandit_boss_dead" ) )
+		{
+			if ( GameAuditor.GetDb.GetBool( "clb24a_jeremy_open_chest" ) )
+			{
+				m_Go$.GetConversation.RSSelectConversation( "jeremy_shop_after_quest" );
+			}
+			else
+			{
+				m_Go$.GetConversation.RSSelectConversation( "jeremy_travellers_quest_done" );
+				GameAuditor.GetDb.SetBool( "clb24a_jeremy_open_chest" , true );
+			}
+		} 
+		else 
+		{
+			m_Go$.GetConversation.RSSelectConversation( "jeremy_shop" );
+		}
+		TryAnim$('talk');
+		m_Go$.GetConversation.RSActivateDialogue();
+	}
+}
+
+
+////////////////////////////////////////////////////////////////////////////////
+//	finish blabbing
+state Exiting$
+{
+	event OnEnterState$
+	{
+		m_Job$.MarkForDeletion();
+	}
+}

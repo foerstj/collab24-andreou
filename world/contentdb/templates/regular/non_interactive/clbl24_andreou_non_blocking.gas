@@ -1,0 +1,78 @@
+
+[t:template,n:clb24a_spire_lava_01]
+{
+	category_name = "rocks";
+	doc = "clb24a_spire_lava_01";
+	specializes = non_interactive_blocking;
+	[aspect]
+	{
+		model = m_i_glb_spike-rock-01;
+		[textures] { 0=b_t_lc01_wal_04x08-d; }
+	}
+}
+[t:template,n:clb24a_spire_lava_02]
+{
+	category_name = "rocks";
+	doc = "clb24a_spire_lava_02";
+	specializes = non_interactive_blocking;
+	[aspect]
+	{
+		model = m_i_glb_spike-rock-02;
+		[textures] { 0=b_t_lc01_wal_04x08-d; }
+	}
+}
+[t:template,n:clb24a_debris_glb_bone_rock_01]
+{
+	category_name = "rocks";
+	doc = "clv24a_cav_rock_bones_xlg";
+	specializes = non_interactive_blocking;
+	[aspect]
+	{
+		model = m_i_glb_debris-bone-rock-01;
+		[textures] { 0=b_i_glb_debris-bone-rock; }
+	}
+}
+[t:template,n:clb24a_debris_glb_bone_rock_02]
+{
+	category_name = "rocks";
+	doc = "clv24a_cav_rock_bones_lg";
+	specializes = non_interactive_blocking;
+	[aspect]
+	{
+		model = m_i_glb_debris-bone-rock-02;
+		[textures] { 0=b_i_glb_debris-bone-rock; }
+	}
+}
+[t:template,n:clb24a_debris_glb_bone_rock_03]
+{
+	category_name = "rocks";
+	doc = "clv24a_cav_rock_bones_med";
+	specializes = non_interactive_blocking;
+	[aspect]
+	{
+		model = m_i_glb_debris-bone-rock-03;
+		[textures] { 0=b_i_glb_debris-bone-rock; }
+	}
+}
+[t:template,n:clb24a_debris_glb_bone_rock_04]
+{
+	category_name = "rocks";
+	doc = "clv24a_cav_rock_bones_sm";
+	specializes = non_interactive_blocking;
+	[aspect]
+	{
+		model = m_i_glb_debris-bone-rock-04;
+		[textures] { 0=b_i_glb_debris-bone-rock; }
+	}
+}
+[t:template,n:clb24a_debris_glb_bone_rock_05]
+{
+	category_name = "rocks";
+	doc = "clv24a_cav_rock_bones_xsm";
+	specializes = non_interactive_blocking;
+	[aspect]
+	{
+		model = m_i_glb_debris-bone-rock-05;
+		[textures] { 0=b_i_glb_debris-bone-rock; }
+	}
+}

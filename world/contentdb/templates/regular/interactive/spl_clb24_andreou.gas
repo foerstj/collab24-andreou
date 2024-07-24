@@ -1,0 +1,258 @@
+
+[t:template,n:c24_spell_explosive_powder_bandit]
+{
+	category_name = "magic";
+	doc = "col24 spell explosive powder - bandit";
+	specializes = base_spell_dark;
+	[attack]
+	{
+		attack_class = ac_combat_magic;
+		aiming_error_range_x = 2.5;
+		aiming_error_range_y = 2.5;
+		ammo_attach_bone = weapon_grip;
+		ammo_template = grenade_magic_small;
+		area_damage_radius = 2;
+		damage_max = 0;
+		damage_min = 0;
+		use_aiming_error = true;
+	}
+	[common]
+	{
+		is_pcontent_allowed = false;
+		description = "Ignites a magical charge and hurls it at the Target.";
+		screen_name = "Explosive Powder";
+		[template_triggers]
+		{
+			[*]
+			{
+				action* = call_sfx_script( "combat_spell_sparkle" );
+				condition* = receive_world_message("we_dropped");
+			}
+			[*]
+			{
+				action* = call_sfx_script( "explosive_powder_cast" );
+				condition* = receive_world_message("we_req_cast");
+			}
+		}
+	}
+	[gui]
+	{
+		active_icon = b_gui_ig_i_ic_sp_143;
+		inventory_icon = b_gui_ig_i_ic_sp_143_inv;
+	}
+	[magic]
+	{
+		attack_damage_modifier_max = ((#magic*3)*.8)+4;
+		attack_damage_modifier_min = ((#magic*3)*.7)+2;
+		cast_range = 12;
+		cast_reload_delay = 2;
+		mana_cost = 0;
+		max_level = 25;
+		required_level = 3;
+		requires_line_of_sight = true;
+		speed_bias = 1;
+		target_type_flags = tt_conscious_enemy | tt_unconscious_enemy | tt_breakable | tt_terrain;
+		usage_context_flags = uc_offensive;
+	}
+	[physics]
+	{
+		velocity = 11;
+	}
+	[spell_launch]
+	{
+		number = 1;
+	}
+}
+
+
+[t:template,n:c24_spell_battle_healing_bandit]
+{
+	category_name = "magic";
+	doc = "c24 spell battle heal - bandit";
+	specializes = base_spell_dark;
+	[aspect]
+	{
+		gold_value = 352;
+	}
+	[common]
+	{
+		is_pcontent_allowed = false;
+		description = "Infuses a Party Member with <alter_life> Health.";
+		screen_name = "Battle Healing";
+		[template_triggers]
+		{
+			[*]
+			{
+				action* = call_sfx_script("heal", "@body_mid");
+				condition* = receive_world_message("we_req_cast");
+			}
+			[*]
+			{
+				action* = call_sfx_script( "combat_spell_sparkle" );
+				condition* = receive_world_message("we_dropped");
+			}
+		}
+	}
+	[gui]
+	{
+		active_icon = b_gui_ig_i_ic_sp_088;
+		inventory_icon = b_gui_ig_i_ic_sp_088_inv;
+	}
+	[magic]
+	{
+		cast_experience = 0.12*((19+((#magic+1)*6))*0.8);
+		cast_range = 10;
+		cast_reload_delay = 1;
+		is_one_shot = true;
+		mana_cost = 10;
+		max_level = 99;
+		required_level = 10;
+		requires_line_of_sight = false;
+		speed_bias = 1;
+		target_type_flags = tt_injured_friend;
+		target_type_flags_not = tt_dead_friend;
+		usage_context_flags = uc_life_giving;
+		[enchantments]
+		{
+			[*]
+			{
+				alteration = alter_life;
+				description = "heal life";
+				initial_delay = 0.5;
+				value = (19+((#magic+1)*6))*0.8;
+			}
+		}
+	}
+	[spell_default] {}
+}
+
+
+[t:template,n:c24_spell_heater_fire_lesser]
+{
+	category_name = "magic";
+	doc = "clb24 Heater Fire Lesser";
+	specializes = base_spell_monster;
+	[attack]
+	{
+		damage_max = 66;
+		damage_min = 57;
+	}
+	[magic]
+	{
+		cast_range = 10;
+		cast_reload_delay = 1;
+		effect_duration = 2;
+		mana_cost = 0;
+		requires_line_of_sight = true;
+		speed_bias = 1;
+		target_type_flags = tt_conscious_enemy;
+		usage_context_flags = uc_offensive;
+	}
+	[spell_fire]
+	{
+		effect_script = heater_fire;
+		particle_fit = 0.01;
+	}
+}
+
+
+[t:template,n:c24_spell_blaster_bomb_lesser]
+{
+	category_name = "magic";
+	doc = "clb24 spell blaster bomb Lesser";
+	specializes = base_spell_monster;
+	[attack]
+	{
+		attack_class = ac_combat_magic;
+		aiming_error_range_x = 8.5;
+		aiming_error_range_y = 8.5;
+		ammo_attach_bone = bone05;
+		ammo_template = grenade_magic;
+		area_damage_radius = 3.5;
+		damage_max = 67;
+		damage_min = 59;
+		use_aiming_error = true;
+	}
+	[magic]
+	{
+		cast_range = 10;
+		cast_reload_delay = 2;
+		mana_cost = 0;
+		requires_line_of_sight = true;
+		speed_bias = 1;
+		target_type_flags = tt_conscious_enemy;
+		usage_context_flags = uc_offensive;
+	}
+	[physics]
+	{
+		velocity = 10;
+	}
+	[spell_launch]
+	{
+		number = 1;
+	}
+}
+
+
+[t:template,n:c24_spell_copter_lightning_lesser]
+{
+	category_name = "magic";
+	doc = "clb24 Copter Lightning Lesser";
+	specializes = base_spell_monster;
+	[attack]
+	{
+		 damage_min = 42;
+		 damage_max = 49;
+	}
+	[common]
+	{
+		[template_triggers]
+		{
+			[*]
+			{
+				action* = call_sfx_script("copter_lightning");
+				condition* = receive_world_message("we_req_cast");
+			}
+		}
+	}
+	[magic]
+	{
+		cast_range = 10;
+		cast_reload_delay = 1;
+		mana_cost = 0;
+		requires_line_of_sight = true;
+		speed_bias = 1;
+		target_type_flags = tt_conscious_enemy;
+		usage_context_flags = uc_offensive;
+	}
+	[spell_instant_hit] {}
+}
+[t:template,n:c24_spell_lava_beast_blast]
+{
+	category_name = "magic";
+	doc = "clb24 Rock Beast Blast";
+	specializes = base_spell_monster;
+	[attack]
+	{
+		damage_max = 110;
+		damage_min = 100;
+		area_damage_radius = 3;
+	}
+	[magic]
+	{
+		cast_range = 12;
+		cast_reload_delay = 0.5;
+		effect_duration = 1;
+		mana_cost = 0;
+		requires_line_of_sight = true;
+		speed_bias = 1;
+		target_type_flags = tt_conscious_enemy;
+		usage_context_flags = uc_offensive;
+	}
+	[spell_damage_volume]
+	{
+		effect_script = lava_beast_blast;
+		start_radius = 1.5;
+		length = 13.0;
+	}
+}
