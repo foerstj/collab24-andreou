@@ -1,0 +1,135 @@
+[bookmarks]
+{
+	[t:bookmark,n:5_0]
+	{
+		description = "5_0 region start";
+		position = 0.000000,0.000000,0.000000,0xf8b7aa17;
+		[camera]
+		{
+		  f azimuth = 0.730797;
+		  f distance = 18.000000;
+		  f orbit = 1.580000;
+		}
+	}
+	[t:bookmark,n:5_1]
+	{
+		description = "5_1 region start";
+		position = 0.000000, 0.000000, 0.000000, 0xecace234;
+		[camera]
+		{
+		  f azimuth = 0.558505;
+		  f distance = 14.000000;
+		  f orbit = 0.150000;
+		}
+	}
+	[t:bookmark,n:5_1_shop]
+	{
+		description = "5_1 shop";
+		position = 0.000000, 0.000000, 0.000000, 0x33605dc3;
+		[camera]
+		{
+		  f azimuth = 0.558505;
+		  f distance = 14.000000;
+		  f orbit = 0.150000;
+		}
+	}
+	[t:bookmark,n:5_2]
+	{
+		description = "5_2 region start";
+		position = 0.000000, 0.000000, 0.000000, 0xf3c9a958;
+		[camera]
+		{
+		  f azimuth = 0.558505;
+		  f distance = 14.000000;
+		  f orbit = 0.150000;
+		}
+	}
+	[t:bookmark,n:5_3]
+	{
+		description = "5_3 region start";
+		position = 0.000000,0.000000,0.000000,0x6c7464d4;
+		[camera]
+		{
+		  f azimuth = 0.558505;
+		  f distance = 14.000000;
+		  f orbit = 0.150000;
+		}
+	}
+	[t:bookmark,n:5_3_bottom]
+	{
+		description = "Bottom of the mines";
+		position = 0.000000,0.000000,0.000000,0x288ef9ca;
+		[camera]
+		{
+		  f azimuth = 1.080797;
+		  f distance = 17.599998;
+		  f orbit = 0.010000;
+		}
+	}
+	[t:bookmark,n:5_3_halls]
+	{
+		description = "Entrence to dwarvern halls in mines";
+		position = 0.000000,0.000000,0.000000,0x6bdd8229;
+		[camera]
+		{
+		  f azimuth = 0.740798;
+		  f distance = 12.599998;
+		  f orbit = 6.290002;
+		}
+	}
+	[t:bookmark,n:5_4]
+	{
+		description = "Start of warrens level";
+		position = 0.000000,0.000000,0.000000,0x2e11c82c;
+		[camera]
+		{
+		  f azimuth = 0.785398;
+		  f distance = 20.000000;
+		  f orbit = 0.000000;
+		}
+	}
+	[t:bookmark,n:5_4_door]
+	{
+		description = "The door of the pipe quest at the end of region 5_4";
+		position = 0.000000,0.000000,0.000000,0x0ca17706;
+		[camera]
+		{
+		  f azimuth = 0.585398;
+		  f distance = 15.100000;
+		  f orbit = -1.560000;
+		}
+	}
+	[t:bookmark,n:5_4_lift]
+	{
+		description = "";
+		position = 0.000000,0.000000,0.000000,0x169dbe9e;
+		[camera]
+		{
+		  f azimuth = 0.820797;
+		  f distance = 17.600000;
+		  f orbit = 1.609999;
+		}
+	}
+	[t:bookmark,n:5_5]
+	{
+		description = "Start of last region - boss arena";
+		position = 0.000000,0.000000,0.000000,0x4a58585c;
+		[camera]
+		{
+		  f azimuth = 0.805398;
+		  f distance = 20.000000;
+		  f orbit = -3.179998;
+		}
+	}
+	[t:bookmark,n:5_3_inhalls]
+	{
+		description = "Inside the dwarvern halls";
+		position = 0.000000,0.000000,0.000000,0xC14CF26F;
+		[camera]
+		{
+		  f azimuth = 1.220796;
+		  f distance = 10.099998;
+		  f orbit = -3.139999;
+		}
+	}
+}

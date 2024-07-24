@@ -1,0 +1,58 @@
+[quests]
+{
+	[clb24a_bandit_boss]
+	{
+		quest_image = b_gui_ig_mnu_jnl_quest_14;
+		screen_name = "Confront the Bandit's Leader";
+		victory_sample = s_e_level_up_quest;
+		[*]
+		{
+			address = 5_1_cilffs_r1:conversations:alafair_give_quest;
+			description = "Elemenate the Bandit's Leader in the cave to the west of Jeremy's shop.";
+		  b is_consumable = false;
+		  i order = 0;
+		  b required = true;
+			speaker = "Alafair";
+		}
+		[*]
+		{
+			description = "Return to the traveller's camp and Jeremy to get your reward.";
+			order = 1;
+		}
+	}
+	[clb24a_blasted_door]
+	{
+		quest_image = b_gui_ig_mnu_jnl_quest_clb24a_warrens_door;
+		screen_name = "The Blasted Door";
+		victory_sample = s_e_level_up_quest;
+		[*]
+		{
+			description = "The door to the goblin's lair is locked. Open the valves at the end of the four colored pipes to activate it's mechanism.";
+		  b is_consumable = true;
+		  i order = 0;
+		  b required = true;
+		}
+	}
+	[clb24a_locked_halls]
+	{
+		quest_image = b_gui_ig_mnu_jnl_quest_clb24a_mines_door;
+		screen_name = "Barricaded Miners";
+		victory_sample = s_e_level_up_quest;
+		[*]
+		{
+			address = 5_3_mines_r1:conversations:mine_door_1;
+			speaker = "Door Keeper";
+			description =  "The miner's barricaded themselves in their halls. Clear out the automatons and scorpiots around the area to gain access.";
+		  b is_consumable = true;
+		  i order = 0;
+		  b required = true;
+		}
+		[*]
+		{
+			description =  "The area is clear of automatons, the miners should let you in.";
+		  b is_consumable = true;
+		  i order = 1;
+		  b required = true;
+		}
+	}
+}
