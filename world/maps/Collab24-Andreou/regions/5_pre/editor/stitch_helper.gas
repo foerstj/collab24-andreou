@@ -1,0 +1,13 @@
+[stitch_helper_data]
+{
+	source_region_guid = 0x0000005E;
+	source_region_name = 5_pre;
+	[t:stitch_editor,n:5_0_cave_r1]
+	{
+		dest_region = 5_0_cave_r1;
+		[node_ids]
+		{
+			0x00000f45 = 0x1E3E66E3,6;
+		}
+	}
+}

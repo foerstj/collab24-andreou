@@ -10,4 +10,12 @@
 			0x05051000 = 0xB60D2523,6;
 		}
 	}
+	[t:stitch_editor,n:5_pre]
+	{
+		dest_region = 5_pre;
+		[node_ids]
+		{
+			0x00000f45 = 0x7203AC06,6;
+		}
+	}
 }
