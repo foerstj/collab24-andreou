@@ -1,11 +1,11 @@
 [start_positions]
 {
-	[t:start_group,n:default]
+	[t:start_group,n:c24_5_test]
 	{
 	  b default = true;
 		description = "This is the default group.";
 	  b dev_only = false;
-	  i id = 0;
+	  i id = 500;
 		screen_name = "";
 		[start_position]
 		{
