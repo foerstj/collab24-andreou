@@ -3,10 +3,10 @@
 	[t:start_group,n:c24_5_test]
 	{
 	  b default = true;
-		description = "This is the default group.";
+		description = "A test start position in Andreouland.";
 	  b dev_only = false;
 	  i id = 500;
-		screen_name = "";
+		screen_name = "Andreouland test";
 		[start_position]
 		{
 		  i id = 1;
