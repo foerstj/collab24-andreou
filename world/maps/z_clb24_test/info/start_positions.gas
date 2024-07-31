@@ -1,12 +1,12 @@
 [start_positions]
 {
-	[t:start_group,n:default]
+	[t:start_group,n:z_clb24_test]
 	{
 	  b default = true;
 		description = "This is the default group.";
-	  b dev_only = false;
-	  i id = 0;
-		screen_name = "";
+	  b dev_only = true;
+	  i id = 5000;
+		screen_name = "z_clb24_test";
 		[start_position]
 		{
 		  i id = 1;
