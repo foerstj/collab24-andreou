@@ -2,10 +2,10 @@
 {
 	created = ngpc-2023,natan;
 	description = none;
-  x guid = 0x00000001;
-	lastmodified = NGPC-2023,natan;
-  x mesh_range = 0x00000001;
+  x guid = 0x00000F51;
+	lastmodified = FLUPSNPUPS,flups;
+  x mesh_range = 0x00000F51;
 	notes = none;
-  x scid_range = 0x00000001;
+  x scid_range = 0x00000F51;
 	se_version = 1.70.0.4;
 }

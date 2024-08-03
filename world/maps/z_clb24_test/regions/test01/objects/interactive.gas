@@ -1,10 +1,10 @@
-[t:lever_des_01,n:0x00100002]
+[t:lever_des_01,n:0xf5100002]
 {
 	[on_off_lever]
 	{
 		off_message = we_req_activate;
-	  x off_scid = 0x00100001;
-	  x on_scid = 0x00100001;
+	  x off_scid = 0xF5100001;
+	  x on_scid = 0xF5100001;
 	}
 	[placement]
 	{
