@@ -1,0 +1,137 @@
+/*
+  ============================================================================
+  ----------------------------------------------------------------------------
+
+	File		: 	job_talk_clb24a_furnace_master.skrit
+
+	Author(s)	: 	Andreou-NG
+
+	Purpose		: 	The furnace master in the dwarvern halls
+
+  ----------------------------------------------------------------------------
+  ============================================================================
+*/
+
+Go		m_Go$;
+GoMind	m_Mind$;
+GoBody  m_Body$;
+Job		m_Job$;
+Goid	m_Target$;
+
+#include "k_job_c_mcp_fidget_utils"
+#include "k_job_c_talk_utils"
+
+startup state STARTUP$
+{
+}
+
+////////////////////////////////////////////////////////////////////////////////
+//	init
+event OnJobInitPointers$( Job job$ )
+{
+	m_Job$		= job$;
+	m_Go$		= job$.Go;
+	m_Mind$		= job$.Go.Mind;
+	m_Body$		= job$.Go.Body;
+}
+
+
+event OnJobInit$( Job job$ )
+{
+	OnJobInitPointers$( job$ );
+
+	m_Target$	= job$.GoalObject;
+
+	SetState Talk$;
+}
+
+////////////////////////////////////////////////////////////////////////////////
+//	blab blab away... pretend you're Lee on coffee
+state Talk$
+{
+	transition
+	{
+		-> Exiting$:	OnWorldMessage( WE_REQ_TALK_END ) =
+		{
+			if( GameAuditor.GetDb.GetBool( "clb24a_furnace_quest_give_reward" ) )
+			{
+				if( m_Target$.IsValid() ) 
+				{
+					GameAuditor.GetDb.SetBool( "clb24a_furnace_quest_give_reward", false );
+					
+					SiegePos SpawnPos$;
+					
+					GoCloneReq cloneReq$ = MakeGoCloneReq( "clb24a_furnace_quest_axe" );
+					
+					SpawnPos$ = m_Target$.go.placement.position;
+					cloneReq$.StartingPos	= SpawnPos$;
+				    
+					If( m_Target$.Go.Hasmind )
+					{
+						if( AIQuery.FindSpotRelativeToSource( m_Target$.Go, .25, .5, 2.0, m_Target$.Go.Mind.TempPos1 ) )
+				   		{
+				   			cloneReq$.StartingPos = m_Target$.Go.Mind.TempPos1;
+				   		}
+				   	}	
+					cloneReq$.SnapToTerrain = true;
+			        GoDb.SCloneGo( cloneReq$ );
+				}
+			}
+			if( m_Go$.Mind.ActorAutoFidgets )
+			{
+				StartFidgetIfRequired$();
+			}
+		}
+	}
+	
+	trigger OnWorldMessage$( WE_ANIM_DONE )
+	{
+		TryAnim$('talk');
+	}
+
+	event OnEnterState$
+	{
+		#only( game )
+		[[
+		if ( GameAuditor.GetDb.GetBool( "clb24a_furnace_quest_end" ) )
+		{
+			m_Go$.GetConversation.RSSelectConversation( "furnace_master_after_quest" );
+		}
+		else if ( GameAuditor.GetDb.GetBool( "clb24a_furnace_quest_start" ) )
+		{
+			if ( Goid.InValidGoid != UIPartyManager.DoesActivePartyHaveTemplate( "blacksmith_hammer", m_Target$ ) )
+			{
+				goid temp_item$ = UIPartyManager.DoesActivePartyHaveTemplate( "blacksmith_hammer", m_Target$ );
+				temp_item$.Go.Parent.Mind.SDoJob( MakeJobReq( JAT_DROP, JQ_ACTION, QP_FRONT, AO_REFLEX, temp_item$ ) );
+				PostWorldMessage( WE_REQ_DELETE, temp_item$, temp_item$, .1 );
+				
+				m_Go$.GetConversation.RSSelectConversation( "furnace_master_done_quest" );
+				GameAuditor.GetDb.SetBool( "clb24a_furnace_quest_end" , true );
+				GameAuditor.GetDb.SetBool( "clb24a_furnace_quest_give_reward", true );
+			}
+			else 
+			{
+				m_Go$.GetConversation.RSSelectConversation( "furnace_master_check_quest" );
+			}
+		} 
+		else 
+		{
+			m_Go$.GetConversation.RSSelectConversation( "furnace_master_give_quest" );
+			GameAuditor.GetDb.SetBool( "clb24a_furnace_quest_start" , true );
+		}
+		TryAnim$('talk');
+		m_Go$.GetConversation.RSActivateDialogue();
+		]]
+	}
+}
+
+
+////////////////////////////////////////////////////////////////////////////////
+//	finish blabbing
+state Exiting$
+{
+	event OnEnterState$
+	{
+		m_Job$.MarkForDeletion();
+	}
+}

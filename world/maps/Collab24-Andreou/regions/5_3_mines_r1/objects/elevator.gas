@@ -33,8 +33,8 @@
 	  i elevator_door_level2 = 1;
 	  x elevator_node = 0x9DEB892E;
 		material = "dm_small";
-		moving1_actioninfo = "clb24a_lava_1;0x00000053,1,-1,-1,out:black;0x00000054,1,-1,-1,in";
-		moving2_actioninfo = "clb24a_mines-5;0x00000053,1,-1,-1,in,5.5;0x00000054,1,-1,-1,out:black,5.5";
+		moving1_actioninfo = "clb24a_lava_1;0x00000053,1,-1,-1,out:black;0x00000054,1,-1,-1,in;0x00000053,3,-1,-1,out:black,1;0x00000053,3,-1,-1,in,6";
+		moving2_actioninfo = "clb24a_mines-5;0x00000053,1,-1,-1,in,5.5;0x00000054,1,-1,-1,out:black,5.5;0x00000053,3,-1,-1,out:black;0x00000053,3,-1,-1,in,5";
 	}
 	[placement]
 	{

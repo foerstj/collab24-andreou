@@ -32,7 +32,7 @@
 				condition* = party_member_within_bounding_box(2.000000,2.000000,2.000000,"on_every_enter");
 			  f delay = 0.000000;
 			  b flip_flop = false;
-			  b multi_player = true;
+			  b multi_player = false;
 			  b no_trig_bits = false;
 				occupants_group = ;
 			  f reset_duration = 0.000000;
@@ -96,7 +96,7 @@
 				condition* = party_member_within_bounding_box(1.000000,1.000000,7.000000,"on_every_enter");
 			  f delay = 0.000000;
 			  b flip_flop = false;
-			  b multi_player = true;
+			  b multi_player = false;
 			  b no_trig_bits = false;
 				occupants_group = ;
 			  f reset_duration = 0.000000;
@@ -770,6 +770,36 @@
 	  p position = -3.76627,0.00585347,-0.744308,0x9ae8699d;
 	}
 }
+[t:trigger_change_mood_box,n:0x05100c85]
+{
+	[common]
+	{
+		dev_instance_text = "MP STARTING POSITION MOOD";
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = mood_change("clb24a_cliffs-1");
+			  b can_self_destruct = true;
+				condition* = party_member_within_sphere(10.000000,"on_every_enter");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.707107,0,0.707107;
+	  p position = -0.820358,0.0115269,1.01169,0x9ae8699d;
+	}
+}
 [t:trigger_change_mood_box,n:0x05100c57]
 {
 	[common]
@@ -796,7 +826,7 @@
 	[placement]
 	{
 	  q orientation = 0,-0.707107,0,0.707107;
-	  p position = 0.115192,-6,-1.41327,0xdc0c73c8;
+	  p position = 0.071909,-6,-1.39395,0xdc0c73c8;
 	}
 }
 [t:trigger_generic,n:0x05100006]

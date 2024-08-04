@@ -211,7 +211,6 @@
 	0x05400be1 = t_gi_cap-08x04-a;
 	0x05400be2 = t_gi_cap-08x08-a;
 	0x05400be3 = t_gi_cap-dor-4-a;
-	0x05400bef = t_gi_exit-ele-base;
 	0x05400bf0 = t_gi_exit-ele-shaft;
 	0x05400bf1 = t_gi_exit-ele-top;
 	0x05400bf2 = t_gi_exit-ele;

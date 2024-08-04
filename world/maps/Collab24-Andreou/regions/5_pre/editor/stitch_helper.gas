@@ -7,7 +7,7 @@
 		dest_region = 5_0_cave_r1;
 		[node_ids]
 		{
-			0x00000f45 = 0x1E3E66E3,6;
+			0x00000f45 = 0xDF758666,6;
 		}
 	}
 }

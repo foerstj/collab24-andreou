@@ -39,6 +39,36 @@
 	  p position = 2.01812,-0.46552,-0.039566,0xa7316e46;
 	}
 }
+[t:blacksmith_hammer,n:0x053005ea]
+{
+	[common]
+	{
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = send_world_message("we_req_activate",0x053005EF,0f,"default","every",0);
+			  b can_self_destruct = true;
+				condition* = receive_world_message("we_picked_up",0,"on_first_message");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = true;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.382683,0,0.92388;
+	  p position = 1.68753,-0.05,-1.06315,0xabc68ef3;
+		use_point_scids = 0x053005e0;
+	}
+}
 [t:pickaxe,n:0x05300298]
 {
 	[aspect]

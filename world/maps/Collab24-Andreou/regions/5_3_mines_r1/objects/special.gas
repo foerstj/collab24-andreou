@@ -642,6 +642,78 @@
 	  p position = -3.41332,-2,-5.18443,0xc49ecb85;
 	}
 }
+[t:trigger_generic,n:0x053005e8]
+{
+	[common]
+	{
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = send_world_message("we_req_activate",0x053005EC,0f,"default","every",0);
+			  b can_self_destruct = true;
+				condition* = party_member_within_bounding_box(7.000000,1.000000,1.000000,"on_every_enter");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  p position = -2.57575,0.05,-3.51402,0x0116344c;
+	}
+}
+[t:check_bool,n:0x053005ec]
+{
+	[check_bool]
+	{
+		bool_variable = "clb24a_furnace_quest_start";
+	  x send_to_scid = 0x053005ED;
+	}
+	[placement]
+	{
+	  p position = -0.672062,-0.05,3.77942,0xdde6545f;
+	}
+}
+[t:trigger_generic,n:0x053005ed]
+{
+	[common]
+	{
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = send_world_message("we_req_deactivate",0x053005E1,0f,"default","every",0);
+				action* = send_world_message("we_req_activate",0x053005E2,0f,"default","every",0);
+				action* = send_world_message("we_req_activate",0x053005E5,0f,"default","every",0);
+				action* = send_world_message("we_req_activate",0x053005E6,0f,"default","every",0);
+				action* = send_world_message("we_req_activate",0x053005E7,0f,"default","every",0);
+			  b can_self_destruct = true;
+				condition* = receive_world_message("we_req_activate",0,"on_first_message");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = true;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  p position = 0.0375177,-0.05,2.34854,0xdde6545f;
+	}
+}
 [t:accumulate_trigger,n:0x053002e9]
 {
 	[generic_accumtrigger]
@@ -1048,7 +1120,7 @@
 	[placement]
 	{
 	  q orientation = 0,1,0,0;
-	  p position = 1.172,-0.05,1.26206,0xf2460018;
+	  p position = 1.52428,-0.0500002,1.71655,0xf2460018;
 	}
 	[set_bool]
 	{
@@ -1060,7 +1132,7 @@
 	[generic_accumtrigger]
 	{
 	  i num_til_send = 5;
-	  x send_to_scid = 0x053002E2;
+	  x send_to_scid = 0x05300516;
 	}
 	[placement]
 	{
@@ -1077,6 +1149,35 @@
 	[placement]
 	{
 	  p position = 1.46442,-0.05,-1.46461,0xf2460018;
+	}
+}
+[t:trigger_generic,n:0x05300516]
+{
+	[common]
+	{
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = send_world_message("we_req_activate",0x053002E2,0f,"default","every",0);
+				action* = change_quest_state("clb24a_locked_halls","active",1);
+			  b can_self_destruct = true;
+				condition* = receive_world_message("we_req_activate",0,"on_first_message");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = true;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  p position = 0.923721,-0.05,0.922806,0xf2460018;
 	}
 }
 [t:trigger_generic,n:0x0530001a]
@@ -1165,11 +1266,39 @@
 	  p position = -2.01492,-2,-2.02142,0x3a3be9c9;
 	}
 }
-[t:use_point,n:0x053002a9]
+[t:use_point,n:0x053005e0]
 {
 	[placement]
 	{
-	  p position = 0.888092,-0.05,0.124687,0xabc68ef3;
+	  p position = 1.26321,-0.05,-0.0338555,0xabc68ef3;
+	}
+}
+[t:trigger_generic,n:0x053005ef]
+{
+	[common]
+	{
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = change_quest_state("clb24a_missing_hammer","active",1);
+			  b can_self_destruct = true;
+				condition* = receive_world_message("we_req_activate",0,"on_first_message");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = true;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  p position = -1.34974,-2,-1.66852,0xd56fdc17;
 	}
 }
 [t:trigger_generic,n:0x0530000f]

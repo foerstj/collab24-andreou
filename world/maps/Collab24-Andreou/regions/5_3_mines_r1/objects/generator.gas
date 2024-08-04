@@ -28,6 +28,54 @@
 	  p position = 2.1305,-0.05,-1.63715,0x1e43ba0b;
 	}
 }
+[t:generator_generic,n:0x053005e6]
+{
+	[generator_basic]
+	{
+		child_template_name = "c24_5_darkling_reveal";
+	}
+	[placement]
+	{
+	  q orientation = -1.27885e-008,-0.707107,1.27885e-008,0.707107;
+	  p position = -1.39676,-0.05,1.2721,0xabc68ef3;
+	}
+}
+[t:generator_generic,n:0x053005e7]
+{
+	[generator_basic]
+	{
+		child_template_name = "c24_5_darkling_reveal";
+	}
+	[placement]
+	{
+	  q orientation = -1.27885e-008,-0.707107,1.27885e-008,0.707107;
+	  p position = -1.38319,-0.05,-0.651363,0xabc68ef3;
+	}
+}
+[t:generator_generic,n:0x053005e2]
+{
+	[generator_basic]
+	{
+		child_template_name = "c24_5_darkling_reveal";
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.92388,0,0.382683;
+	  p position = 2.799,2,3.33136,0x65829078;
+	}
+}
+[t:generator_generic,n:0x053005e5]
+{
+	[generator_basic]
+	{
+		child_template_name = "c24_5_darkling_reveal";
+	}
+	[placement]
+	{
+	  q orientation = 0,0.92388,0,0.382684;
+	  p position = -3.07657,1.95354,3.53537,0x65829078;
+	}
+}
 [t:generator_generic,n:0x05300258]
 {
 	[generator_basic]

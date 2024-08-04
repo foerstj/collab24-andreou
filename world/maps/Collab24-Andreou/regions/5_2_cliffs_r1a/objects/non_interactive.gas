@@ -951,6 +951,13 @@
 	  p position = 2.94959,-12,-4.7941,0xde6cf692;
 	}
 }
+[t:supplies_glb_01,n:0x052000a3]
+{
+	[placement]
+	{
+	  p position = 0.738798,-12,-5.73627,0xde6cf692;
+	}
+}
 [t:debris_cav_03,n:0x052000c2]
 {
 	[placement]
@@ -991,11 +998,12 @@
 	  p position = -2.16108,0,-1.5679,0x0b508425;
 	}
 }
-[t:supplies_glb_01,n:0x052000a3]
+[t:trough_grs_grain,n:0x052000b0]
 {
 	[placement]
 	{
-	  p position = 0.738798,-12,-5.73627,0xde6cf692;
+	  q orientation = 0,-0.718285,0,0.695749;
+	  p position = 3.61366,0,1.96687,0x0b508425;
 	}
 }
 [t:debris_cav_01,n:0x052000c1]
@@ -1028,14 +1036,6 @@
 	{
 	  q orientation = 0,0.983808,0,0.179225;
 	  p position = -0.474586,0,0.936203,0x9630d3eb;
-	}
-}
-[t:trough_grs_grain,n:0x052000b0]
-{
-	[placement]
-	{
-	  q orientation = 0,-0.718285,0,0.695749;
-	  p position = 3.61366,0,1.96687,0x0b508425;
 	}
 }
 [t:bed_glb_sleeping_bag,n:0x05200012]

@@ -17,13 +17,12 @@
 	{
 		chapter = chapter_05;
 		quest_image = b_gui_ig_mnu_jnl_quest_14;
-		screen_name = "Confront the Bandit's Leader";
+		screen_name = "Bandits on the Road";
 		victory_sample = s_e_level_up_quest;
 		[*]
 		{
 			address = 5_1_cilffs_r1:conversations:alafair_give_quest;
 			description = "Elemenate the Bandit's Leader in the cave to the west of Jeremy's shop.";
-		  b is_consumable = false;
 		  i order = 0;
 		  b required = true;
 			speaker = "Alafair";
@@ -43,8 +42,28 @@
 		[*]
 		{
 			description = "The door to the goblin's lair is locked. Open the valves at the end of the four colored pipes to activate it's mechanism.";
+		  i order = 0;
+		  b required = true;
+		}
+	}
+	[clb24a_goblin_lair]
+	{
+		chapter = chapter_05;
+		quest_image = b_gui_ig_mnu_jnl_quest_clb24a_golbin_lair;
+		screen_name = "The Goblin's Lair";
+		victory_sample = s_e_level_up_quest;
+		[*]
+		{
+			description = "Enter the mines and find there the goblin's lair";
 		  b is_consumable = true;
 		  i order = 0;
+		  b required = false;
+			speaker = "frightened man";
+		}
+		[*]
+		{
+			description = "Deal with the goblin menace once and for all";
+		  i order = 1;
 		  b required = true;
 		}
 	}
@@ -57,18 +76,39 @@
 		[*]
 		{
 			address = 5_3_mines_r1:conversations:mine_door_1;
-			speaker = "Door Keeper";
-			description =  "The miner's barricaded themselves in their halls. Clear out the automatons and scorpiots around the area to gain access.";
-		  b is_consumable = true;
+			description = "The miner's barricaded themselves in their halls. Clear out the automatons and scorpiots around the area to gain access.";
 		  i order = 0;
 		  b required = true;
+			speaker = "Door Keeper";
 		}
 		[*]
 		{
-			description =  "The area is clear of automatons, the miners should let you in.";
-		  b is_consumable = true;
+			description = "The area is clear of automatons, the miners should let you in.";
 		  i order = 1;
 		  b required = true;
+			speaker = ;
+		}
+	}
+	[clb24a_missing_hammer]
+	{
+		chapter = chapter_05;
+		quest_image = b_gui_ig_mnu_jnl_quest_10;
+		screen_name = "Missing Hammer";
+		victory_sample = s_e_level_up_quest;
+		[*]
+		{
+			address = 5_1_cilffs_r1:conversations:traveller_male;
+			description = "Find the missing hammer under a rock near the unfinished bridge in the mines";
+		  i order = 0;
+		  b required = true;
+			speaker = "Furnace Master";
+		}
+		[*]
+		{
+			description = "Return the hammer to the furnace master in the mines halls";
+		  i order = 1;
+		  b required = true;
+			speaker = ;
 		}
 	}
 }

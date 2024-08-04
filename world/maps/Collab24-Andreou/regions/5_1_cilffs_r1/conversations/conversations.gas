@@ -35,7 +35,30 @@
 {
 	[text*]
 	{
-		screen_text = "TODO Text";
+	  i order = 0;
+		screen_text = "Have you come this far for a reading? My inner eye is not as bright as it once was, but I can glimpse into the future a bit. I see bright orange light and searing hot, boulders are flying in your direction. Machines whirl and lava is bubbling. You wonder why you went down that lair, but it is too late now. All is about to end.";
+	  f scroll_rate = 10.000000;
+	}
+	[text*]
+	{
+		screen_text = "I see your resolve, there is no need for a second reading.";
+	  f scroll_rate = 10.000000;
+	}
+}
+[frightened_man]
+{
+	[text*]
+	{
+		activate_quest* = clb24a_goblin_lair,0;
+	  i order = 0;
+	  b quest_dialog = true;
+		screen_text = "Ahh! You startled me. Did you come from TODOSadowLand? You don’t look like the climber type, I guess that means they repaired the bridge. Oh I’m so relieved, that means I can finally leave this area here. I was sneaking past bandits and trolls these past few weeks and living from berries. The mines further up the path are infested with some sort of beasts and machines, and you can hear some drilling in the deep parts of the mine. I heard these blasted goblins made their lair there. I’m not staying around to find out what they are cooking there, I’m leaving!";
+	  f scroll_rate = 10.000000;
+	}
+	[text*]
+	{
+	  i order = 1;
+		screen_text = "You want to scale the mountain? That’s your business, I’m not taking even one step in that direction.";
 	  f scroll_rate = 10.000000;
 	}
 }
@@ -62,6 +85,16 @@
 	{
 		choice = shop;
 		screen_text = "Are you here still? You are clear to browse what I have, but don't expect any more presents from me.";
+	  f scroll_rate = 10.000000;
+	}
+}
+[jeremy_travellers_left_quest_done]
+{
+	[text*]
+	{
+		choice = shop;
+		complete_quest* = clb24a_bandit_boss;
+		screen_text = "Where were you? Good job helping these travelers, they left and I couldn’t be happier. Don’t you think you are welcome to pitch your own tent here. You are welcome to my chest upstairs and to trade here, but as soon as our business is finished you go away.";
 	  f scroll_rate = 10.000000;
 	}
 }

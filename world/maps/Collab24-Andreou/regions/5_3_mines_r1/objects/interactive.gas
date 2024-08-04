@@ -606,6 +606,40 @@
 		use_point_scids = 0x0530002f;
 	}
 }
+[t:debris_glb_bone_rock_breakable_02,n:0x053005df]
+{
+	[aspect]
+	{
+	  f scale_multiplier = 1.15208;
+	}
+	[common]
+	{
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = send_world_message("we_req_deactivate",0x053005EB,0f,"default","every",0);
+			  b can_self_destruct = true;
+				condition* = receive_world_message("we_killed",0,"on_first_message");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = true;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  q orientation = 0,0.979973,0,-0.199132;
+	  p position = 1.81939,-2,-1.48799,0xd56fdc17;
+		use_point_scids = 0x053005e0;
+	}
+}
 [t:wall_cav_boarded,n:0x0530000e]
 {
 	[aspect]

@@ -1,5 +1,116 @@
 [start_positions]
 {
+	[t:start_group,n:c24_5_1_jeremy]
+	{
+	  b default = true;
+		description = "Jeremy's shop at the Sunset Slopes";
+	  b dev_only = false;
+	  i id = 501;
+		screen_name = "Jeremy's Cliff Shop";
+		[start_position]
+		{
+		  i id = 1;
+			position = -1.713959,0.000000,-1.342392,0x33605DC3;
+			[camera]
+			{
+			  f azimuth = 0.500000;
+			  f distance = 20.000000;
+			  f orbit = 0.000000;
+				position = -1.713959,0.000000,-1.342392,0x33605DC3;
+			}
+		}
+		[start_position]
+		{
+		  i id = 2;
+			position = -3.661552,-4.750000,-5.515472,0x5C937DDD;
+			[camera]
+			{
+			  f azimuth = 0.500000;
+			  f distance = 20.000000;
+			  f orbit = 0.000000;
+				position = -3.661552,-4.750000,-5.515472,0x5C937DDD;
+			}
+		}
+		[start_position]
+		{
+		  i id = 3;
+			position = -0.875160,0.000000,-0.183487,0x24AE882E;
+			[camera]
+			{
+			  f azimuth = 0.500000;
+			  f distance = 20.000000;
+			  f orbit = 0.000000;
+				position = -0.875160,0.000000,-0.183487,0x24AE882E;
+			}
+		}
+		[start_position]
+		{
+		  i id = 4;
+			position = -0.075790,0.000000,1.906456,0x33605DC3;
+			[camera]
+			{
+			  f azimuth = 0.500000;
+			  f distance = 20.000000;
+			  f orbit = 0.000000;
+				position = -0.075790,0.000000,1.906456,0x33605DC3;
+			}
+		}
+		[start_position]
+		{
+		  i id = 5;
+			position = 0.003014,-0.050000,0.549995,0x9AE8699D;
+			[camera]
+			{
+			  f azimuth = 0.500000;
+			  f distance = 20.000000;
+			  f orbit = 0.000000;
+				position = 0.003014,-0.050000,0.549995,0x9AE8699D;
+			}
+		}
+		[start_position]
+		{
+		  i id = 6;
+			position = -0.486855,0.000000,-0.115356,0x141140F0;
+			[camera]
+			{
+			  f azimuth = 0.500000;
+			  f distance = 20.000000;
+			  f orbit = 0.000000;
+				position = -0.486855,0.000000,-0.115356,0x141140F0;
+			}
+		}
+		[start_position]
+		{
+		  i id = 7;
+			position = 2.938606,0.000000,-0.536736,0x9C050D84;
+			[camera]
+			{
+			  f azimuth = 0.500000;
+			  f distance = 20.000000;
+			  f orbit = 0.000000;
+				position = 2.938606,0.000000,-0.536736,0x9C050D84;
+			}
+		}
+		[start_position]
+		{
+		  i id = 8;
+			position = -0.361328,0.000000,0.809174,0x9C050D84;
+			[camera]
+			{
+			  f azimuth = 0.500000;
+			  f distance = 20.000000;
+			  f orbit = 0.000000;
+				position = -0.361328,0.000000,0.809174,0x9C050D84;
+			}
+		}
+		[world_levels]
+		{
+			[normal]
+			{
+			  i required_level = 13;
+			}
+		}
+	}
 	[t:start_group,n:c24_5_test]
 	{
 	  b default = true;
@@ -16,7 +127,7 @@
 			  f azimuth = 0.500000;
 			  f distance = 20.000000;
 			  f orbit = 0.000000;
-				position = -0.051981,-6.000000,5.350830,0x7203AC06;
+				position = 0.017174,-6.000000,-1.633945,0x058C3F7D;
 			}
 		}
 		[world_levels]

@@ -249,7 +249,7 @@
 	[placement]
 	{
 	  q orientation = 0,1.49012e-007,0,1;
-	  p position = -3.28604,0,-0.833725,0x4cc111ef;
+	  p position = -3.28441,0,-0.807632,0x4cc111ef;
 	}
 }
 [t:cmd_ai_t_patrol,n:0x054000ed]

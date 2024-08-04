@@ -73,9 +73,16 @@ state Talk$
 			{
 				m_Go$.GetConversation.RSSelectConversation( "jeremy_shop_after_quest" );
 			}
-			else
+			else 
 			{
-				m_Go$.GetConversation.RSSelectConversation( "jeremy_travellers_quest_done" );
+				if ( GameAuditor.GetDb.GetBool( "clb24a_travellers_left" ) )
+				{
+					m_Go$.GetConversation.RSSelectConversation( "jeremy_travellers_left_quest_done" );
+				}
+				else
+				{
+					m_Go$.GetConversation.RSSelectConversation( "jeremy_travellers_quest_done" );
+				}
 				GameAuditor.GetDb.SetBool( "clb24a_jeremy_open_chest" , true );
 			}
 		} 

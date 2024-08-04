@@ -6,14 +6,6 @@
 	  p position = -0.062521,0,-0.410177,0x02ed8e5b;
 	}
 }
-[t:c24_5_bandit,n:0x051000f0]
-{
-	[placement]
-	{
-	  q orientation = 0,-0.507118,0,0.861877;
-	  p position = -2.34098,0,0.96789,0x02ed8e5b;
-	}
-}
 [t:c24_5_bandit_mage,n:0x051000f3]
 {
 	[common]
@@ -401,14 +393,6 @@
 	{
 	  q orientation = 0,0.459878,0,0.887982;
 	  p position = 1.8359,-0.449999,-0.826419,0x337adb79;
-	}
-}
-[t:c24_5_bandit,n:0x0510013b]
-{
-	[placement]
-	{
-	  q orientation = 0,0.0471657,0,0.998887;
-	  p position = 0.147118,-0.449999,0.473656,0x9bf111fa;
 	}
 }
 [t:c24_5_bandit_ranged,n:0x05100139]
@@ -881,6 +865,7 @@
 		{
 			* = jeremy_shop;
 			* = jeremy_shop_after_quest;
+			* = jeremy_travellers_left_quest_done;
 			* = jeremy_travellers_quest_done;
 		}
 	}
@@ -1122,22 +1107,6 @@
 	  p position = 1.07068,-0.45,-0.557642,0xaa645bc4;
 	}
 }
-[t:c24_5_bandit_ranged,n:0x051000d7]
-{
-	[placement]
-	{
-	  q orientation = 0,0.572882,0,0.819638;
-	  p position = 0.643209,-0.45,-0.374387,0xac8394d5;
-	}
-}
-[t:c24_5_bandit,n:0x051000db]
-{
-	[placement]
-	{
-	  q orientation = 0,-0.70578,0,0.708431;
-	  p position = -0.672957,-0.45,-0.436566,0xac8394d5;
-	}
-}
 [t:c24_5_bandit_mage,n:0x051000d6]
 {
 	[placement]
@@ -1160,14 +1129,6 @@
 	{
 	  q orientation = 0,0.871089,0,0.491126;
 	  p position = 0.0496712,-0.35,-2.31953,0x575693d2;
-	}
-}
-[t:c24_5_bandit,n:0x05100083]
-{
-	[placement]
-	{
-	  q orientation = 0,0.999731,0,0.0231955;
-	  p position = 1.43982,-0.35,-2.41967,0x575693d2;
 	}
 }
 [t:c24_5_bandit,n:0x05100084]
@@ -1388,6 +1349,29 @@
 	  p position = -2.81653,0,-1.98235,0xa584934c;
 	}
 }
+[t:mp_townfolk_male_01,n:0x05100c86]
+{
+	[common]
+	{
+		screen_name = "Frightened Man";
+	}
+	[conversation]
+	{
+		[conversations]
+		{
+			* = frightened_man;
+		}
+	}
+	[mind]
+	{
+		jat_talk = world\ai\jobs\common\job_talk.skrit;
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.627491,0,-0.778623;
+	  p position = 2.34654,-0.65,-2.0839,0xb0f3e895;
+	}
+}
 [t:c24_5_bandit,n:0x0510004b]
 {
 	[placement]
@@ -1402,14 +1386,6 @@
 	{
 	  q orientation = 0,-0.0447099,0,0.999;
 	  p position = -0.922054,0,1.21873,0x36efa88a;
-	}
-}
-[t:c24_5_bandit_ranged,n:0x051000ec]
-{
-	[placement]
-	{
-	  q orientation = 0,0.731354,0,-0.681998;
-	  p position = -0.791161,-0.45,0.948067,0x5898533a;
 	}
 }
 [t:c24_5_bandit_ranged,n:0x051000ed]

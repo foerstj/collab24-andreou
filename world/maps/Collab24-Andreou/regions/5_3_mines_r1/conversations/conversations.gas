@@ -2,8 +2,7 @@
 {
 	[text*]
 	{
-		screen_text = "accept convo
-TODO add text";
+		screen_text = "Good! Let’s show these goblins that dwarves are not to be messed with.";
 	  f scroll_rate = 10.000000;
 	}
 }
@@ -11,8 +10,7 @@ TODO add text";
 {
 	[text*]
 	{
-		screen_text = "disband convo
-TODO add text";
+		screen_text = "Hahaha, I see you can’t keep up. Well, I don’t blame you. I’ll wait for you here while you catch your breath.";
 	  f scroll_rate = 10.000000;
 	}
 }
@@ -21,8 +19,7 @@ TODO add text";
 	[text*]
 	{
 		choice = potential_member;
-		screen_text = "disband rejoin coinvo
-TODO add text";
+		screen_text = "Rested? Did your business? Then let’s go, no need to dawdle.";
 	  f scroll_rate = 10.000000;
 	}
 }
@@ -31,8 +28,15 @@ TODO add text";
 	[text*]
 	{
 		choice = potential_member;
-		screen_text = "join convo
-TODO add text";
+		screen_text = "Well there is a brave soul. These cowards locked themselves and waited for an outsider to do their dirty work. Where are the times when dwarves battled to the death against any intruder? I tell you they all are soft, even if their metal is strong. I am not like them, and it is high time I faced the danger head on! So, will we join forces?";
+	  f scroll_rate = 10.000000;
+	}
+}
+[conversation_uddonlim_multiplayer]
+{
+	[text*]
+	{
+		screen_text = "Well there is a brave soul. These cowards locked themselves and waited for an outsider to do their dirty work. Where are the times when dwarves battled to the death against any intruder? I tell you they all are soft, even if their metal is strong. I am not like them, and I say it is high time we faced the danger head on!";
 	  f scroll_rate = 10.000000;
 	}
 }
@@ -40,8 +44,7 @@ TODO add text";
 {
 	[text*]
 	{
-		screen_text = "reject convo
-TODO add text";
+		screen_text = "Suit yourself, but you are missing the strongest axe wielder around here.";
 	  f scroll_rate = 10.000000;
 	}
 }
@@ -50,8 +53,7 @@ TODO add text";
 	[text*]
 	{
 		choice = potential_member;
-		screen_text = "rejoin convo
-TODO add text";
+		screen_text = "I am still waiting, as you see. My arm and my axe are here waiting to crush some goblin skulls.";
 	  f scroll_rate = 10.000000;
 	}
 }
@@ -67,6 +69,81 @@ TODO add text";
 	{
 	  i order = 1;
 		screen_text = "I’ll keep watch, darklings and scorpions might come for our supplies. I don’t think they like goblin meat.";
+	  f scroll_rate = 10.000000;
+	}
+}
+[dwarf_worker_1]
+{
+	[text*]
+	{
+		screen_text = "No no, I tell you, the right way to dig is straight down, you get the fastest to the best ore!";
+	  f scroll_rate = 10.000000;
+	}
+}
+[dwarf_worker_2]
+{
+	[text*]
+	{
+		screen_text = "Have you gone mad? You have to dig out in a circular area that way you will find all of the goodies and not miss anything.";
+	  f scroll_rate = 10.000000;
+	}
+}
+[dwarf_worker_3]
+{
+	[text*]
+	{
+		screen_text = "You both don’t understand a thing! When you look for ores you have to dig straight tunnels in every direction.";
+	  f scroll_rate = 10.000000;
+	}
+}
+[dwarf_worker_4]
+{
+	[text*]
+	{
+		screen_text = "Last meal I found a big worm in my food. Doesn’t he know I am a vegetarian?";
+	  f scroll_rate = 10.000000;
+	}
+}
+[dwarf_worker_5]
+{
+	[text*]
+	{
+		screen_text = "If you want a piece of advice, don’t take any food the quartermaster offers you, you will end up with food poisoning.";
+	  f scroll_rate = 10.000000;
+	}
+}
+[furnace_master_after_quest]
+{
+	[text*]
+	{
+		screen_text = "So how is my axe doing? Hope you didn’t sell it to the quartermaster hehe… I can’t stand that lad…";
+	  f scroll_rate = 10.000000;
+	}
+}
+[furnace_master_check_quest]
+{
+	[text*]
+	{
+		screen_text = "Have you found my hammer? It is near the unfinished rail bridge, this side of the chasm under some black rocks.";
+	  f scroll_rate = 10.000000;
+	}
+}
+[furnace_master_done_quest]
+{
+	[text*]
+	{
+		complete_quest* = clb24a_missing_hammer;
+		screen_text = "Oh you are a savior! This hammer will get me back to working in no time. I guess you deserve a reward, how about this axe I have made? Hope it will serve you well.";
+	  f scroll_rate = 10.000000;
+	}
+}
+[furnace_master_give_quest]
+{
+	[text*]
+	{
+		activate_quest* = clb24a_missing_hammer,0;
+	  b quest_dialog = true;
+		screen_text = "Nothing beats the heat of the furnace, the smell of burning coal, and the feel of the hammer in the hand. Pity I left my hammer back near the construction site. Say, can you help me out here? Do you mind getting it back for me? It was on this side of the chasm, where we were building the rail bridge. I hid it under a rock when we had to run. I thought I would be back straight away...";
 	  f scroll_rate = 10.000000;
 	}
 }

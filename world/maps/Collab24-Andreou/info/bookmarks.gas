@@ -14,12 +14,12 @@
 	[t:bookmark,n:5_1]
 	{
 		description = "5_1 region start";
-		position = 0.000000, 0.000000, 0.000000, 0xecace234;
+		position = 0.000000,0.000000,0.000000,0x462F6ED9;
 		[camera]
 		{
-		  f azimuth = 0.558505;
-		  f distance = 14.000000;
-		  f orbit = 0.150000;
+		  f azimuth = 0.785398;
+		  f distance = 0.100000;
+		  f orbit = 0.000000;
 		}
 	}
 	[t:bookmark,n:5_1_shop]
@@ -77,6 +77,17 @@
 		  f orbit = 6.290002;
 		}
 	}
+	[t:bookmark,n:5_3_inhalls]
+	{
+		description = "Inside the dwarvern halls";
+		position = 0.000000,0.000000,0.000000,0xa6b03139;
+		[camera]
+		{
+		  f azimuth = 0.590797;
+		  f distance = 10.099998;
+		  f orbit = -3.289998;
+		}
+	}
 	[t:bookmark,n:5_4]
 	{
 		description = "Start of warrens level";
@@ -119,17 +130,6 @@
 		  f azimuth = 0.805398;
 		  f distance = 20.000000;
 		  f orbit = -3.179998;
-		}
-	}
-	[t:bookmark,n:5_3_inhalls]
-	{
-		description = "Inside the dwarvern halls";
-		position = 0.000000,0.000000,0.000000,0xC14CF26F;
-		[camera]
-		{
-		  f azimuth = 1.220796;
-		  f distance = 10.099998;
-		  f orbit = -3.139999;
 		}
 	}
 }
