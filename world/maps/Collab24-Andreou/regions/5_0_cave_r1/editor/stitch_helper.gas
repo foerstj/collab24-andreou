@@ -15,7 +15,7 @@
 		dest_region = 5_pre;
 		[node_ids]
 		{
-			0x00000f45 = 0x7203AC06,6;
+			0x00000f45 = 0x058C3F7D,6;
 		}
 	}
 }

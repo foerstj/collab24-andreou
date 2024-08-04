@@ -1,7 +1,21 @@
+[chapters]
+{
+	[chapter_05]
+	{
+		chapter_image = b_gui_ig_mnu_jnl_chapter_05;
+		screen_name = "Chapter V: The Lair of Doom";
+		[*]
+		{
+			description = "The end of the journey draws near...";
+		  i order = 0;
+		}
+	}
+}
 [quests]
 {
 	[clb24a_bandit_boss]
 	{
+		chapter = chapter_05;
 		quest_image = b_gui_ig_mnu_jnl_quest_14;
 		screen_name = "Confront the Bandit's Leader";
 		victory_sample = s_e_level_up_quest;
@@ -22,6 +36,7 @@
 	}
 	[clb24a_blasted_door]
 	{
+		chapter = chapter_05;
 		quest_image = b_gui_ig_mnu_jnl_quest_clb24a_warrens_door;
 		screen_name = "The Blasted Door";
 		victory_sample = s_e_level_up_quest;
@@ -35,6 +50,7 @@
 	}
 	[clb24a_locked_halls]
 	{
+		chapter = chapter_05;
 		quest_image = b_gui_ig_mnu_jnl_quest_clb24a_mines_door;
 		screen_name = "Barricaded Miners";
 		victory_sample = s_e_level_up_quest;
