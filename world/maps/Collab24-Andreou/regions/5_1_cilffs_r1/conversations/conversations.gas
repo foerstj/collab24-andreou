@@ -10,7 +10,6 @@
 	}
 	[text*]
 	{
-	  i order = 1;
 		screen_text = "Hope you will have luck on your journey. Do tell us if you manage to get to the bandit’s leader to the west of here. Jeremy told us he will reward however makes us leave, but you might find raiding their cave rewarding by itself. They managed to steal many artifacts in their endeavors.";
 	  f scroll_rate = 10.000000;
 	}
@@ -26,7 +25,6 @@
 	}
 	[text*]
 	{
-	  i order = 1;
 		screen_text = "We will be on our way soon, thank you again!";
 	  f scroll_rate = 10.000000;
 	}
@@ -57,7 +55,6 @@
 	}
 	[text*]
 	{
-	  i order = 1;
 		screen_text = "You want to scale the mountain? That’s your business, I’m not taking even one step in that direction.";
 	  f scroll_rate = 10.000000;
 	}
@@ -74,7 +71,6 @@
 	[text*]
 	{
 		choice = shop;
-	  i order = 1;
 		screen_text = "You are still here, and these travelers are too. So if you could kindly get one of you out of here that would be the dream. Yeah yeah you can still buy stuff, just don't expect discounts. And no paybacks! I don't need your sword with troll blood all over it, yuck.";
 	  f scroll_rate = 10.000000;
 	}
@@ -125,7 +121,6 @@
 	}
 	[text*]
 	{
-	  i order = 2;
 		screen_text = "Oh, I'm fine, thank you. Master Jeremy looks after me and we get along... more or less. Anyway it is not like I can go anywhere else. These travelers however do seem lost, might you try and help them? It will cheer master Jeremy up for sure, he doesn’t like them setting up shop in his, well, shop... I'm sorry, I really have to get back to this thing here.";
 	  f scroll_rate = 10.000000;
 	}

@@ -54,6 +54,8 @@
 	0x05500abd = t_gi_flr_04x04-a;
 	0x05500ac1 = t_gi_flr_04x08-a;
 	0x05500ac3 = t_gi_flr_08x08-a;
+	0x05500ae9 = t_gi_flr_trap-3-a;
+	0x05500aea = t_gi_flr_trap-3-b;
 	0x05500af8 = t_gi_gad_flr-cplate-a;
 	0x05500af9 = t_gi_gad_flr-cplate-b;
 	0x05500b2d = t_gi_pipe_air-a;

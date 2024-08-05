@@ -1,3 +1,65 @@
+[t:coil_gob_03,n:0x05500040]
+{
+	[aspect]
+	{
+	  f life = 500;
+	  f max_life = 500;
+	}
+	[common]
+	{
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = send_world_message("we_req_activate",0x05500047,0f,"default","every",0);
+				action* = send_world_message("we_req_deactivate",0x05500042,0f,"default","every",0);
+			  b can_self_destruct = true;
+				condition* = receive_world_message("we_killed",0,"on_first_message");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = true;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  q orientation = 0,2.51448e-008,0,-1;
+	  p position = 0,0,0,0xa284db28;
+		use_point_scids = 0x05500051,0x05500052,0x05500053,0x05500054,0x05500055,0x05500056,0x05500057,0x05500058;
+	}
+}
+[t:dsx_goblin_inventor,n:0x05500083]
+{
+	[actor]
+	{
+		alignment = aa_neutral;
+	}
+	[common]
+	{
+		screen_name = "Blasted Goblin";
+	}
+	[conversation]
+	{
+		[conversations]
+		{
+			* = blasted_goblin;
+		}
+	}
+	[mind]
+	{
+		jat_talk = world\ai\jobs\common\job_talk.skrit;
+	}
+	[placement]
+	{
+	  p position = 0.061081,-5,0.167294,0xb196e6b9;
+	}
+}
 [t:c24_5_lava_beast_boss,n:0x05500004]
 {
 	[common]
@@ -22,6 +84,9 @@
 			[*]
 			{
 				action* = send_world_message("we_req_activate",0x05500009,0f,"default","every",0);
+				action* = send_world_message("we_req_activate",0x05500079,0f,"default","every",0);
+				action* = send_world_message("we_trigger_activate",0x055000A4,0f,"default","every",0);
+				action* = send_world_message("we_req_activate",0x05500091,0f,"default","every",0);
 			  b can_self_destruct = true;
 				condition* = receive_world_message("we_killed",0,"on_every_message");
 			  f delay = 0.000000;
@@ -36,9 +101,126 @@
 			}
 		}
 	}
+	[health_threshold_message_sender]
+	{
+	  x send_to_scid_1 = 0x0550001D;
+	  x send_to_scid_2 = 0x0550001E;
+	  f threshold_3 = -2;
+	}
+	[mind]
+	{
+	  f actor_life_ratio_high_threshold = 0.66;
+	  f actor_life_ratio_low_threshold = 0.33;
+	}
 	[placement]
 	{
 	  q orientation = 0,-0.707107,0,0.707107;
-	  p position = -1.58285,0,2.15549,0x74bc4166;
+	  p position = -1.98463,0,1.99,0x74bc4166;
+	}
+}
+[t:coil_gob_03,n:0x0550003f]
+{
+	[aspect]
+	{
+	  f life = 500;
+	  f max_life = 500;
+	}
+	[common]
+	{
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = send_world_message("we_req_activate",0x05500047,0f,"default","every",0);
+				action* = send_world_message("we_req_deactivate",0x05500041,0f,"default","every",0);
+			  b can_self_destruct = true;
+				condition* = receive_world_message("we_killed",0,"on_first_message");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = true;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  p position = 0,0,0,0x7f8b4035;
+		use_point_scids = 0x05500049,0x0550004a,0x0550004b,0x0550004c,0x0550004d,0x0550004e,0x0550004f,0x05500050;
+	}
+}
+[t:coil_gob_03,n:0x05500028]
+{
+	[aspect]
+	{
+	  f life = 500;
+	  f max_life = 500;
+	}
+	[common]
+	{
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = send_world_message("we_req_activate",0x0550002A,0f,"default","every",0);
+				action* = send_world_message("we_req_deactivate",0x05500029,0f,"default","every",0);
+			  b can_self_destruct = true;
+				condition* = receive_world_message("we_killed",0,"on_first_message");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = true;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  q orientation = 0,-1.12686e-007,0,1;
+	  p position = 0,0,0,0xae49025c;
+		use_point_scids = 0x05500037,0x05500038,0x05500039,0x0550003a,0x0550003b,0x0550003c,0x0550003d,0x0550003e;
+	}
+}
+[t:coil_gob_03,n:0x0550001f]
+{
+	[aspect]
+	{
+	  f life = 500;
+	  f max_life = 500;
+	}
+	[common]
+	{
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = send_world_message("we_req_activate",0x0550002A,0f,"default","every",0);
+				action* = send_world_message("we_req_deactivate",0x05500020,0f,"default","every",0);
+			  b can_self_destruct = true;
+				condition* = receive_world_message("we_killed",0,"on_first_message");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = true;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  p position = 0,0,0,0x35fb3fba;
+		use_point_scids = 0x0550002f,0x05500030,0x05500031,0x05500032,0x05500033,0x05500034,0x05500035,0x05500036;
 	}
 }

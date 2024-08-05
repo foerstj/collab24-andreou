@@ -94,14 +94,6 @@
 	  p position = -3.51303,0,1.7224,0x58f08d00;
 	}
 }
-[t:c24_5_darkling_reveal,n:0x05300510]
-{
-	[placement]
-	{
-	  q orientation = 0,-0.12965,0,0.99156;
-	  p position = -3.51462,1.90735e-006,-0.769927,0x58f08d00;
-	}
-}
 [t:c24_5_rock_beast,n:0x0530050d]
 {
 	[placement]
@@ -1550,14 +1542,6 @@
 	  p position = -2.19725,0,-1.0751,0x4314cb05;
 	}
 }
-[t:c24_5_darkling_reveal,n:0x0530035f]
-{
-	[placement]
-	{
-	  q orientation = 0,-0.749036,0,0.66253;
-	  p position = -1.39954,0,1.14568,0x4314cb05;
-	}
-}
 [t:c24_5_darkling,n:0x053003ab]
 {
 	[placement]
@@ -1872,22 +1856,6 @@
 	  p position = -0.144678,-2,-0.705841,0x00e3f8e0;
 	}
 }
-[t:c24_5_darkling_reveal,n:0x0530016b]
-{
-	[placement]
-	{
-	  q orientation = 0,-0.372528,0,0.928021;
-	  p position = -1.36455,-2,-1.96409,0xc657766d;
-	}
-}
-[t:c24_5_darkling_reveal,n:0x0530016c]
-{
-	[placement]
-	{
-	  q orientation = 0,-0.30531,0,0.952253;
-	  p position = -0.0358343,-2,-1.8924,0xc657766d;
-	}
-}
 [t:c24_5_automaton_ranged_1_reveal,n:0x05300169]
 {
 	[placement]
@@ -1936,37 +1904,6 @@
 	  p position = -4.56475,-2,-3.14453,0xa895532d;
 	}
 }
-[t:c24_5_darkling_reveal,n:0x05300151]
-{
-	[placement]
-	{
-	  q orientation = 0,-0.829529,0,0.558464;
-	  p position = 1.35993,-2,-2.06412,0x8edef3db;
-	}
-}
-[t:c24_5_darkling_reveal,n:0x05300152]
-{
-	[placement]
-	{
-	  q orientation = 0,-0.971443,0,0.237272;
-	  p position = -0.992509,-2,-2.77905,0x8edef3db;
-	}
-}
-[t:c24_5_darkling_reveal,n:0x05300153]
-{
-	[placement]
-	{
-	  q orientation = 0,0.406605,0,0.913604;
-	  p position = -3.41732,-2,-2.86502,0x8edef3db;
-	}
-}
-[t:c24_5_darkling_reveal,n:0x05300154]
-{
-	[placement]
-	{
-	  p position = -4.90875,-2,-4.88391,0x8edef3db;
-	}
-}
 [t:c24_5_rock_beast,n:0x05300158]
 {
 	[placement]
@@ -2013,22 +1950,6 @@
 	{
 	  q orientation = 0,-0.370152,0,0.928971;
 	  p position = 0.0919924,0,-0.847375,0x2ec96944;
-	}
-}
-[t:c24_5_darkling_reveal,n:0x0530016d]
-{
-	[placement]
-	{
-	  q orientation = 0,-0.467631,0,0.883924;
-	  p position = 0.456376,-1.99892,-1.98921,0x1193d7dd;
-	}
-}
-[t:c24_5_darkling_reveal,n:0x0530016e]
-{
-	[placement]
-	{
-	  q orientation = 0,0.0585095,0,0.998287;
-	  p position = -1.39521,-1.99947,-1.99471,0x1193d7dd;
 	}
 }
 [t:c24_5_darkling,n:0x053000a7]

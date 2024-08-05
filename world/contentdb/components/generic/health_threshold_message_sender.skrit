@@ -1,0 +1,95 @@
+//////////////////////////////////////////////////////////////////////////////
+//
+// File     :  health_threshold_message_sender.skrit
+// Author(s):  Andreou-NG
+//
+// 
+//----------------------------------------------------------------------------
+//  $Revision:: $              $Date:$ 04-08-2024
+//----------------------------------------------------------------------------
+//
+//	Sends messages when health threshold is reached
+//
+//////////////////////////////////////////////////////////////////////////////
+
+property bool   _server_only$        = true;
+property string _required_component$ = "aspect";
+
+property float			threshold_1$		=	0.5						doc = "When health reaches this threshold first message will send (less than zero will be ignored)";
+property scid      		send_to_scid_1$								doc = "Scid of object to receive first message";
+property eWorldEvent	message_1$			= WE_REQ_ACTIVATE			doc = "Message to send to first pobject";
+property float			threshold_2$		=	-1						doc = "When health reaches this threshold first message will send (less than zero will be ignored)";
+property scid      		send_to_scid_2$								doc = "Scid of object to receive first message";
+property eWorldEvent	message_2$			= WE_REQ_ACTIVATE			doc = "Message to send to first pobject";
+property float			threshold_3$		=	-1						doc = "When health reaches this threshold first message will send (less than zero will be ignored)";
+property scid      		send_to_scid_3$								doc = "Scid of object to receive first message";
+property eWorldEvent	message_3$			= WE_REQ_ACTIVATE			doc = "Message to send to first pobject";
+
+
+bool message_1_sent$ = false;
+bool message_2_sent$ = false;
+bool message_3_sent$ = false;
+
+owner	= GoSkritComponent;
+
+//////////////////////////////////////////////////////////////////////////////
+
+trigger OnGoDrawDebugHud$
+{
+	Goid goid$ = send_to_scid_1$.Goid;
+	if( goid$.IsValid )
+	{
+		World.DrawDebugDirectedLine( owner.go.Placement.Position,
+									 goid$.go.Placement.Position,
+									 MakeColor( 0.5, 1.0, 0, 0.5 ),
+									 ToString( message_1$ ) );
+	}
+	goid$ = send_to_scid_2$.Goid;
+	if( goid$.IsValid )
+	{
+		World.DrawDebugDirectedLine( owner.go.Placement.Position,
+									 goid$.go.Placement.Position,
+									 MakeColor( 0.5, 1.0, 0, 0.5 ),
+									 ToString( message_2$ ) );
+	}
+	goid$ = send_to_scid_3$.Goid;
+	if( goid$.IsValid )
+	{
+		World.DrawDebugDirectedLine( owner.go.Placement.Position,
+									 goid$.go.Placement.Position,
+									 MakeColor( 0.5, 1.0, 0, 0.5 ),
+									 ToString( message_3$ ) );
+	}
+}
+
+startup state Startup$
+{
+	transition -> Waiting$ : OnGoHandleMessage( WE_ENTERED_WORLD );
+}
+
+state Waiting$
+{
+	event OnGoHandleMessage$( eWorldEvent e$, WorldMessage )
+	{
+		if( e$ == we_damaged )
+		{
+			float life$ = owner.Go.Aspect.CurrentLife;
+			float max_life$ = owner.Go.Aspect.MaxLife;
+			if ( ( life$ < max_life$*threshold_1$) && (!message_1_sent$) )
+			{
+				PostWorldMessage( message_1$, owner.Goid, send_to_scid_1$, 0 );
+				message_1_sent$ = true;
+			}
+			if ( ( life$ < max_life$*threshold_2$) && (!message_2_sent$) )
+			{
+				PostWorldMessage( message_2$, owner.Goid, send_to_scid_2$, 0 );
+				message_2_sent$ = true;
+			}
+			if ( ( life$ < max_life$*threshold_3$) && (!message_3_sent$) )
+			{
+				PostWorldMessage( message_3$, owner.Goid, send_to_scid_3$, 0 );
+				message_3_sent$ = true;
+			}
+		}
+	}
+}

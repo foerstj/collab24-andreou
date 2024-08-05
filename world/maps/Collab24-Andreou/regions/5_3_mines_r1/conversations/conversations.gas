@@ -67,7 +67,6 @@
 	}
 	[text*]
 	{
-	  i order = 1;
 		screen_text = "I’ll keep watch, darklings and scorpions might come for our supplies. I don’t think they like goblin meat.";
 	  f scroll_rate = 10.000000;
 	}
@@ -167,7 +166,6 @@
 	}
 	[text*]
 	{
-	  i order = 1;
 		screen_text = "Have you cleared all of them? Our listeners can still feel them here. Destroy every last one of them!";
 	  f scroll_rate = 10.000000;
 	}

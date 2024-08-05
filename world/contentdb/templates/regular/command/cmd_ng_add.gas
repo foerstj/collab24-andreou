@@ -1,0 +1,14 @@
+[t:template,n:cmd_change_screen_name]
+{
+	specializes = cmd_const;
+	doc			= "cmd_change_screen_name";
+   	extra_doc	= "This changes the object's screen name";
+	category_name       = "zurb";
+	
+	[gizmo]
+	{
+		diffuse_color= 0.1500000,1.00000,0.150000;
+	}
+
+	[cmd_change_screen_name]	{}
+}

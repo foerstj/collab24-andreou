@@ -54,7 +54,8 @@
 		victory_sample = s_e_level_up_quest;
 		[*]
 		{
-			description = "Enter the mines and find there the goblin's lair";
+			address = 5_1_cilffs_r1:conversations:frightened_man;
+			description = "Enter the mines and find there the goblin's lair.";
 		  b is_consumable = true;
 		  i order = 0;
 		  b required = false;
@@ -62,8 +63,26 @@
 		}
 		[*]
 		{
-			description = "Deal with the goblin menace once and for all";
+			description = "Deal with the goblin menace once and for all.";
 		  i order = 1;
+		  b required = true;
+		}
+		[*]
+		{
+			description = "Destroy the goblin magma monster.";
+		  i order = 2;
+		  b required = true;
+		}
+		[*]
+		{
+			description = "Talk to the blasted goblin.";
+		  i order = 3;
+		  b required = true;
+		}
+		[*]
+		{
+			description = "The goblin menace was defeated. The lava pools lie dormant... for now.";
+		  i order = 4;
 		  b required = true;
 		}
 	}
@@ -86,7 +105,6 @@
 			description = "The area is clear of automatons, the miners should let you in.";
 		  i order = 1;
 		  b required = true;
-			speaker = ;
 		}
 	}
 	[clb24a_missing_hammer]
@@ -97,8 +115,9 @@
 		victory_sample = s_e_level_up_quest;
 		[*]
 		{
-			address = 5_1_cilffs_r1:conversations:traveller_male;
+			address = 5_3_mines_r1:conversations:furnace_master_give_quest;
 			description = "Find the missing hammer under a rock near the unfinished bridge in the mines";
+		  b is_consumable = true;
 		  i order = 0;
 		  b required = true;
 			speaker = "Furnace Master";

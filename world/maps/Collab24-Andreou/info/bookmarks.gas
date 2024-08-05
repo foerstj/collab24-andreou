@@ -14,7 +14,7 @@
 	[t:bookmark,n:5_1]
 	{
 		description = "5_1 region start";
-		position = 0.000000,0.000000,0.000000,0x462F6ED9;
+		position = 0.000000,0.000000,0.000000,0x462f6ed9;
 		[camera]
 		{
 		  f azimuth = 0.785398;
@@ -124,12 +124,12 @@
 	[t:bookmark,n:5_5]
 	{
 		description = "Start of last region - boss arena";
-		position = 0.000000,0.000000,0.000000,0x4a58585c;
+		position = 0.000000,0.000000,0.000000,0x4A58585C;
 		[camera]
 		{
-		  f azimuth = 0.805398;
-		  f distance = 20.000000;
-		  f orbit = -3.179998;
+		  f azimuth = 0.460797;
+		  f distance = 10.500000;
+		  f orbit = 0.000000;
 		}
 	}
 }

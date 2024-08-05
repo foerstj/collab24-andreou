@@ -234,7 +234,7 @@
 {
 	[cmd_dumb_guy]
 	{
-		alignment_activated = aa_neutral;
+		alignment_activated = aa_good;
 	  x target_actor = 0x05100111;
 	}
 	[placement]
@@ -246,7 +246,7 @@
 {
 	[cmd_dumb_guy]
 	{
-		alignment_activated = aa_neutral;
+		alignment_activated = aa_good;
 	  x target_actor = 0x05100112;
 	}
 	[placement]
@@ -258,7 +258,7 @@
 {
 	[cmd_dumb_guy]
 	{
-		alignment_activated = aa_neutral;
+		alignment_activated = aa_good;
 	  x target_actor = 0x0510010F;
 	}
 	[placement]
@@ -343,7 +343,7 @@
 {
 	[cmd_dumb_guy]
 	{
-		alignment_activated = aa_neutral;
+		alignment_activated = aa_good;
 	  x target_actor = 0x0510010D;
 	}
 	[placement]
@@ -355,7 +355,7 @@
 {
 	[cmd_dumb_guy]
 	{
-		alignment_activated = aa_neutral;
+		alignment_activated = aa_good;
 	  x target_actor = 0x0510010E;
 	}
 	[placement]
@@ -380,7 +380,7 @@
 {
 	[cmd_dumb_guy]
 	{
-		alignment_activated = aa_neutral;
+		alignment_activated = aa_good;
 	  x target_actor = 0x05100110;
 	}
 	[placement]

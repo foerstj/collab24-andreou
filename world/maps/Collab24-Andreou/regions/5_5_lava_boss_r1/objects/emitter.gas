@@ -6,6 +6,7 @@
 	}
 	[sound_emitter]
 	{
+	  b continual_loop = true;
 		event_sound = "env_lava_bubbling";
 	  f max_dist = 35;
 	}
@@ -18,8 +19,70 @@
 	}
 	[sound_emitter]
 	{
+	  b continual_loop = true;
 		event_sound = "env_lava_bubbling";
 	  f max_dist = 35;
+	}
+}
+[t:emt_generic_act,n:0x05500041]
+{
+	[generic_emitter_act]
+	{
+		other_effect = "heal_tesla_coil";
+	  f rep_freq_max = 1;
+	  f rep_freq_min = 1;
+	  x target = 0x0550003F;
+	  x target2 = 0x05500004;
+	}
+	[placement]
+	{
+	  q orientation = 0,1,0,0;
+	  p position = -2.17976,0,-3.46599,0x970c78cb;
+	}
+}
+[t:emt_generic_act,n:0x05500042]
+{
+	[generic_emitter_act]
+	{
+		other_effect = "heal_tesla_coil";
+	  f rep_freq_max = 1;
+	  f rep_freq_min = 1;
+	  x target = 0x05500040;
+	  x target2 = 0x05500004;
+	}
+	[placement]
+	{
+	  q orientation = 0,1,0,2.98023e-008;
+	  p position = 2.20529,0,-1.17164,0x9b00c551;
+	}
+}
+[t:emt_generic_act,n:0x05500021]
+{
+	[generic_emitter_act]
+	{
+		other_effect = "invulnerability";
+	  f scale = 2.5;
+	  x target = 0x05500004;
+	}
+	[placement]
+	{
+	  q orientation = 0,0.707107,0,0.707107;
+	  p position = -3.48984,0,2.20933,0x74bc4166;
+	}
+}
+[t:emt_generic_act,n:0x0550007a]
+{
+	[generic_emitter_act]
+	{
+	  b geyser_red = true;
+	  b maintain_state = false;
+	  f scale = 1.5;
+	  x target = 0x05500004;
+	}
+	[placement]
+	{
+	  q orientation = 0,0.707107,0,0.707107;
+	  p position = -3.52962,0,3.20354,0x74bc4166;
 	}
 }
 [t:emt_sound,n:0x05500011]
@@ -31,6 +94,7 @@
 	}
 	[sound_emitter]
 	{
+	  b continual_loop = true;
 		event_sound = "env_lava_bubbling";
 	  f max_dist = 35;
 	}
@@ -44,8 +108,41 @@
 	}
 	[sound_emitter]
 	{
+	  b continual_loop = true;
 		event_sound = "env_lava_bubbling";
 	  f max_dist = 35;
+	}
+}
+[t:emt_generic_act,n:0x05500029]
+{
+	[generic_emitter_act]
+	{
+		other_effect = "heal_tesla_coil";
+	  f rep_freq_max = 1;
+	  f rep_freq_min = 1;
+	  x target = 0x05500028;
+	  x target2 = 0x05500004;
+	}
+	[placement]
+	{
+	  q orientation = 0,1,0,0;
+	  p position = 1.00789,0,-2.9956,0x2b2d752d;
+	}
+}
+[t:emt_generic_act,n:0x05500020]
+{
+	[generic_emitter_act]
+	{
+		other_effect = "heal_tesla_coil";
+	  f rep_freq_max = 1;
+	  f rep_freq_min = 1;
+	  x target = 0x0550001F;
+	  x target2 = 0x05500004;
+	}
+	[placement]
+	{
+	  q orientation = 0,1,0,0;
+	  p position = -1.11712,0,-1.5034,0x123b1e32;
 	}
 }
 [t:emt_sound,n:0x05500010]
@@ -56,6 +153,7 @@
 	}
 	[sound_emitter]
 	{
+	  b continual_loop = true;
 		event_sound = "env_lava_bubbling";
 	  f max_dist = 35;
 	}
@@ -68,6 +166,7 @@
 	}
 	[sound_emitter]
 	{
+	  b continual_loop = true;
 		event_sound = "env_lava_bubbling";
 	  f max_dist = 35;
 	}

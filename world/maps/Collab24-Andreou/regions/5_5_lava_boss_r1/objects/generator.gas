@@ -1,0 +1,250 @@
+[t:clb24_generator_activate_exploding_wood_box_big,n:0x0550005b]
+{
+	[generator_object_exploding]
+	{
+		child_template_name = "c24_5_robot_blaster";
+	  x initial_command = 0x0550006B;
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.707107,0,0.707107;
+	  p position = -2.89832,1.5,-3.0691,0x7db1daff;
+	}
+}
+[t:clb24_generator_activate_exploding_wood_box_big,n:0x0550005c]
+{
+	[generator_object_exploding]
+	{
+		child_template_name = "c24_5_robot_blaster";
+	  x initial_command = 0x05500071;
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.707107,0,0.707107;
+	  p position = 3.01222,1.5,-3.12072,0x7db1daff;
+	}
+}
+[t:clb24_generator_activate_exploding_wood_box_small,n:0x05500063]
+{
+	[generator_object_exploding]
+	{
+		child_template_name = "c24_5_hunter";
+	  x initial_command = 0x0550006B;
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.707107,0,0.707107;
+	  p position = -3.23264,1.5,-1.02214,0x7db1daff;
+	}
+}
+[t:clb24_generator_activate_exploding_wood_box_small,n:0x05500064]
+{
+	[generator_object_exploding]
+	{
+		child_template_name = "c24_5_hunter";
+	  x initial_command = 0x0550006B;
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.707107,0,0.707107;
+	  p position = -3.18842,1.5,0.603843,0x7db1daff;
+	}
+}
+[t:clb24_generator_activate_exploding_wood_box_small,n:0x05500065]
+{
+	[generator_object_exploding]
+	{
+		child_template_name = "c24_5_gobbot_minigun";
+	  x initial_command = 0x0550006B;
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.707107,0,0.707107;
+	  p position = -0.774446,1.5,-3.28518,0x7db1daff;
+	}
+}
+[t:clb24_generator_activate_exploding_wood_box_small,n:0x05500066]
+{
+	[generator_object_exploding]
+	{
+		child_template_name = "c24_5_gobbot_minigun";
+	  x initial_command = 0x05500071;
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.707107,0,0.707107;
+	  p position = 0.824713,1.5,-3.31412,0x7db1daff;
+	}
+}
+[t:clb24_generator_activate_exploding_wood_box_small,n:0x05500067]
+{
+	[generator_object_exploding]
+	{
+		child_template_name = "c24_5_hunter";
+	  x initial_command = 0x05500071;
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.707107,0,0.707107;
+	  p position = 3.33038,1.5,-1.15784,0x7db1daff;
+	}
+}
+[t:clb24_generator_activate_exploding_wood_box_small,n:0x05500068]
+{
+	[generator_object_exploding]
+	{
+		child_template_name = "c24_5_hunter";
+	  x initial_command = 0x05500071;
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.707107,0,0.707107;
+	  p position = 3.33692,1.5,0.403294,0x7db1daff;
+	}
+}
+[t:clb24_generator_activate_exploding_wood_box_small,n:0x05500075]
+{
+	[generator_object_exploding]
+	{
+		child_template_name = "c24_5_gobbot_minigun";
+	  x initial_command = 0x0550006B;
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.707107,0,0.707107;
+	  p position = -0.753434,-5,-1.75214,0xb196e6b9;
+	}
+}
+[t:clb24_generator_activate_exploding_wood_box_small,n:0x05500076]
+{
+	[generator_object_exploding]
+	{
+		child_template_name = "c24_5_gobbot_minigun";
+	  x initial_command = 0x05500071;
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.707107,0,0.707107;
+	  p position = 0.848334,-5,-1.71429,0xb196e6b9;
+	}
+}
+[t:clb24_generator_activate_exploding_wood_box_big,n:0x05500059]
+{
+	[generator_object_exploding]
+	{
+		child_template_name = "c24_5_robot_blaster";
+	  x initial_command = 0x05500069;
+	}
+	[placement]
+	{
+	  p position = -2.82199,0,-3.06006,0xcd1767b1;
+	}
+}
+[t:clb24_generator_activate_exploding_wood_box_big,n:0x0550005a]
+{
+	[generator_object_exploding]
+	{
+		child_template_name = "c24_5_robot_blaster";
+	  x initial_command = 0x05500070;
+	}
+	[placement]
+	{
+	  p position = -2.70378,0,3.14678,0xcd1767b1;
+	}
+}
+[t:clb24_generator_activate_exploding_wood_box_small,n:0x0550005d]
+{
+	[generator_object_exploding]
+	{
+		child_template_name = "c24_5_hunter";
+	  x initial_command = 0x05500069;
+	}
+	[placement]
+	{
+	  p position = -0.761857,0,-3.58723,0xcd1767b1;
+	}
+}
+[t:clb24_generator_activate_exploding_wood_box_small,n:0x0550005e]
+{
+	[generator_object_exploding]
+	{
+		child_template_name = "c24_5_hunter";
+	  x initial_command = 0x05500069;
+	}
+	[placement]
+	{
+	  p position = 1.21797,0,-3.69766,0xcd1767b1;
+	}
+}
+[t:clb24_generator_activate_exploding_wood_box_small,n:0x0550005f]
+{
+	[generator_object_exploding]
+	{
+		child_template_name = "c24_5_gobbot_minigun";
+	  x initial_command = 0x05500069;
+	}
+	[placement]
+	{
+	  p position = -3.43143,0,-0.948309,0xcd1767b1;
+	}
+}
+[t:clb24_generator_activate_exploding_wood_box_small,n:0x05500060]
+{
+	[generator_object_exploding]
+	{
+		child_template_name = "c24_5_gobbot_minigun";
+	  x initial_command = 0x05500070;
+	}
+	[placement]
+	{
+	  p position = -3.38101,0,0.790872,0xcd1767b1;
+	}
+}
+[t:clb24_generator_activate_exploding_wood_box_small,n:0x05500061]
+{
+	[generator_object_exploding]
+	{
+		child_template_name = "c24_5_hunter";
+	  x initial_command = 0x05500070;
+	}
+	[placement]
+	{
+	  p position = -0.503527,0,3.66153,0xcd1767b1;
+	}
+}
+[t:clb24_generator_activate_exploding_wood_box_small,n:0x05500062]
+{
+	[generator_object_exploding]
+	{
+		child_template_name = "c24_5_hunter";
+	  x initial_command = 0x05500070;
+	}
+	[placement]
+	{
+	  p position = 1.52225,0,3.73138,0xcd1767b1;
+	}
+}
+[t:clb24_generator_activate_exploding_wood_box_small,n:0x05500073]
+{
+	[generator_object_exploding]
+	{
+		child_template_name = "c24_5_gobbot_minigun";
+	  x initial_command = 0x05500069;
+	}
+	[placement]
+	{
+	  p position = -1.62156,0,-0.960883,0xcd1767b1;
+	}
+}
+[t:clb24_generator_activate_exploding_wood_box_small,n:0x05500074]
+{
+	[generator_object_exploding]
+	{
+		child_template_name = "c24_5_gobbot_minigun";
+	  x initial_command = 0x05500070;
+	}
+	[placement]
+	{
+	  p position = -1.54455,0,0.777764,0xcd1767b1;
+	}
+}

@@ -588,6 +588,34 @@
 [mood_setting*]
 {
   b interior = true;
+	mood_name = clb24a_lava_4_nis;
+  f transition_time = 5.000000;
+	[fog]
+	{
+	  x fog_color = 0xFF4E2307;
+	  f fog_density = 1.000000;
+	  f fog_far_dist = 55.000000;
+	  f fog_lowdetail_far_dist = 40.000000;
+	  f fog_lowdetail_near_dist = 20.000000;
+	  f fog_near_dist = 20.000000;
+	}
+	[frustum]
+	{
+	  f frustum_height = 60.000000;
+	  f frustum_width = 50.000000;
+	}
+	[music]
+	{
+		ambient_track = ;
+		room_type = rt_concerthall;
+	  f standard_intro_delay = 5.000000;
+	  f standard_repeat_delay = 5.000000;
+		standard_track = s_m_dwarvenmines_08;
+	}
+}
+[mood_setting*]
+{
+  b interior = true;
 	mood_name = clb24a_lava_5;
   f transition_time = 3.000000;
 	[fog]

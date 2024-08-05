@@ -18,7 +18,7 @@
 		max_life = 312;
 		mana = 20;
 		max_mana = 20;
-   		experience_value = 244;
+   		experience_value = 234;
 
 		[textures]
 		{
@@ -120,7 +120,7 @@
 		max_life = 282;
 		mana = 20;
 		max_mana = 20;
-   		experience_value = 244;
+   		experience_value = 220;
 
 		[textures]
 		{
@@ -414,7 +414,7 @@
 	}
 	[aspect]
 	{
-		experience_value = 166;
+		experience_value = 138;
 		life = 188;
 		life_recovery_period = 4;
 		life_recovery_unit  = 1;
@@ -514,7 +514,7 @@
 	}
 	[aspect]
 	{
-		experience_value = 262;
+		experience_value = 223;
 		life = 287;
 		max_life = 287;
 		mana = 16;
@@ -771,7 +771,7 @@
 	[aspect]
 	{
 		draw_shadow = false;
-		experience_value = 264;
+		experience_value = 331;
 		life = 480;
 		max_life = 480;
 		max_mana = 10;
@@ -1654,7 +1654,7 @@
 	}
 	[aspect]
 	{
-		experience_value = 326;
+		experience_value = 261;
 		life = 370;
         max_life = 370;
         mana = 14;
@@ -1945,7 +1945,7 @@
 	}
 	[aspect]
 	{
-		experience_value = 221;
+		experience_value = 138;
 		life = 223;
 		max_life = 223;
 		mana = 10;
@@ -2011,7 +2011,7 @@
 	}
 	[aspect]
 	{
-		experience_value = 480;
+		experience_value = 369;
 		life = 459;
 		max_life = 459;
 		mana = 10;
@@ -2196,7 +2196,7 @@
 	}
 	[aspect]
 	{
-		experience_value = 498;
+		experience_value = 415;
 		life = 532;
 		max_life = 532;
 		mana = 10;
@@ -2383,7 +2383,7 @@
 	}
 	[aspect]
 	{
-		experience_value = 263;
+		experience_value = 219;
 		life = 252;
 		max_life = 252;
 		mana = 100;
@@ -2535,7 +2535,7 @@
 	}
 	[aspect]
 	{
-		experience_value = 131;
+		experience_value = 33;
 		life = 24;
 		max_life = 24;
 		mana = 4;
@@ -2681,7 +2681,7 @@
 	}
 	[aspect]
 	{
-		experience_value = 208;
+		experience_value = 185;
 		life = 197;
 		max_life = 197;
 		mana = 24;
@@ -2774,7 +2774,7 @@
 	}
 	[aspect]
 	{
-		experience_value = 313;
+		experience_value = 294;
 		life = 346;
 		max_life = 346;
 		mana = 22;
@@ -2881,7 +2881,7 @@
 	}
 	[aspect]
 	{
-		experience_value = 1244;
+		experience_value = 1421;
 		life = 2800;
 		material = stone;
 		max_life = 2800;
@@ -2993,5 +2993,10 @@
 				}
 			}
 		}
+	}
+	[health_threshold_message_sender]
+	{
+		threshold_1 = 0.7;
+		threshold_2 = 0.35;
 	}
 }

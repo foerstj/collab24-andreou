@@ -1,0 +1,24 @@
+[blasted_goblin]
+{
+	[text*]
+	{
+		activate_quest* = clb24a_goblin_lair,4;
+		choice = more;
+		complete_quest* = clb24a_goblin_lair;
+	  i order = 0;
+	  b quest_dialog = true;
+		screen_text = "Okay okay I yield! No more! I am sorry, soooo sorry! Krug becoming merchants, undead rising, but I am the problem. I was only trying something here in my own cave, sheesh. But okay, point taken. I will not do any of it again. Never ever ever so slightly never. You are a hero now I guess, so be a hero and don’t take it out on me okay? I’ll behave, I promise.";
+	  f scroll_rate = 10.000000;
+	}
+	[text*]
+	{
+	  i order = 1;
+		screen_text = "You want something more? Ehh, I have nothing to give you. You destroyed everything, don't you remember?";
+	  f scroll_rate = 10.000000;
+	}
+	[text*]
+	{
+		screen_text = "You’ll see you’ll see... I will get my- Oh you are still here! Ehehe, sorry didn’t see you there. Ding a ling a ding dong tra la la... nice weather isn’t it?";
+	  f scroll_rate = 10.000000;
+	}
+}

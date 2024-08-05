@@ -1,0 +1,535 @@
+[t:cmd_ai_t_move_orient,n:0x0550002c]
+{
+	[cmd_ai_dojob]
+	{
+	  x target1 = 0x05500004;
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.707107,0,-0.707107;
+	  p position = 1.91759,0,2.04502,0x970c78cb;
+	}
+}
+[t:cmd_selection_toggle,n:0x05500046]
+{
+	[cmd_selection_toggle]
+	{
+	  x object_scid = 0x0550003F;
+	  i start_state = 1;
+	}
+	[placement]
+	{
+	  q orientation = 0,1,0,0;
+	  p position = 1.04365,0,-3.55102,0x970c78cb;
+	}
+}
+[t:cmd_ai_c_patrol,n:0x05500072]
+{
+	[placement]
+	{
+	  q orientation = 0,-0.707107,0,0.707107;
+	  p position = 2.86428,0,2.0191,0x970c78cb;
+	}
+}
+[t:cmd_camera_command,n:0x05500094]
+{
+	[cmd_camera_command]
+	{
+	  f duration = 1;
+	  x next_scid = 0x05500098;
+	}
+	[placement]
+	{
+	  q orientation = 0.200829,0.677988,-0.200829,0.677988;
+	  p position = -1.55128,11.3697,2.24848,0x970c78cb;
+	}
+}
+[t:cmd_camera_command,n:0x05500098]
+{
+	[cmd_camera_command]
+	{
+	  f duration = 4;
+	  x next_scid = 0x0550009A;
+	}
+	[placement]
+	{
+	  q orientation = 0.253404,0.660141,-0.253404,0.660141;
+	  p position = 0.300111,12.5536,2.1973,0x970c78cb;
+	}
+}
+[t:cmd_enter_nis,n:0x0550007f]
+{
+	[cmd_enter_nis]
+	{
+	  x next_scid = 0x05500081;
+	}
+	[common]
+	{
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = send_world_message("we_req_activate",0x05500080,0f,"default","every",0);
+			  b can_self_destruct = true;
+				condition* = receive_world_message("we_req_activate",0,"on_first_message");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = false;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = true;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  p position = -2.50566,0,1.34135,0x588eb234;
+	}
+}
+[t:cmd_selection_toggle,n:0x05500044]
+{
+	[cmd_selection_toggle]
+	{
+	  x object_scid = 0x05500040;
+	  i start_state = 1;
+	}
+	[placement]
+	{
+	  q orientation = 0,1,0,2.98023e-008;
+	  p position = -0.848221,0,-1.10318,0x9b00c551;
+	}
+}
+[t:cmd_party_wrangler,n:0x05500080]
+{
+	[placement]
+	{
+	  p position = 3.39815,0,-0.413839,0x9b00c551;
+	}
+}
+[t:cmd_leave_nis,n:0x0550008e]
+{
+	[common]
+	{
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = send_world_message("we_req_deactivate",0x05500080,2f,"default","every",0);
+				action* = send_world_message("we_req_activate",0x05500008,1f,"default","every",0);
+			  b can_self_destruct = true;
+				condition* = receive_world_message("we_req_activate",0,"on_first_message");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = false;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = true;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  p position = 3.45417,1.90735e-006,1.38974,0x9b00c551;
+	}
+}
+[t:cmd_leave_nis,n:0x055000a2]
+{
+	[common]
+	{
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = send_world_message("we_req_deactivate",0x05500080,2f,"default","every",0);
+			  b can_self_destruct = true;
+				condition* = receive_world_message("we_req_activate",0,"on_first_message");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = false;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = true;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  q orientation = 0,1,0,5.96047e-008;
+	  p position = 0.0742635,-1.6,1.99815,0x85e01a77;
+	}
+}
+[t:cmd_move_party,n:0x05500090]
+{
+	[placement]
+	{
+	  q orientation = 0,1,0,2.98023e-008;
+	  p position = -2.00519,1.5,3.96149,0x7db1daff;
+	}
+}
+[t:cmd_enter_nis,n:0x05500092]
+{
+	[cmd_enter_nis]
+	{
+	  x next_scid = 0x05500094;
+	}
+	[common]
+	{
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = send_world_message("we_req_activate",0x05500080,0f,"default","every",0);
+			  b can_self_destruct = true;
+				condition* = receive_world_message("we_req_activate",0,"on_first_message");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = false;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = true;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  q orientation = 0,-2.98023e-008,0,1;
+	  p position = 3.98227,1.5,3.57815,0x7db1daff;
+	}
+}
+[t:cmd_selection_toggle,n:0x05500084]
+{
+	[cmd_selection_toggle]
+	{
+	  x object_scid = 0x05500083;
+	  i start_state = 1;
+	  b toggle_visability = true;
+	}
+	[placement]
+	{
+	  q orientation = 0,1,0,0;
+	  p position = -1.01324,-5,1.20668,0xb196e6b9;
+	}
+}
+[t:cmd_alignment_changer,n:0x05500085]
+{
+	[cmd_dumb_guy]
+	{
+		alignment_activated = aa_good;
+	  x target_actor = 0x05500083;
+	}
+	[placement]
+	{
+	  p position = -1.02427,-5,-0.207977,0xb196e6b9;
+	}
+}
+[t:cmd_ai_c_patrol,n:0x0550006b]
+{
+	[cmd_ai_dojob]
+	{
+	  x next_scid = 0x0550006A;
+	}
+	[placement]
+	{
+	  p position = -0.051857,0,-0.0456838,0x04882c73;
+	}
+}
+[t:cmd_camera_command,n:0x0550009f]
+{
+	[cmd_camera_command]
+	{
+	  x next_scid = 0x055000A1;
+	}
+	[placement]
+	{
+	  q orientation = 1.54196e-008,0.984808,-0.173648,3.48553e-008;
+	  p position = 3.99323,2.6517,0.869914,0x04882c73;
+	}
+}
+[t:cmd_camera_command,n:0x055000a1]
+{
+	[cmd_camera_command]
+	{
+	  f duration = 3;
+	  x next_scid = 0x055000A2;
+	}
+	[placement]
+	{
+	  q orientation = 1.82124e-008,0.993572,-0.113203,7.73153e-008;
+	  p position = 3.9997,2.10982,1.02889,0x04882c73;
+	}
+}
+[t:cmd_ai_t_move,n:0x05500027]
+{
+	[cmd_ai_dojob]
+	{
+	  x target1 = 0x05500004;
+	}
+	[placement]
+	{
+	  p position = -1.90254,0,-2.44686,0xbb92550d;
+	}
+}
+[t:cmd_ai_c_patrol,n:0x05500071]
+{
+	[cmd_ai_dojob]
+	{
+	  x next_scid = 0x05500072;
+	}
+	[placement]
+	{
+	  p position = 2.08424,0,-0.198785,0xbb92550d;
+	}
+}
+[t:cmd_move_party,n:0x0550007e]
+{
+	[placement]
+	{
+	  q orientation = 0,1,0,2.98023e-008;
+	  p position = -1.99311,0,2.27342,0xbb92550d;
+	}
+}
+[t:cmd_camera_command,n:0x05500086]
+{
+	[cmd_camera_command]
+	{
+	  x next_scid = 0x05500088;
+	}
+	[placement]
+	{
+	  q orientation = 1.6434e-008,0.994522,-0.104528,2.06878e-007;
+	  p position = -1.96303,5.69353,-1.05048,0xbb92550d;
+	}
+}
+[t:cmd_camera_command,n:0x05500088]
+{
+	[cmd_camera_command]
+	{
+	  f duration = 7;
+	  x next_scid = 0x0550008C;
+	}
+	[placement]
+	{
+	  q orientation = 2.51408e-008,-0.995396,-0.0958458,-2.06001e-007;
+	  p position = -1.9888,1.89438,0.161294,0xbb92550d;
+	}
+}
+[t:cmd_camera_command,n:0x0550008a]
+{
+	[cmd_camera_command]
+	{
+	  f duration = 0;
+	  x next_scid = 0x0550008B;
+		order = cor_snap;
+	}
+	[placement]
+	{
+	  q orientation = 0.199368,0,0,0.979925;
+	  p position = -1.95265,3.99998,-1.022,0xbb92550d;
+	}
+}
+[t:cmd_camera_command,n:0x0550008c]
+{
+	[cmd_camera_command]
+	{
+	  f duration = 2;
+	  x next_scid = 0x0550008A;
+	}
+	[placement]
+	{
+	  q orientation = 2.51408e-008,-0.995396,-0.0958458,-2.06001e-007;
+	  p position = -1.90691,1.51671,0.464372,0xbb92550d;
+	}
+}
+[t:cmd_camera_command,n:0x0550009a]
+{
+	[cmd_camera_command]
+	{
+	  f duration = 1;
+	  x next_scid = 0x0550009F;
+	}
+	[placement]
+	{
+	  q orientation = 0.264887,0.655618,-0.264887,0.655618;
+	  p position = 1.92453,5.94172,-3.97171,0xbb92550d;
+	}
+}
+[t:cmd_change_screen_name,n:0x0550001b]
+{
+	[cmd_change_screen_name]
+	{
+		new_screen_name = "Magma Beast (Shielded)";
+	  x object_scid = 0x05500004;
+	}
+	[common]
+	{
+		dev_instance_text = "SHIELDED SCREEN NAME";
+	}
+	[placement]
+	{
+	  p position = -0.504959,0,0.785026,0x74bc4166;
+	}
+}
+[t:cmd_change_screen_name,n:0x0550001c]
+{
+	[cmd_change_screen_name]
+	{
+		new_screen_name = "Magma Beast (Vulnerable)";
+	  x object_scid = 0x05500004;
+	}
+	[common]
+	{
+		dev_instance_text = "VULNERABLE SCREEN NAME";
+	}
+	[placement]
+	{
+	  p position = -0.400793,0,3.83353,0x74bc4166;
+	}
+}
+[t:cmd_selection_toggle,n:0x05500026]
+{
+	[cmd_selection_toggle]
+	{
+	  x object_scid = 0x05500004;
+	  b toggle_invincibility = true;
+	  b toggle_selection = false;
+	}
+	[placement]
+	{
+	  q orientation = 0,1,0,0;
+	  p position = -0.31391,0,2.30146,0x74bc4166;
+	}
+}
+[t:cmd_ai_c_patrol,n:0x05500069]
+{
+	[cmd_ai_dojob]
+	{
+	  x next_scid = 0x0550006A;
+	}
+	[placement]
+	{
+	  p position = 0.172133,0,-2.15392,0x74bc4166;
+	}
+}
+[t:ee_sphere_kill,n:0x05500079]
+{
+	[common]
+	{
+		dev_instance_text = "KILL ANY LEFTOVER MOBS";
+	}
+	[ee_sphere_kill]
+	{
+	  i radius = 35;
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.707107,0,0.707107;
+	  p position = -3.34559,0,-0.579375,0x74bc4166;
+	}
+}
+[t:cmd_ai_t_move_orient,n:0x0550007b]
+{
+	[cmd_ai_dojob]
+	{
+	  x target1 = 0x05500004;
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.707107,0,0.707107;
+	  p position = -2.65679,0,2.19238,0x74bc4166;
+	}
+}
+[t:cmd_camera_command,n:0x05500081]
+{
+	[cmd_camera_command]
+	{
+	  f duration = 0;
+	  x next_scid = 0x05500086;
+		order = cor_snap;
+	}
+	[placement]
+	{
+	  q orientation = 0.0308435,0.706434,-0.0308435,0.706434;
+	  p position = -3.43344,6.3064,2.06473,0x74bc4166;
+	}
+}
+[t:cmd_camera_command,n:0x0550008b]
+{
+	[cmd_camera_command]
+	{
+	  f duration = 7;
+	  x next_scid = 0x0550008E;
+	}
+	[placement]
+	{
+	  q orientation = 0.0861745,-0.701836,0.0861745,0.701836;
+	  p position = 1.05743,4.1955,1.94503,0x74bc4166;
+	}
+}
+[t:cmd_ai_c_patrol,n:0x05500070]
+{
+	[cmd_ai_dojob]
+	{
+	  x next_scid = 0x05500072;
+	}
+	[placement]
+	{
+	  p position = 0.116272,0,-0.0768881,0xe1841cb3;
+	}
+}
+[t:cmd_ai_t_move_orient,n:0x05500024]
+{
+	[cmd_ai_dojob]
+	{
+	  x target1 = 0x05500004;
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.707107,0,-0.707107;
+	  p position = 1.99938,0,1.94124,0x2b2d752d;
+	}
+}
+[t:cmd_selection_toggle,n:0x0550002e]
+{
+	[cmd_selection_toggle]
+	{
+	  x object_scid = 0x05500028;
+	  i start_state = 1;
+	}
+	[placement]
+	{
+	  q orientation = 0,1,0,0;
+	  p position = -1.81309,0,-3.15745,0x2b2d752d;
+	}
+}
+[t:cmd_ai_c_patrol,n:0x0550006a]
+{
+	[placement]
+	{
+	  p position = 3.85188,0,1.88057,0x2b2d752d;
+	}
+}
+[t:cmd_selection_toggle,n:0x0550002d]
+{
+	[cmd_selection_toggle]
+	{
+	  x object_scid = 0x0550001F;
+	  i start_state = 1;
+	}
+	[placement]
+	{
+	  q orientation = 0,1,0,0;
+	  p position = 1.95808,0,-1.37618,0x123b1e32;
+	}
+}

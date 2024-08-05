@@ -1,0 +1,33 @@
+//////////////////////////////////////////////////////////////////////////////
+//
+// File     :  cmd_change_screen_name.skrit
+// Author(s):  Andreou_NG
+//
+//----------------------------------------------------------------------------
+//  $Revision:: $              $Date:$ 15-07-2023
+//----------------------------------------------------------------------------
+//////////////////////////////////////////////////////////////////////////////
+//
+// Changes the screen name of an object.
+//
+//////////////////////////////////////////////////////////////////////////////
+// public definitions
+
+property Scid	object_scid$								doc = "The scid to change the name for";
+property String	new_screen_name$							doc = "The new screen name";
+
+owner = GoSkritComponent;
+
+//////////////////////////////////////////////////////////////////////////////
+
+trigger OnGoHandleMessage$( WE_REQ_ACTIVATE )
+{
+	if ( !object_scid$.IsValid )
+	{
+		report.errorf( "cmd_change_screen_name.skrit - BAD CONTENT. Scid 0x%08x has a BAD object_scid.  BAD.\n", owner.Scid );
+		return;
+	}
+	
+	
+	object_scid$.Go.Common.SSetScreenName(new_screen_name$);
+}
