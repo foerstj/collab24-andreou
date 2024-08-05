@@ -75,20 +75,29 @@ state Waiting$
 		{
 			float life$ = owner.Go.Aspect.CurrentLife;
 			float max_life$ = owner.Go.Aspect.MaxLife;
-			if ( ( life$ < max_life$*threshold_1$) && (!message_1_sent$) )
+			if (threshold_1$ >= 0)
 			{
-				PostWorldMessage( message_1$, owner.Goid, send_to_scid_1$, 0 );
-				message_1_sent$ = true;
+				if ( ( life$ < max_life$*threshold_1$) && (!message_1_sent$) )
+				{
+					PostWorldMessage( message_1$, owner.Goid, send_to_scid_1$, 0 );
+					message_1_sent$ = true;
+				}
 			}
-			if ( ( life$ < max_life$*threshold_2$) && (!message_2_sent$) )
+			if (threshold_2$ >= 0)
 			{
-				PostWorldMessage( message_2$, owner.Goid, send_to_scid_2$, 0 );
-				message_2_sent$ = true;
+				if ( ( life$ < max_life$*threshold_2$) && (!message_2_sent$) )
+				{
+					PostWorldMessage( message_2$, owner.Goid, send_to_scid_2$, 0 );
+					message_2_sent$ = true;
+				}
 			}
-			if ( ( life$ < max_life$*threshold_3$) && (!message_3_sent$) )
+			if (threshold_3$ >= 0)
 			{
-				PostWorldMessage( message_3$, owner.Goid, send_to_scid_3$, 0 );
-				message_3_sent$ = true;
+				if ( ( life$ < max_life$*threshold_3$) && (!message_3_sent$) )
+				{
+					PostWorldMessage( message_3$, owner.Goid, send_to_scid_3$, 0 );
+					message_3_sent$ = true;
+				}
 			}
 		}
 	}
