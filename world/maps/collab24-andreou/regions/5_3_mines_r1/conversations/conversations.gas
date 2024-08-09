@@ -175,7 +175,7 @@
 	[text*]
 	{
 		complete_quest* = clb24a_locked_halls;
-		screen_text = "Did we feel right? Is it done? Oh thank the *** (Dwarves Have a Deity?? TODO). Come on in!";
+		screen_text = "Did we feel right? Is it done? Oh thank the maker. Come on in!";
 	  f scroll_rate = 10.000000;
 	}
 }

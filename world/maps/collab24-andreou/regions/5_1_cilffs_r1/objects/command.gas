@@ -733,3 +733,10 @@
 	  p position = -0.687271,-0.95,0.936218,0x8f08fa5b;
 	}
 }
+[t:cmd_auto_save,n:0x051000d7]
+{
+	[placement]
+	{
+	  p position = 1.76293,0.968765,1.88347,0x5fa45e41;
+	}
+}

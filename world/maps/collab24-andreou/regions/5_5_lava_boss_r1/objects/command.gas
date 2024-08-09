@@ -533,3 +533,11 @@
 	  p position = 1.95808,0,-1.37618,0x123b1e32;
 	}
 }
+[t:cmd_auto_save,n:0x05500095]
+{
+	[placement]
+	{
+	  q orientation = 0,0.707107,0,0.707107;
+	  p position = 0.778524,0,-0.688905,0xea7d26da;
+	}
+}

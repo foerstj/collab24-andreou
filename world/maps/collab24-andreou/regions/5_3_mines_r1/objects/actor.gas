@@ -1191,7 +1191,7 @@
 	}
 	[placement]
 	{
-	  p position = 0.940636,-1.99369,1.13571,0x0fd15853;
+	  p position = 0.925453,-1.99328,1.14447,0x0fd15853;
 	}
 }
 [t:mp_dwarf_worker,n:0x053005d4]
