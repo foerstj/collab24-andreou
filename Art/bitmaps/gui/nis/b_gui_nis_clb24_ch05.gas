@@ -1,0 +1,6 @@
+[t:tsd,n:b_gui_nis_clb24_ch05]
+{
+  b hasalpha = true;
+    layer1texture1 = b_gui_nis_clb24_ch05;
+  i texturedetail = 2;
+}
