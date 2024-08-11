@@ -1,0 +1,34 @@
+[world_locations]
+{
+//Andreou's part
+	[t:location,n:5_0_cave]
+	{
+		id = 0500;
+		screen_name = "a Dark Cave";
+	}
+	[t:location,n:5_1_cliffs]
+	{
+		id = 0501;
+		screen_name = "Sunset Slopes";
+	}
+	[t:location,n:5_2_cliffs_cave]
+	{
+		id = 0502;
+		screen_name = "the Bandit's Hideout";
+	}
+	[t:location,n:5_3_mines]
+	{
+		id = 0503;
+		screen_name = "Dirgnon Mines";
+	}
+	[t:location,n:5_3_mines_halls]
+	{
+		id = 0504;
+		screen_name = "Dirgnon Mine Living Quarters";
+	}
+	[t:location,n:5_4_Goblin_Lair]
+	{
+		id = 0505;
+		screen_name = "the Goblin's Lair";
+	}
+}

@@ -8290,9 +8290,9 @@
 		[position]
 		{
 		  x node = 0xAED86A82;
-		  f x = -1.017936;
+		  f x = -1.017937;
 		  f y = 7.467028;
-		  f z = -1.142261;
+		  f z = -1.142262;
 		}
 	}
 	[t:point,n:light_0xd6a8d365]

@@ -1129,6 +1129,18 @@
 	  p position = -3.12018,0,-0.474899,0x2bcb6c9c;
 	}
 }
+[t:rock_glb_tide_02,n:0x053005ca]
+{
+	[aspect]
+	{
+	  f scale_multiplier = 0.768236;
+	}
+	[placement]
+	{
+	  q orientation = 0,0.384769,0,0.923013;
+	  p position = -1.66943,0,-1.92466,0x568ae420;
+	}
+}
 [t:rocks_cav_02,n:0x053005bc]
 {
 	[aspect]

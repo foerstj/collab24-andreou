@@ -16,7 +16,8 @@
 {
 	[placement]
 	{
-	  p position = 1.44329,2.85569,-1.35144,0x4f1dc539;
+	  q orientation = 0,-0.707107,0,0.707107;
+	  p position = -2.19701,12.1271,-1.94661,0xaed86a82;
 	}
 	[sound_emitter]
 	{
@@ -29,7 +30,7 @@
 {
 	[placement]
 	{
-	  p position = 0.102104,-2.38364,-3.21963,0x35c36b07;
+	  p position = 0.258324,0.888916,-4.00739,0x35c36b07;
 	}
 	[sound_emitter]
 	{
@@ -55,7 +56,8 @@
 {
 	[placement]
 	{
-	  p position = 0.981636,2.85569,-6.08978,0x6639ecd3;
+	  q orientation = 0,0.707107,0,0.707107;
+	  p position = 0.626007,8.85251,-0.885269,0x3043fb9d;
 	}
 	[sound_emitter]
 	{
@@ -68,7 +70,7 @@
 {
 	[placement]
 	{
-	  p position = -2.67911,2.85569,3.25594,0xbd15cf12;
+	  p position = -2.07715,6.856,1.49327,0xbd15cf12;
 	}
 	[sound_emitter]
 	{
@@ -81,7 +83,7 @@
 {
 	[placement]
 	{
-	  p position = 1.34584,2.85569,-3.34791,0xebfdfff4;
+	  p position = 2.03392,7.28561,-3.70171,0xebfdfff4;
 	}
 	[sound_emitter]
 	{
