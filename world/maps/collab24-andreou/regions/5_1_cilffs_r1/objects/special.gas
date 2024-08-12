@@ -177,17 +177,18 @@
 	  p position = 3.13652,-0.35,-2.22964,0x65ba509f;
 	}
 }
-[t:trigger_change_mood_box,n:0x05100c04]
+[t:trigger_change_mood_box,n:0x051000f0]
 {
 	[common]
 	{
+		dev_instance_text = "MOOD & WORLD LOCATION";
 		[instance_triggers]
 		{
 			[*]
 			{
 				action* = mood_change("clb24a_cliffs-1");
 			  b can_self_destruct = true;
-				condition* = party_member_within_bounding_box(2.500000,1.000000,1.000000,"on_every_enter");
+				condition* = party_member_within_bounding_box(1.000000,1.000000,3.000000,"on_every_enter");
 			  f delay = 0.000000;
 			  b flip_flop = false;
 			  b multi_player = true;
@@ -198,11 +199,27 @@
 			  b single_shot = false;
 			  b start_active = true;
 			}
+			[*]
+			{
+				action* = set_player_world_location("5_1_cliffs");
+			  b can_self_destruct = true;
+				condition* = party_member_within_bounding_box(1.000000,1.000000,3.000000,"on_every_enter");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = false;
+			  b single_shot = false;
+			  b start_active = true;
+			}
 		}
 	}
 	[placement]
 	{
-	  p position = 0.348419,-11.5763,-7.11684,0x0de523a3;
+	  q orientation = 0,-0.707107,0,0.707107;
+	  p position = 0.689926,-11.1601,-8.76151,0x0de523a3;
 	}
 }
 [t:trigger_fade_node_group,n:0x05100c4d]
@@ -255,6 +272,7 @@
 {
 	[common]
 	{
+		dev_instance_text = "MOOD & WORLD LOCATION";
 		[instance_triggers]
 		{
 			[*]
@@ -269,6 +287,21 @@
 				occupants_group = ;
 			  f reset_duration = 0.000000;
 			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+			[*]
+			{
+				action* = set_player_world_location("5_1_cliffs");
+			  b can_self_destruct = true;
+				condition* = party_member_within_bounding_box(4.000000,1.000000,1.000000,"on_every_enter");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = false;
 			  b single_shot = false;
 			  b start_active = true;
 			}
@@ -308,7 +341,7 @@
 			[*]
 			{
 			  b can_self_destruct = true;
-				condition* = party_member_within_bounding_box(5.000000,1.000000,5.000000,"on_every_enter");
+				condition* = party_member_within_bounding_box(5.000000,1.000000,6.000000,"on_every_enter");
 			  f delay = 0.000000;
 			  b flip_flop = false;
 			  b multi_player = true;
@@ -323,13 +356,14 @@
 	}
 	[placement]
 	{
-	  p position = -0.0771484,-11.9983,-1.99577,0xaa322de2;
+	  p position = -0.103241,-11.9983,-1.72738,0xaa322de2;
 	}
 }
 [t:trigger_change_mood_box,n:0x0510014c]
 {
 	[common]
 	{
+		dev_instance_text = "MOOD & WORLD LOCATION";
 		[instance_triggers]
 		{
 			[*]
@@ -347,12 +381,27 @@
 			  b single_shot = false;
 			  b start_active = true;
 			}
+			[*]
+			{
+				action* = set_player_world_location("5_2_cliffs_cave");
+			  b can_self_destruct = true;
+				condition* = party_member_within_bounding_box(4.000000,1.000000,1.000000,"on_every_enter");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = false;
+			  b single_shot = false;
+			  b start_active = true;
+			}
 		}
 	}
 	[placement]
 	{
 	  q orientation = 0,2.98023e-008,0,1;
-	  p position = 0.0942039,-12,-3.52818,0xaa322de2;
+	  p position = 0.0136528,-12,-3.07577,0xaa322de2;
 	}
 }
 [t:accumulate_trigger,n:0x05100122]
@@ -832,12 +881,13 @@
 {
 	[common]
 	{
-		dev_instance_text = "MP STARTING POSITION MOOD";
+		dev_instance_text = "MP STARTING POSITION MOOD & WORLD LOCATION";
 		[instance_triggers]
 		{
 			[*]
 			{
 				action* = mood_change("clb24a_cliffs-1");
+				action* = set_player_world_location("5_1_cliffs");
 			  b can_self_destruct = true;
 				condition* = party_member_within_sphere(10.000000,"on_every_enter");
 			  f delay = 0.000000;
@@ -846,7 +896,7 @@
 			  b no_trig_bits = false;
 				occupants_group = ;
 			  f reset_duration = 0.000000;
-			  b single_player = true;
+			  b single_player = false;
 			  b single_shot = false;
 			  b start_active = true;
 			}
@@ -892,6 +942,7 @@
 {
 	[common]
 	{
+		dev_instance_text = "MOOD & WORLD LOCATION";
 		[instance_triggers]
 		{
 			[*]
@@ -906,6 +957,21 @@
 				occupants_group = ;
 			  f reset_duration = 0.000000;
 			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+			[*]
+			{
+				action* = set_player_world_location("5_1_cliffs");
+			  b can_self_destruct = true;
+				condition* = party_member_within_bounding_box(1.000000,1.000000,4.000000,"on_every_enter");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = false;
 			  b single_shot = false;
 			  b start_active = true;
 			}
@@ -1008,5 +1074,35 @@
 	[placement]
 	{
 	  p position = 8.25898,2,0.662434,0x84a410ed;
+	}
+}
+[t:trigger_generic,n:0x05100138]
+{
+	[common]
+	{
+		dev_instance_text = "DISABLE CHAPTER UI FOR LP BACKTRACKING";
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = send_world_message("we_trigger_deactivate",0x051000C6,0f,"default","every",0);
+			  b can_self_destruct = true;
+				condition* = party_member_within_bounding_box(8.000000,1.000000,1.000000,"on_first_enter");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = false;
+			  b single_shot = true;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.446198,0,0.894934;
+	  p position = -2.47355,0,2.58149,0xdfe50715;
 	}
 }

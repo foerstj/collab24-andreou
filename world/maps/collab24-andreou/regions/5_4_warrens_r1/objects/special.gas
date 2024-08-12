@@ -5,6 +5,50 @@
 	  p position = 3.72612,-0.1,0.208132,0x808fcba1;
 	}
 }
+[t:trigger_change_mood_box,n:0x05400134]
+{
+	[common]
+	{
+		dev_instance_text = "MOOD & WORLD LOCATION";
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = mood_change("clb24a_lava_1");
+			  b can_self_destruct = true;
+				condition* = party_member_within_bounding_box(5.500000,3.000000,5.500000,"on_every_enter");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+			[*]
+			{
+				action* = set_player_world_location("5_4_goblin_lair");
+			  b can_self_destruct = true;
+				condition* = party_member_within_bounding_box(5.500000,3.000000,5.500000,"on_every_enter");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = false;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  p position = -2.03509,0.1,0.252574,0x808fcba1;
+	}
+}
 [t:trigger_generic,n:0x054002a8]
 {
 	[common]
@@ -1409,5 +1453,63 @@
 	[placement]
 	{
 	  p position = 0.0871773,0.3,0.694744,0xf0e7aacf;
+	}
+}
+[t:trigger_generic,n:0x05400135]
+{
+	[common]
+	{
+		dev_instance_text = "AUTOSAVE";
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = send_world_message("we_req_activate",0x0540015A,0f,"default","every",0);
+			  b can_self_destruct = true;
+				condition* = party_member_within_bounding_box(2.000000,1.000000,1.000000,"on_first_enter");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = false;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = true;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  p position = -0.0780446,0.4,-1.09407,0xf1eb42bb;
+	}
+}
+[t:trigger_generic,n:0x0540016a]
+{
+	[common]
+	{
+		dev_instance_text = "AUTOSAVE";
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = send_world_message("we_req_activate",0x0540015C,0f,"default","every",0);
+			  b can_self_destruct = true;
+				condition* = party_member_within_bounding_box(2.000000,1.000000,1.000000,"on_first_enter");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = false;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = true;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  p position = -0.134121,0.3,0.953415,0x3efc44aa;
 	}
 }

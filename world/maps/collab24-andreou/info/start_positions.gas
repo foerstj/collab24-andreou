@@ -2,10 +2,10 @@
 {
 	[t:start_group,n:c24_5_1_jeremy]
 	{
-	  b default = true;
+	  b default = false;
 		description = "Jeremy's shop at the Sunset Slopes";
 	  b dev_only = false;
-	  i id = 501;
+	  i id = 51;
 		screen_name = "Jeremy's Cliff Shop";
 		[start_position]
 		{
@@ -115,19 +115,19 @@
 	{
 	  b default = false;
 		description = "A test start position in Andreouland.";
-	  b dev_only = false;
+	  b dev_only = true;
 	  i id = 500;
 		screen_name = "Andreouland test";
 		[start_position]
 		{
 		  i id = 1;
-			position = 0.017174,-6.000000,-1.633945,0x058C3F7D;
+			position = -0.053339,0.000000,-1.737999,0xF8B7AA17;
 			[camera]
 			{
 			  f azimuth = 0.500000;
 			  f distance = 20.000000;
 			  f orbit = 0.000000;
-				position = 0.017174,-6.000000,-1.633945,0x058C3F7D;
+				position = -0.053339,0.000000,-1.737999,0xF8B7AA17;
 			}
 		}
 		[world_levels]
