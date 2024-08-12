@@ -1217,3 +1217,18 @@
 	  p position = -1.13119,0.35,1.71315,0x607fd1ed;
 	}
 }
+[t:cmd_auto_save,n:0x0540015a]
+{
+	[placement]
+	{
+	  p position = 1.31896,0.400002,-1.36902,0xf1eb42bb;
+	}
+}
+[t:cmd_auto_save,n:0x0540015c]
+{
+	[placement]
+	{
+	  q orientation = 0,1,0,0;
+	  p position = -0.915668,0.3,0.893158,0x2adf2077;
+	}
+}
