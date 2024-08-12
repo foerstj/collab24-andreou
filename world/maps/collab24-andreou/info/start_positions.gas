@@ -2,7 +2,7 @@
 {
 	[t:start_group,n:c24_5_1_jeremy]
 	{
-	  b default = false;
+	  b default = true;
 		description = "Jeremy's shop at the Sunset Slopes";
 	  b dev_only = false;
 	  i id = 51;

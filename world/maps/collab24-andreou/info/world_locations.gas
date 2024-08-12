@@ -26,7 +26,7 @@
 		id = 0504;
 		screen_name = "Dirgnon Mine Living Quarters";
 	}
-	[t:location,n:5_4_Goblin_Lair]
+	[t:location,n:5_4_goblin_lair]
 	{
 		id = 0505;
 		screen_name = "the Goblin's Lair";
