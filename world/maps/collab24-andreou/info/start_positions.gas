@@ -105,9 +105,9 @@
 		}
 		[world_levels]
 		{
-			[normal]
+			[regular]
 			{
-			  i required_level = 13;
+			  i required_level = 12;
 			}
 		}
 	}
