@@ -499,6 +499,7 @@
 			{
 				action* = send_world_message("we_req_activate",0x0550008F,0f,"default","every",0);
 				action* = send_world_message("we_req_activate",0x05500087,5.5f,"default","every",0);
+				action* = change_quest_state("i_must_scream","completed",0);
 			  b can_self_destruct = true;
 				condition* = receive_world_message("we_req_activate",0,"on_first_message");
 			  f delay = 0.000000;
