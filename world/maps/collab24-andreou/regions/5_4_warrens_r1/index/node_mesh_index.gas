@@ -16,6 +16,10 @@
 	0x0540055e = t_xxx_cnr_tee-04-08-12-r;
 	0x0540055f = t_xxx_cnr_tee-08-04-12-l;
 	0x05400560 = t_xxx_cnr_tee-08-04-12-r;
+	0x0540063b = t_xxx_dgn_cap-08x04-a;
+	0x0540063c = t_xxx_dgn_cap-08x08-a;
+	0x05400645 = t_xxx_dgn_cap-vertical-04x04-b;
+	0x05400647 = t_xxx_dgn_cap-vertical-04x08-b;
 	0x05400684 = t_xxx_flr_h2o_04x04-v0;
 	0x05400689 = t_xxx_flr_h2o_04x08-v0;
 	0x0540068a = t_xxx_flr_h2o_08x08-v0;
