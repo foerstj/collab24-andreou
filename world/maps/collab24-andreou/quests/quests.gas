@@ -130,4 +130,19 @@
 			speaker = ;
 		}
 	}
+
+	[i_must_scream]
+	{
+		chapter = chapter_01_valleyball;
+		quest_image = b_gui_ig_mnu_quest;
+		screen_name = Make A Goblin Squeal;
+		[*]
+		{
+			description = stop the blasted goblin;
+		  b is_consumable = false;
+		  i order = 0;
+		  b required = true;
+			speaker = ;
+		}
+	}
 }
