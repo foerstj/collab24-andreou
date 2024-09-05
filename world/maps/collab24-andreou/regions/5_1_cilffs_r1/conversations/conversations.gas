@@ -48,9 +48,10 @@
 	[text*]
 	{
 		activate_quest* = clb24a_goblin_lair,0;
+		activate_quest* = i_must_scream,0;
 	  i order = 0;
 	  b quest_dialog = true;
-		screen_text = "Ahh! You startled me. Did you come from Larissa Keep? You don稚 look like the climber type, I guess that means they repaired the bridge. Oh I知 so relieved, that means I can finally leave this area here. I was sneaking past bandits and trolls these past few weeks and living from berries. The mines further up the path are infested with some sort of beasts and machines, and you can hear some drilling in the deep parts of the mine. I heard these blasted goblins made their lair there. I知 not staying around to find out what they are cooking there, I知 leaving!";
+		screen_text = "Are you another guest? Did you come from Larissa Keep? You don稚 look like the climber type, I guess that means they repaired the bridge. Oh I知 so relieved, that means I can finally leave this area here. I was sneaking past bandits and trolls these past few weeks and living from berries. The mines further up the path are infested with some sort of beasts and machines, and you can hear some drilling in the deep parts of the mine. I heard these blasted goblins made their lair there. I知 not staying around to find out what they are cooking there, I知 leaving!";
 	  f scroll_rate = 10.000000;
 	}
 	[text*]

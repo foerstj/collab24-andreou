@@ -933,10 +933,8 @@
 			{
 				action* = send_world_message("we_req_activate",0x05400172,1f,"default","every",0);
 				action* = send_world_message("we_req_activate",0x05400173,1f,"default","every",0);
-				action* = send_world_message("we_req_activate",0x05400174,1f,"default","every",0);
 				action* = send_world_message("we_req_activate",0x05400175,0f,"default","every",0);
 				action* = send_world_message("we_req_activate",0x05400176,0f,"default","every",0);
-				action* = send_world_message("we_req_activate",0x05400177,0f,"default","every",0);
 				action* = send_world_message("we_req_activate",0x05400178,2f,"default","every",0);
 			  b can_self_destruct = true;
 				condition* = party_member_within_sphere(7.000000,"on_first_enter");

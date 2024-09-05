@@ -1,0 +1,10 @@
+[t:template,n:clb24a_emt_generic_act]
+{
+	specializes	=	emitter;
+    category_name = "emitter";
+
+	doc			=	"clb24a_emt_generic_act";
+    extra_doc = "requires trigger activation";
+	[on_client] {}
+	[clb24a_generic_emitter_act] {}
+}

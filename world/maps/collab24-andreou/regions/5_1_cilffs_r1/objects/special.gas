@@ -23,11 +23,13 @@
 {
 	[common]
 	{
+		dev_instance_text = "CHECK JEREMY SHOP VISITORS";
 		[instance_triggers]
 		{
 			[*]
 			{
 				action* = send_world_message("we_req_activate",0x05100176,0f,"default","every",0);
+				action* = send_world_message("we_req_activate",0x051009C5,0f,"default","every",0);
 			  b can_self_destruct = true;
 				condition* = party_member_within_bounding_box(2.000000,2.000000,2.000000,"on_every_enter");
 			  f delay = 0.000000;
@@ -44,7 +46,7 @@
 	}
 	[placement]
 	{
-	  p position = 5.88866,3.58935,1.31889,0x2ccfe4e4;
+	  p position = 3.50823,2.72793,0.463516,0x2ccfe4e4;
 	}
 }
 [t:check_bool,n:0x05100176]
@@ -56,7 +58,20 @@
 	}
 	[placement]
 	{
-	  p position = -2.72006,-1.87128,-0.352798,0x2ccfe4e4;
+	  p position = -1.26783,-0.926338,-0.272545,0x2ccfe4e4;
+	}
+}
+[t:check_quest,n:0x051009c5]
+{
+	[check_quest]
+	{
+		quest_name = "clb24a_goblin_lair";
+	  x send_to_scid = 0x05100B6F;
+	}
+	[placement]
+	{
+	  q orientation = 0,2.98023e-008,0,1;
+	  p position = -1.29754,-0.950388,0.684616,0x2ccfe4e4;
 	}
 }
 [t:trigger_generic,n:0x051000cb]
@@ -1022,36 +1037,6 @@
 	[placement]
 	{
 	  p position = 2.36792,0,-2.12298,0xb46c0ad4;
-	}
-}
-[t:trigger_generic,n:0x0510017b]
-{
-	[common]
-	{
-		dev_instance_text = "FORCE PRIMARY QUEST CONVO";
-		[instance_triggers]
-		{
-			[*]
-			{
-				action* = send_world_message("we_req_talk_begin",0x05100C86,0f,"0x4002","party_member_within_bounding_box",0);
-			  b can_self_destruct = true;
-				condition* = party_member_within_bounding_box(1.000000,0.500000,6.000000,"on_first_enter");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = false;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = true;
-			  b single_shot = true;
-			  b start_active = true;
-			}
-		}
-	}
-	[placement]
-	{
-	  q orientation = 0,0.317305,0,-0.948324;
-	  p position = -2.28568,0,-0.932247,0x7074e668;
 	}
 }
 [t:blocking_object,n:0x0510017a]

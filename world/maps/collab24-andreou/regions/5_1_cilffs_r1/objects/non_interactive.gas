@@ -19970,8 +19970,8 @@
 	}
 	[placement]
 	{
-	  q orientation = 0,-0.883717,0,0.468021;
-	  p position = -1.69446,0,-1.10415,0x41c69752;
+	  q orientation = 0,0.883717,0,-0.468021;
+	  p position = -1.84662,0,-1.14317,0x41c69752;
 	}
 }
 [t:bush_grs_03,n:0x0510048e]
@@ -20290,6 +20290,18 @@
 	  p position = 5.93833,-4.75,2.96324,0x5c937ddd;
 	}
 }
+[t:foliage_grs_01,n:0x051003af]
+{
+	[aspect]
+	{
+	  f scale_multiplier = 1.07091;
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.208778,0,0.977963;
+	  p position = -6.00275,-4.75,-2.72498,0x5c937ddd;
+	}
+}
 [t:foliage_grs_01,n:0x051003db]
 {
 	[aspect]
@@ -20312,30 +20324,6 @@
 	{
 	  q orientation = 0,-0.68831,0,0.725417;
 	  p position = 5.97576,-4.75,-5.35644,0x5c937ddd;
-	}
-}
-[t:foliage_grs_01,n:0x051003e7]
-{
-	[aspect]
-	{
-	  f scale_multiplier = 0.859977;
-	}
-	[placement]
-	{
-	  q orientation = 0,0.810043,0,0.58637;
-	  p position = -3.73459,-4.73718,-4.07304,0x5c937ddd;
-	}
-}
-[t:foliage_grs_01,n:0x051003e8]
-{
-	[aspect]
-	{
-	  f scale_multiplier = 0.97337;
-	}
-	[placement]
-	{
-	  q orientation = 0,0.638663,0,0.769487;
-	  p position = -6.39222,-4.75,-3.79769,0x5c937ddd;
 	}
 }
 [t:tree_grs_deciduous_02,n:0x051005c9]
@@ -26717,8 +26705,8 @@
 	}
 	[placement]
 	{
-	  q orientation = 0,-0.999554,0,0.0298536;
-	  p position = 1.39293,1.90735e-006,-1.1986,0x141140f0;
+	  q orientation = 0,0.999554,0,-0.0298536;
+	  p position = 1.39293,0,-1.1986,0x141140f0;
 	}
 }
 [t:fern_grs_03,n:0x0510020a]

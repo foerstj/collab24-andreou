@@ -14,8 +14,8 @@
 	[attack]
 	{
 		attack_range = 9;
-		damage_max = 68;
-		damage_min = 53;
+		damage_max = 53;
+		damage_min = 43;
 		reload_delay = 1.5;
 	}
 	[common]
@@ -65,8 +65,8 @@
 		ammo_template = grenade;
 		area_damage_radius = 3.5;
 		attack_range = 10;
-		damage_max = 70;
-		damage_min = 58;
+		damage_max = 60;
+		damage_min = 48;
 		reload_delay = 2;
 	}
 	[common]
@@ -108,8 +108,8 @@
 	[attack]
 	{
 		attack_range = 11;
-		damage_max = 55;
-		damage_min = 44;
+		damage_max = 50;
+		damage_min = 38;
 		reload_delay = 1.0;
 	}
 	[common]
@@ -152,8 +152,8 @@
 	{
 		area_damage_radius = 1.0;
 		attack_range = 11;
-		damage_max = 42;
-		damage_min = 30;
+		damage_max = 38;
+		damage_min = 24;
 		reload_delay = 0.5;
 	}
 	[body]

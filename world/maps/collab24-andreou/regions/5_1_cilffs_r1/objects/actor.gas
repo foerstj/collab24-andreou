@@ -840,6 +840,29 @@
 	  p position = 0.174103,-3.75,1.01719,0x5c937ddd;
 	}
 }
+[t:mp_townfolk_male_01,n:0x05100c86]
+{
+	[common]
+	{
+		screen_name = "Frightened Man";
+	}
+	[conversation]
+	{
+		[conversations]
+		{
+			* = frightened_man;
+		}
+	}
+	[mind]
+	{
+		jat_talk = world\ai\jobs\common\job_talk.skrit;
+	}
+	[placement]
+	{
+	  q orientation = 0,0.989361,0,-0.145484;
+	  p position = -2.98552,-4.70751,-4.37718,0x5c937ddd;
+	}
+}
 [t:c24_5_troll,n:0x051000ab]
 {
 	[placement]
@@ -1285,29 +1308,6 @@
 	{
 	  q orientation = 0,0.983106,0,0.183034;
 	  p position = -2.81653,0,-1.98235,0xa584934c;
-	}
-}
-[t:mp_townfolk_male_01,n:0x05100c86]
-{
-	[common]
-	{
-		screen_name = "Frightened Man";
-	}
-	[conversation]
-	{
-		[conversations]
-		{
-			* = frightened_man;
-		}
-	}
-	[mind]
-	{
-		jat_talk = world\ai\jobs\common\job_talk.skrit;
-	}
-	[placement]
-	{
-	  q orientation = 0,-0.627491,0,-0.778623;
-	  p position = 2.34654,-0.65,-2.0839,0xb0f3e895;
 	}
 }
 [t:c24_5_bandit,n:0x0510004b]

@@ -420,6 +420,19 @@
 	  p position = 2.14874,0,-1.18684,0xcec129b4;
 	}
 }
+[t:cmd_selection_toggle,n:0x05100b6f]
+{
+	[cmd_selection_toggle]
+	{
+	  x object_scid = 0x05100C86;
+	  b toggle_visability = true;
+	}
+	[placement]
+	{
+	  q orientation = 0,1,0,0;
+	  p position = -4.41925,-4.75,-5.32965,0x5c937ddd;
+	}
+}
 [t:cmd_ai_t_stop,n:0x051000b4]
 {
 	[cmd_ai_dojob]

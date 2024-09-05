@@ -56,9 +56,9 @@
 	  p position = 2.20529,0,-1.17164,0x9b00c551;
 	}
 }
-[t:emt_generic_act,n:0x05500021]
+[t:clb24a_emt_generic_act,n:0x05500021]
 {
-	[generic_emitter_act]
+	[clb24a_generic_emitter_act]
 	{
 		other_effect = "invulnerability";
 	  f scale = 2.5;
@@ -82,7 +82,7 @@
 	[placement]
 	{
 	  q orientation = 0,0.707107,0,0.707107;
-	  p position = -3.52962,0,3.20354,0x74bc4166;
+	  p position = -3.51716,0,3.1882,0x74bc4166;
 	}
 }
 [t:emt_sound,n:0x05500011]

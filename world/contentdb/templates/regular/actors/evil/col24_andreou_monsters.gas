@@ -14,8 +14,8 @@
 	}
 	[aspect]
 	{
-		life = 312;
-		max_life = 312;
+		life = 282;
+		max_life = 282;
 		mana = 20;
 		max_mana = 20;
    		experience_value = 234;
@@ -33,8 +33,8 @@
 	[attack]
 	{
 		attack_range = 0.5;
-		damage_max = 21;
-		damage_min = 18;
+		damage_max = 16;
+		damage_min = 12;
 	}
    	[defend] { defense=79; }
 	[inventory]
@@ -116,8 +116,8 @@
 	}
 	[aspect]
 	{
-		life = 282;
-		max_life = 282;
+		life = 263;
+		max_life = 263;
 		mana = 20;
 		max_mana = 20;
    		experience_value = 220;
@@ -142,7 +142,7 @@
 			[all*]
 			{
 				es_feet = bo_bo_le_light;
-                es_shield_hand = bw_g_c_c_m_r_low;
+                es_shield_hand = bw_g_c_s_m_r_avg;
 			}
 			[oneof*]
 			{
@@ -216,8 +216,8 @@
 	}
 	[aspect]
 	{
-		life = 233;
-		max_life = 233;
+		life = 193;
+		max_life = 193;
 		mana = 40;
 		max_mana = 40;
    		experience_value = 244;
@@ -2944,14 +2944,14 @@
 		gib_gore_good = true;
 		[break_particulate]
 		{
-			frag_glb_lava_beast_01 = 1;
-			frag_glb_lava_beast_02 = 1;
-			frag_glb_lava_beast_03 = 1;
-			frag_glb_lava_beast_04 = 1;
-			frag_glb_lava_beast_05 = 1;
-			frag_glb_lava_beast_06 = 2;
-			frag_glb_lava_beast_07 = 3;
-			frag_glb_lava_beast_08 = 4;
+			clb24a_frag_glb_magma_beast_01 = 1;
+			clb24a_frag_glb_magma_beast_02 = 1;
+			clb24a_frag_glb_magma_beast_03 = 1;
+			clb24a_frag_glb_magma_beast_04 = 1;
+			clb24a_frag_glb_magma_beast_05 = 1;
+			clb24a_frag_glb_magma_beast_06 = 2;
+			clb24a_frag_glb_magma_beast_07 = 3;
+			clb24a_frag_glb_magma_beast_08 = 4;
 		}
 	}
 	[inventory]

@@ -38,14 +38,6 @@
 	  p position = -1.91758,4,-1.08791,0x687313c8;
 	}
 }
-[t:c24_5_gobbot_granade,n:0x05400053]
-{
-	[placement]
-	{
-	  q orientation = 0,0.677415,0,0.735601;
-	  p position = 0.491929,6,0.771191,0x02e51369;
-	}
-}
 [t:c24_5_hunter,n:0x0540004d]
 {
 	[placement]
@@ -60,14 +52,6 @@
 	{
 	  q orientation = 0,0.879733,0,0.475467;
 	  p position = -0.764862,6,1.03227,0x2b481de1;
-	}
-}
-[t:c24_5_gobbot_granade,n:0x05400052]
-{
-	[placement]
-	{
-	  q orientation = 0,0.856953,0,0.515395;
-	  p position = 1.41084,6,-0.0464029,0x4ea76fcf;
 	}
 }
 [t:c24_5_robot_copter,n:0x05400082]
@@ -291,7 +275,7 @@
 	[placement]
 	{
 	  q orientation = 0,0.818802,0,0.574075;
-	  p position = 3.34209,0,-1.45426,0xd282ad25;
+	  p position = 3.36193,0,-1.4556,0xd282ad25;
 	}
 }
 [t:c24_5_robot_blaster,n:0x054000cb]
@@ -735,20 +719,12 @@
 	  p position = -0.0522108,6,-0.279318,0xdfcce744;
 	}
 }
-[t:c24_5_gobbot_electric,n:0x05400186]
-{
-	[placement]
-	{
-	  q orientation = 0,0.165938,0,0.986136;
-	  p position = -1.10379,6,0.929252,0xdfcce744;
-	}
-}
 [t:c24_5_gobbot_electric,n:0x05400187]
 {
 	[placement]
 	{
-	  q orientation = 0,-0.823814,0,0.566861;
-	  p position = 0.817486,2,0.117124,0xab4f7c81;
+	  q orientation = 0,-0.838971,0,-0.544177;
+	  p position = 1.027,2,1.6095,0xab4f7c81;
 	}
 }
 [t:c24_5_gobbot_electric,n:0x05400188]
@@ -1015,19 +991,7 @@
 	[placement]
 	{
 	  q orientation = 0,-0.92388,0,0.382683;
-	  p position = 11.2391,0.15,-2.31595,0x16beea04;
-	}
-}
-[t:c24_5_gobbot_minigun,n:0x0540023a]
-{
-	[mind]
-	{
-		jat_fidget = world\ai\jobs\common\job_fidget.skrit?still=true;
-	}
-	[placement]
-	{
-	  q orientation = 0,-0.92388,0,0.382683;
-	  p position = 12.5861,0.15,-3.56903,0x16beea04;
+	  p position = 12.1753,0.15,-3.21666,0x16beea04;
 	}
 }
 [t:c24_5_gobbot_minigun,n:0x0540023b]
@@ -1038,8 +1002,8 @@
 	}
 	[placement]
 	{
-	  q orientation = 0,-0.92388,0,0.382683;
-	  p position = 13.8724,0.15,-4.77051,0x16beea04;
+	  q orientation = 0,-0.707107,0,0.707107;
+	  p position = 13.9334,0.15,-6.20901,0x16beea04;
 	}
 }
 [t:c24_5_gobbot_granade,n:0x0540023c]
@@ -1050,20 +1014,8 @@
 	}
 	[placement]
 	{
-	  q orientation = 0,-0.382683,0,0.92388;
-	  p position = 14.0498,0.15,-9.73347,0x16beea04;
-	}
-}
-[t:c24_5_gobbot_granade,n:0x0540023d]
-{
-	[mind]
-	{
-		jat_fidget = world\ai\jobs\common\job_fidget.skrit?still=true;
-	}
-	[placement]
-	{
-	  q orientation = 0,-0.382683,0,0.92388;
-	  p position = 13.0983,0.15,-11.3525,0x16beea04;
+	  q orientation = 0,-0.707107,0,0.707107;
+	  p position = 13.7827,0.15,-10.0185,0x16beea04;
 	}
 }
 [t:c24_5_gobbot_granade,n:0x0540023e]
@@ -1075,7 +1027,7 @@
 	[placement]
 	{
 	  q orientation = 0,-0.382683,0,0.92388;
-	  p position = 11.666,0.15,-12.7321,0x16beea04;
+	  p position = 12.2893,0.15,-12.5862,0x16beea04;
 	}
 }
 [t:c24_5_gobbot_electric,n:0x05400161]
@@ -1277,7 +1229,7 @@
 {
 	[placement]
 	{
-	  q orientation = 0,0.812598,0,0.582825;
+	  q orientation = 0,0.162474,0,0.986713;
 	  p position = 0.596725,6,-0.525828,0xc5aa8431;
 	}
 }
@@ -1287,22 +1239,6 @@
 	{
 	  q orientation = 0,0.999866,0,-0.0163779;
 	  p position = -1.30743,6,-0.111469,0x60df3807;
-	}
-}
-[t:c24_5_gobbot_minigun,n:0x05400193]
-{
-	[placement]
-	{
-	  q orientation = 0,-0.43994,0,0.898027;
-	  p position = 0.714645,6,-0.148191,0x60df3807;
-	}
-}
-[t:c24_5_gobbot_minigun,n:0x05400192]
-{
-	[placement]
-	{
-	  q orientation = 0,-0.920012,0,0.391891;
-	  p position = 0.876826,6,0.867248,0x05625476;
 	}
 }
 [t:c24_5_robot_blaster,n:0x0540018f]
@@ -1388,18 +1324,6 @@
 	  p position = 0.0250206,0.2,0.16568,0xc08664c3;
 	}
 }
-[t:c24_5_gobbot_granade,n:0x05400150]
-{
-	[mind]
-	{
-		jat_fidget = world\ai\jobs\common\job_fidget.skrit?still=true;
-	}
-	[placement]
-	{
-	  q orientation = 0,0.707107,0,0.707107;
-	  p position = 0.137745,0.4,2.06201,0xf414b233;
-	}
-}
 [t:c24_5_gobbot_granade,n:0x05400152]
 {
 	[mind]
@@ -1409,19 +1333,7 @@
 	[placement]
 	{
 	  q orientation = 0,0.707107,0,0.707107;
-	  p position = 0.12344,0.4,-0.106842,0xf414b233;
-	}
-}
-[t:c24_5_gobbot_granade,n:0x0540014f]
-{
-	[mind]
-	{
-		jat_fidget = world\ai\jobs\common\job_fidget.skrit?still=true;
-	}
-	[placement]
-	{
-	  q orientation = 0,0.707107,0,0.707107;
-	  p position = 0.0130997,0.4,-0.152428,0xb7cd60a6;
+	  p position = 0.150272,0.4,0.979813,0xf414b233;
 	}
 }
 [t:c24_5_gobbot_granade,n:0x05400151]
@@ -1433,19 +1345,7 @@
 	[placement]
 	{
 	  q orientation = 0,0.707107,0,0.707107;
-	  p position = 0.100742,0.4,1.84603,0xb7cd60a6;
-	}
-}
-[t:c24_5_gobbot_electric,n:0x0540014b]
-{
-	[mind]
-	{
-		jat_fidget = world\ai\jobs\common\job_fidget.skrit?still=true;
-	}
-	[placement]
-	{
-	  q orientation = 0,0.707107,0,0.707107;
-	  p position = 0.206104,0.4,0.21376,0x50509752;
+	  p position = 0.106941,0.4,1.18124,0xb7cd60a6;
 	}
 }
 [t:c24_5_gobbot_electric,n:0x0540014d]
@@ -1457,7 +1357,7 @@
 	[placement]
 	{
 	  q orientation = 0,0.707107,0,0.707107;
-	  p position = 0.24614,0.4,1.97509,0x50509752;
+	  p position = 0.224136,0.4,1.25079,0x50509752;
 	}
 }
 [t:c24_5_hunter,n:0x05400153]
@@ -1508,18 +1408,6 @@
 	  p position = -0.939875,0.2,0.862991,0xc667b8f4;
 	}
 }
-[t:c24_5_gobbot_electric,n:0x0540014c]
-{
-	[mind]
-	{
-		jat_fidget = world\ai\jobs\common\job_fidget.skrit?still=true;
-	}
-	[placement]
-	{
-	  q orientation = 0,0.707107,0,0.707107;
-	  p position = 0.220829,0.4,1.79448,0x2f2675b6;
-	}
-}
 [t:c24_5_gobbot_electric,n:0x0540014e]
 {
 	[mind]
@@ -1529,6 +1417,6 @@
 	[placement]
 	{
 	  q orientation = 0,0.707107,0,0.707107;
-	  p position = 0.22636,0.4,-0.107422,0x2f2675b6;
+	  p position = 0.124912,0.4,0.849571,0x2f2675b6;
 	}
 }

@@ -1,0 +1,86 @@
+[t:template,n:clb24a_frag_glb_magma_beast_01]
+{
+	doc = "clb24a_frag_glb_magma_beast_01";
+	specializes = fragment;
+	[aspect] 
+	{
+		model=m_i_glb_frag-rock-beast-01; 
+		textures:0 = b_c_edm_rb-03;
+	}
+}
+[t:template,n:clb24a_frag_glb_magma_beast_02]
+{
+	doc = "clb24a_frag_glb_magma_beast_02";
+	specializes = fragment;
+	[aspect] 
+	{
+		model=m_i_glb_frag-rock-beast-02; 
+		textures:0 = b_c_edm_rb-03;
+	}
+}
+[t:template,n:clb24a_frag_glb_magma_beast_03]
+{
+	doc = "clb24a_frag_glb_magma_beast_03";
+	specializes = fragment;
+	[aspect] 
+	{
+		model=m_i_glb_frag-rock-beast-03; 
+		textures:0 = b_c_edm_rb-03;
+	}
+}
+[t:template,n:clb24a_frag_glb_magma_beast_04]
+{
+	doc = "clb24a_frag_glb_magma_beast_04";
+	specializes = fragment;
+	[aspect] 
+	{
+		model=m_i_glb_frag-rock-beast-04; 
+		textures:0 = b_c_edm_rb-03;
+	}
+}
+[t:template,n:clb24a_frag_glb_magma_beast_05]
+{
+	doc = "clb24a_frag_glb_magma_beast_05";
+	specializes = fragment;
+	[aspect] 
+	{
+		model=m_i_glb_frag-rock-beast-05; 
+		textures:0 = b_c_edm_rb-03;
+	}
+}
+[t:template,n:clb24a_frag_glb_magma_beast_06] //// ET these are for the LAVA beast blast spell. -CarlosN
+{
+	doc = "clb24a_frag_glb_magma_beast_06";
+	specializes = fragment;
+	[aspect] 
+	{ 
+		model=m_i_glb_frag-rock-beast-06;
+		scale_base = 1.2;
+		textures:0 = b_c_edm_rb-03;
+	}
+	physics:sim_duration = 2;
+}
+[t:template,n:clb24a_frag_glb_magma_beast_07] //// ET these are for the LAVA beast blast spell. -CarlosN
+{
+	doc = "clb24a_frag_glb_magma_beast_07";
+	specializes = fragment;
+	[aspect] 
+	{ 
+		model=m_i_glb_frag-rock-beast-07;
+		scale_base = 1.4; 
+		textures:0 = b_c_edm_rb-03;
+	}
+	physics:sim_duration = 2;
+}
+[t:template,n:clb24a_frag_glb_magma_beast_08] //// ET these are for the LAVA beast blast spell. -CarlosN
+{
+	doc = "clb24a_frag_glb_magma_beast_08";
+	specializes = fragment;
+	[aspect] 
+	{ 
+		model=m_i_glb_frag-rock-beast-08;
+		scale_base = 2; 
+		textures:0 = b_c_edm_rb-03;
+	}
+	physics:sim_duration = 2;
+}

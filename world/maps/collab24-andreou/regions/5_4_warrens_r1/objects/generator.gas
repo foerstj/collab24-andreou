@@ -498,7 +498,7 @@
 	}
 	[placement]
 	{
-	  p position = 0.958961,2,-0.644439,0x11b8d0e3;
+	  p position = 0.685058,2,-0.768783,0x11b8d0e3;
 	}
 }
 [t:clb24_generator_activate_exploding_wood_box_small,n:0x05400173]
@@ -511,18 +511,6 @@
 	[placement]
 	{
 	  p position = 0.778732,2,1.13971,0x11b8d0e3;
-	}
-}
-[t:clb24_generator_activate_exploding_wood_box_small,n:0x05400174]
-{
-	[generator_object_exploding]
-	{
-		child_template_name = "c24_5_gobbot_flame";
-	  x initial_command = 0x054001E0;
-	}
-	[placement]
-	{
-	  p position = -1.187,2,-0.726074,0x11b8d0e3;
 	}
 }
 [t:clb24_generator_activate_exploding_wood_box_small,n:0x05400175]
@@ -547,18 +535,6 @@
 	[placement]
 	{
 	  p position = 0.464737,2,-1.05907,0x5ed9ac42;
-	}
-}
-[t:clb24_generator_activate_exploding_wood_box_small,n:0x05400177]
-{
-	[generator_object_exploding]
-	{
-		child_template_name = "c24_5_gobbot_flame";
-	  x initial_command = 0x054001E0;
-	}
-	[placement]
-	{
-	  p position = 0.430679,2,0.983795,0x5ed9ac42;
 	}
 }
 [t:clb24_generator_activate_exploding_wood_box_big,n:0x05400178]
