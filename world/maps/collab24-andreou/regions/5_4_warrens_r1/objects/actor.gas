@@ -1030,14 +1030,6 @@
 	  p position = 12.2893,0.15,-12.5862,0x16beea04;
 	}
 }
-[t:c24_5_gobbot_electric,n:0x05400161]
-{
-	[placement]
-	{
-	  q orientation = 0,-0.91789,0,0.396834;
-	  p position = -0.913952,0,-0.905504,0xdb49aff6;
-	}
-}
 [t:c24_5_gobbot_electric,n:0x05400162]
 {
 	[placement]
@@ -1054,14 +1046,6 @@
 	  p position = -0.715591,0,0.933288,0xdb49aff6;
 	}
 }
-[t:c24_5_gobbot_electric,n:0x05400163]
-{
-	[placement]
-	{
-	  q orientation = 0,0.556954,0,0.830544;
-	  p position = 0.890972,0,1.2509,0x9dfe559e;
-	}
-}
 [t:c24_5_robot_heater,n:0x05400166]
 {
 	[placement]
@@ -1075,7 +1059,7 @@
 	[placement]
 	{
 	  q orientation = 0,-0.277424,0,0.960748;
-	  p position = -2.81096,0,-2.60084,0x57ee3d1c;
+	  p position = -2.80272,0,-3.54895,0x57ee3d1c;
 	}
 }
 [t:c24_5_robot_copter,n:0x05400159]
@@ -1208,7 +1192,7 @@
 	[placement]
 	{
 	  q orientation = 0,-1,0,-1.5496e-007;
-	  p position = -2.00699,-6,0.167595,0x3bda8e1a;
+	  p position = -2.04854,-6,-0.00637817,0x3bda8e1a;
 	}
 }
 [t:c24_5_gobbot_minigun,n:0x054001f6]

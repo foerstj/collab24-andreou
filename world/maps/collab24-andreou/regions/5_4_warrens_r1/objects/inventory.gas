@@ -1,0 +1,37 @@
+[t:potion_health_medium,n:0x054000d3]
+{
+	[placement]
+	{
+	  p position = 3.2145,0.669893,-0.976989,0x0982cb9e;
+		use_point_scids = 0x0540014C;
+	}
+}
+[t:potion_health_medium,n:0x054000d4]
+{
+	[placement]
+	{
+	  p position = 0.92541,4.66278,1.27196,0x13ecfba6;
+		use_point_scids = 0x0540014B;
+	}
+}
+[t:potion_health_large,n:0x0540014f]
+{
+	[placement]
+	{
+	  p position = -2.11214,-6,0.216248,0x3b82a25e;
+	}
+}
+[t:potion_health_large,n:0x05400150]
+{
+	[placement]
+	{
+	  p position = -2.09157,-6,0.172329,0x631af1c2;
+	}
+}
+[t:potion_health_large,n:0x0540016b]
+{
+	[placement]
+	{
+	  p position = -2.00189,-6,0.11615,0x3bda8e1a;
+	}
+}

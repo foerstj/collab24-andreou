@@ -1,0 +1,11 @@
+[t:gold,n:0x05e0000d]
+{
+	[aspect]
+	{
+	  i gold_value = 40000;
+	}
+	[placement]
+	{
+	  p position = -2.21467,0,2.88783,0xee8f5b76;
+	}
+}

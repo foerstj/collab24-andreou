@@ -1003,6 +1003,9 @@
 			{
 				action* = fade_nodes_global(0x00000054,1,2,-1,"out:black");
 				action* = change_quest_state("clb24a_blasted_door","completed",0);
+				action* = set_camera_fade_node(0xFA7C1430,1);
+				action* = set_occludes_camera_node(0xFA7C1430,0);
+				action* = set_bounds_camera_node(0xFA7C1430,0);
 			  b can_self_destruct = true;
 				condition* = receive_world_message("we_req_activate",0,"on_first_message");
 			  f delay = 0.000000;
@@ -1509,5 +1512,19 @@
 	[placement]
 	{
 	  p position = 0.0871773,0.3,0.694744,0xf0e7aacf;
+	}
+}
+[t:use_point,n:0x0540014b]
+{
+	[placement]
+	{
+	  p position = 0.0806484,4,0.296032,0x13ecfba6;
+	}
+}
+[t:use_point,n:0x0540014c]
+{
+	[placement]
+	{
+	  p position = 2.50954,0,0.0597648,0x0982cb9e;
 	}
 }

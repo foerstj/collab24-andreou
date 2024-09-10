@@ -134,8 +134,8 @@
 	specializes = base_spell_monster;
 	[attack]
 	{
-		damage_max = 66;
-		damage_min = 57;
+		damage_max = 43;
+		damage_min = 35;
 	}
 	[magic]
 	{
@@ -169,8 +169,8 @@
 		ammo_attach_bone = bone05;
 		ammo_template = grenade_magic;
 		area_damage_radius = 3.5;
-		damage_max = 67;
-		damage_min = 59;
+		damage_max = 56;
+		damage_min = 45;
 		use_aiming_error = true;
 	}
 	[magic]
@@ -201,8 +201,8 @@
 	specializes = base_spell_monster;
 	[attack]
 	{
-		 damage_min = 42;
-		 damage_max = 49;
+		 damage_min = 32;
+		 damage_max = 41;
 	}
 	[common]
 	{

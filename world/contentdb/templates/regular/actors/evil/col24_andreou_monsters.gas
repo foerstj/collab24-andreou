@@ -9,7 +9,7 @@
 			strength =   13, 0;
 			intelligence =  10, 0;
 			dexterity =   11, 0;
-			melee =  13,  0;
+			melee =  9,  0;
 		}
 	}
 	[aspect]
@@ -33,8 +33,8 @@
 	[attack]
 	{
 		attack_range = 0.5;
-		damage_max = 16;
-		damage_min = 12;
+		damage_max = 6;
+		damage_min = 2;
 	}
    	[defend] { defense=79; }
 	[inventory]
@@ -391,8 +391,8 @@
 	[attack]
 	{
 		attack_range = 0.5;
-		damage_max = 45;
-		damage_min = 41;
+		damage_max = 25;
+		damage_min = 21;
 	}
 	[defend] { defense=171; }
 }
@@ -1961,8 +1961,8 @@
 	[attack]
 	{
 		attack_range = 0.5;
-		damage_max = 49;
-		damage_min = 40;
+		damage_max = 40;
+		damage_min = 33;
 		reload_delay = 0;
 	}
 	[common] { screen_name="Hunter"; }

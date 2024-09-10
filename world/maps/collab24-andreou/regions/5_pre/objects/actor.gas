@@ -1,0 +1,111 @@
+[t:clb24_test_melee,n:0x05e00009]
+{
+	[aspect]
+	{
+	  f max_life = 323.4;
+	  f max_mana = 75;
+	}
+	[conversation]
+	{
+		[conversations]
+		{
+			* = pm;
+		}
+	}
+	[mind]
+	{
+		jat_talk = world\ai\jobs\common\job_talk.skrit;
+	}
+	[placement]
+	{
+	  q orientation = 0,0.707107,0,0.707107;
+	  p position = -3.41363,0,2.68186,0xee8f5b76;
+	}
+}
+[t:clb24_test_melee2,n:0x05e0000a]
+{
+	[aspect]
+	{
+	  f max_life = 274.4;
+	  f max_mana = 45;
+	}
+	[conversation]
+	{
+		[conversations]
+		{
+			* = pm;
+		}
+	}
+	[mind]
+	{
+		jat_talk = world\ai\jobs\common\job_talk.skrit;
+	}
+	[placement]
+	{
+	  q orientation = 0,0.707107,0,0.707107;
+	  p position = -3.2846,0,0.687166,0xee8f5b76;
+	}
+}
+[t:clb24_test_nmage,n:0x05e0000b]
+{
+	[aspect]
+	{
+	  f max_life = 107.8;
+	  f max_mana = 159;
+	}
+	[conversation]
+	{
+		[conversations]
+		{
+			* = pm;
+		}
+	}
+	[mind]
+	{
+		jat_talk = world\ai\jobs\common\job_talk.skrit;
+	}
+	[placement]
+	{
+	  q orientation = 0,0.707107,0,0.707107;
+	  p position = -3.53097,0,-1.05197,0xee8f5b76;
+	}
+}
+[t:clb24_test_ranged,n:0x05e0000c]
+{
+	[aspect]
+	{
+	  f max_life = 166.6;
+	  f max_mana = 77;
+	}
+	[conversation]
+	{
+		[conversations]
+		{
+			* = pm;
+		}
+	}
+	[mind]
+	{
+		jat_talk = world\ai\jobs\common\job_talk.skrit;
+	}
+	[placement]
+	{
+	  q orientation = 0,0.707107,0,0.707107;
+	  p position = -3.60074,0,-2.83277,0xee8f5b76;
+	}
+}
+[t:smithy_liorne,n:0x05e0000f]
+{
+	[conversation]
+	{
+		[conversations]
+		{
+			* = shop;
+		}
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.707107,0,0.707107;
+	  p position = 3.0585,0,2.42805,0xee8f5b76;
+	}
+}

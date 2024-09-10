@@ -1,0 +1,18 @@
+[pm]
+{
+	[text*]
+	{
+		choice = potential_member;
+		screen_text = "jjoin?";
+	  f scroll_rate = 10.000000;
+	}
+}
+[shop]
+{
+	[text*]
+	{
+		choice = shop;
+		screen_text = "shop";
+	  f scroll_rate = 10.000000;
+	}
+}
