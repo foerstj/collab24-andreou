@@ -1418,9 +1418,9 @@
 		  strength 		= 15, 0; 
 		  intelligence  =  8, 0;
 		  dexterity 	=  11, 0;
-		  ranged 		=  16, 0;
-		  combat_magic	=  16, 0;
-		  nature_magic	=  16, 0;
+		  ranged 		=  9, 0;
+		  combat_magic	=  9, 0;
+		  nature_magic	=  9, 0;
 		}
 	}
 	[aspect]
