@@ -495,7 +495,7 @@
 	[placement]
 	{
 	  q orientation = 0,-0.98549,0,0.169735;
-	  p position = 1.03663,-3.75,0.210457,0x5c937ddd;
+	  p position = 1.02367,-3.75,0.211357,0x5c937ddd;
 	}
 }
 [t:trigger_generic,n:0x05100005]
@@ -548,8 +548,8 @@
 		{
 			[*]
 			{
-				action* = fade_node(0x8F08FA5B,"out:black"), group(1);
-				action* = fade_node(0x8F08FA5B,"in"), group(2);
+				action* = fade_nodes(0x00000051,1,2,1,"out:black"), group(1);
+				action* = fade_nodes(0x00000051,1,2,1,"in"), group(2);
 			  b can_self_destruct = true;
 				condition* = party_member_entered_trigger_group("5_1_house_floor1","on_every_enter"), group(1);
 				condition* = party_member_left_trigger_group("5_1_house_floor1","on_every_leave"), group(2);
@@ -579,8 +579,8 @@
 		{
 			[*]
 			{
-				action* = fade_node(0x93985007,"out:black"), group(1);
-				action* = fade_node(0x93985007,"in"), group(2);
+				action* = fade_nodes(0x00000051,1,2,2,"out:black"), group(1);
+				action* = fade_nodes(0x00000051,1,2,2,"in"), group(2);
 			  b can_self_destruct = true;
 				condition* = party_member_entered_trigger_group("5_1_house","on_every_enter"), group(1);
 				condition* = party_member_left_trigger_group("5_1_house","on_every_leave"), group(2);
@@ -599,7 +599,7 @@
 	[placement]
 	{
 	  q orientation = 0,0.343971,0,0.93898;
-	  p position = 3.17891,-4.71626,-5.43626,0x5c937ddd;
+	  p position = 3.22458,-4.71626,-5.38123,0x5c937ddd;
 	}
 }
 [t:use_point,n:0x0510005a]

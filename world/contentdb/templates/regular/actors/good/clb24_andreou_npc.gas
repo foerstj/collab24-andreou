@@ -224,6 +224,8 @@
             spell_resurrect = 2;
             spell_revive = 2;
             spell_healing_hands = 2;
+            spell_healing_wind = 1;
+            spell_battle_healing = 1;
 
             spell_zap = 1;
             spell_fireshot = 1;

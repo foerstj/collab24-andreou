@@ -1,7 +1,7 @@
 [t:region,n:region]
 {
 	created = ngpc-2023,natan;
-	description = none;
+	description = "none";
   x guid = 0x00000051;
 	lastmodified = NGPC-2023,natan;
   x mesh_range = 0x00000051;

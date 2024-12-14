@@ -99,6 +99,7 @@ state Talk$
 		{
 			m_Go$.GetConversation.RSSelectConversation( "conversation_uddonlim_accept" );
 			GameAuditor.GetDb.SetBool( "party_accept_0x53005DD", false );
+			GameAuditor.GetDb.SetBool( "party_disbanded_0x53005DD", false );
 			TryAnim$('glrn');
 		} 
 		else if ( GameAuditor.GetDb.GetBool( "party_decline_0x53005DD" ) )
