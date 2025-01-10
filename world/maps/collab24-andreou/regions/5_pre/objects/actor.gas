@@ -5,6 +5,10 @@
 	  f max_life = 323.4;
 	  f max_mana = 75;
 	}
+	[common]
+	{
+	  b is_multi_player = false;
+	}
 	[conversation]
 	{
 		[conversations]
@@ -28,6 +32,10 @@
 	{
 	  f max_life = 274.4;
 	  f max_mana = 45;
+	}
+	[common]
+	{
+	  b is_multi_player = false;
 	}
 	[conversation]
 	{
@@ -53,6 +61,10 @@
 	  f max_life = 107.8;
 	  f max_mana = 159;
 	}
+	[common]
+	{
+	  b is_multi_player = false;
+	}
 	[conversation]
 	{
 		[conversations]
@@ -76,6 +88,10 @@
 	{
 	  f max_life = 166.6;
 	  f max_mana = 77;
+	}
+	[common]
+	{
+	  b is_multi_player = false;
 	}
 	[conversation]
 	{
