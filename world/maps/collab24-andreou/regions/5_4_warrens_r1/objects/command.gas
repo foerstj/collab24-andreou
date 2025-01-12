@@ -830,13 +830,6 @@
 	  p position = -1.29283,0,-1.19803,0x4b48375a;
 	}
 }
-[t:cmd_auto_save,n:0x0540015a]
-{
-	[placement]
-	{
-	  p position = 1.31896,0.400002,-1.36902,0xf1eb42bb;
-	}
-}
 [t:cmd_ai_c_patrol,n:0x054001b2]
 {
 	[cmd_ai_dojob]
